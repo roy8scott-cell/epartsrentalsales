@@ -31,7 +31,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
             Ver Productos
           </button>
           <a
-            href="https://wa.me/1234567890?text=Hola%2C%20quiero%20información%20sobre%20piezas"
+            href="https://wa.me/17878524747?text=Hola%2C%20quiero%20información%20sobre%20piezas"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-whatsapp text-primary-foreground px-8 py-3.5 rounded-md font-heading font-bold text-sm uppercase tracking-wider hover:brightness-110 transition flex items-center justify-center gap-2"

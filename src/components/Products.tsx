@@ -261,7 +261,7 @@ const Products = () => {
                           {product.price}
                         </span>
                         <a
-                          href={`https://wa.me/1234567890?text=Hola%2C%20me%20interesa%20${encodeURIComponent(product.name)}%20(${brand.name})%20-%20${product.sku}`}
+                          href={`https://wa.me/17878524747?text=Hola%2C%20me%20interesa%20${encodeURIComponent(product.name)}%20(${brand.name})%20-%20${product.sku}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="bg-whatsapp text-primary-foreground px-3 py-1.5 rounded-md text-xs font-heading font-bold flex items-center gap-1 hover:brightness-110 transition"
@@ -273,7 +273,7 @@ const Products = () => {
 
                       {/* Mobile: compact buy button */}
                       <a
-                        href={`https://wa.me/1234567890?text=Hola%2C%20me%20interesa%20${encodeURIComponent(product.name)}%20(${brand.name})%20-%20${product.sku}`}
+                        href={`https://wa.me/17878524747?text=Hola%2C%20me%20interesa%20${encodeURIComponent(product.name)}%20(${brand.name})%20-%20${product.sku}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="md:hidden bg-whatsapp text-primary-foreground px-4 py-2.5 rounded-full text-xs font-heading font-bold flex items-center gap-1.5 hover:brightness-110 transition flex-shrink-0 shadow-sm"
