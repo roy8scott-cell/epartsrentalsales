@@ -1,8 +1,12 @@
 import heroBg from "@/assets/hero-bg.jpg";
 
-const Hero = () => {
+interface HeroProps {
+  onNavigate: (tab: string) => void;
+}
+
+const Hero = ({ onNavigate }: HeroProps) => {
   return (
-    <section id="inicio" className="relative overflow-hidden">
+    <section className="relative overflow-hidden min-h-full flex items-center">
       <div className="absolute inset-0">
         <img src={heroBg} alt="" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-secondary/80" />
@@ -20,12 +24,12 @@ const Hero = () => {
           Compra fácil por WhatsApp.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 mt-4">
-          <a
-            href="#productos"
+          <button
+            onClick={() => onNavigate("productos")}
             className="bg-primary text-primary-foreground px-8 py-3.5 rounded-md font-heading font-bold text-sm uppercase tracking-wider hover:brightness-110 transition"
           >
             Ver Productos
-          </a>
+          </button>
           <a
             href="https://wa.me/1234567890?text=Hola%2C%20quiero%20información%20sobre%20piezas"
             target="_blank"
