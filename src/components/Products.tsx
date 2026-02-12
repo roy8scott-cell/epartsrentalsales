@@ -144,95 +144,119 @@ const Products = () => {
       .filter((cat) => cat.products.length > 0);
   }, [brand, search]);
 
+  const totalResults = filteredCategories.reduce((sum, cat) => sum + cat.products.length, 0);
+
   return (
     <section className="min-h-full flex flex-col">
-      <div className="container py-8 flex-1">
-        {/* Header */}
-        <div className="mb-8">
-          <span className="text-primary font-heading font-bold text-sm uppercase tracking-widest">
-            Catálogo de Repuestos
-          </span>
-          <h2 className="text-3xl md:text-4xl font-heading font-black text-foreground mt-2">
-            Encuentra tu Repuesto
-          </h2>
-          <p className="text-muted-foreground mt-2 max-w-lg">
-            Selecciona la marca y busca por nombre o código. ¡Consulta disponibilidad por WhatsApp!
-          </p>
-        </div>
+      {/* Sticky top bar on mobile: brand pills + search */}
+      <div className="sticky top-0 z-10 bg-background/95 backdrop-blur-sm border-b border-border md:relative md:border-0 md:bg-transparent md:backdrop-blur-none">
+        <div className="container pt-4 pb-3 md:pt-8">
+          {/* Header - hidden on mobile for compactness */}
+          <div className="hidden md:block mb-6">
+            <span className="text-primary font-heading font-bold text-sm uppercase tracking-widest">
+              Catálogo de Repuestos
+            </span>
+            <h2 className="text-3xl md:text-4xl font-heading font-black text-foreground mt-2">
+              Encuentra tu Repuesto
+            </h2>
+            <p className="text-muted-foreground mt-2 max-w-lg">
+              Selecciona la marca y busca por nombre o código. ¡Consulta disponibilidad por WhatsApp!
+            </p>
+          </div>
 
-        {/* Brand Tabs */}
-        <div className="flex flex-wrap gap-2 mb-6">
-          {brands.map((b) => (
-            <button
-              key={b.id}
-              onClick={() => { setActiveBrand(b.id); setSearch(""); }}
-              className={`px-5 py-2.5 rounded-lg font-heading font-bold text-sm uppercase tracking-wider transition-all border-2 ${
-                activeBrand === b.id
-                  ? `${b.accent} bg-card shadow-md scale-105 text-foreground`
-                  : "border-transparent bg-card text-muted-foreground hover:text-foreground hover:bg-muted"
-              }`}
-            >
-              {b.name}
-            </button>
-          ))}
-        </div>
+          {/* Brand Tabs - horizontal scroll on mobile */}
+          <div className="flex gap-2 mb-3 overflow-x-auto pb-1 scrollbar-hide md:flex-wrap md:overflow-visible md:mb-6">
+            {brands.map((b) => (
+              <button
+                key={b.id}
+                onClick={() => { setActiveBrand(b.id); setSearch(""); }}
+                className={`px-4 py-2 md:px-5 md:py-2.5 rounded-full md:rounded-lg font-heading font-bold text-xs md:text-sm uppercase tracking-wider transition-all border-2 whitespace-nowrap flex-shrink-0 ${
+                  activeBrand === b.id
+                    ? `${b.accent} bg-card shadow-md text-foreground`
+                    : "border-transparent bg-card text-muted-foreground hover:text-foreground hover:bg-muted"
+                }`}
+              >
+                {b.name}
+              </button>
+            ))}
+          </div>
 
-        {/* Search Bar */}
-        <div className="relative max-w-md mb-8">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" size={20} />
-          <input
-            type="text"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder={`Buscar en ${brand.name}... (nombre o código)`}
-            className="w-full pl-10 pr-10 py-3 rounded-lg border border-border bg-card text-foreground placeholder:text-muted-foreground font-body text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition"
-          />
+          {/* Search Bar - full width on mobile */}
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" size={18} />
+            <input
+              type="text"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder={`Buscar en ${brand.name}...`}
+              className="w-full pl-10 pr-10 py-2.5 md:py-3 rounded-full md:rounded-lg border border-border bg-card text-foreground placeholder:text-muted-foreground font-body text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition md:max-w-md"
+            />
+            {search && (
+              <button
+                onClick={() => setSearch("")}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+              >
+                <X size={18} />
+              </button>
+            )}
+          </div>
+
+          {/* Results count on mobile */}
           {search && (
-            <button
-              onClick={() => setSearch("")}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-            >
-              <X size={18} />
-            </button>
+            <p className="text-xs text-muted-foreground mt-2 md:hidden">
+              {totalResults} resultado{totalResults !== 1 ? "s" : ""} para "{search}"
+            </p>
           )}
         </div>
+      </div>
 
-        {/* Catalog Grid by Category */}
+      {/* Products List */}
+      <div className="container py-4 md:py-0 flex-1">
         {filteredCategories.length === 0 ? (
           <div className="text-center py-16 text-muted-foreground">
-            <Search size={48} className="mx-auto mb-4 opacity-30" />
-            <p className="font-heading font-semibold text-lg">No se encontraron repuestos</p>
-            <p className="text-sm mt-1">Intenta con otro término de búsqueda</p>
+            <Search size={40} className="mx-auto mb-3 opacity-30" />
+            <p className="font-heading font-semibold">No se encontraron repuestos</p>
+            <p className="text-sm mt-1">Intenta con otro término</p>
           </div>
         ) : (
-          <div className="space-y-8">
+          <div className="space-y-6 md:space-y-8">
             {filteredCategories.map((cat) => (
               <div key={cat.name}>
-                <h3 className="font-heading font-bold text-lg text-foreground mb-4 flex items-center gap-2">
-                  <span className={`inline-block w-1 h-5 rounded-full ${brand.accent.replace("border-", "bg-")}`} />
+                <h3 className="font-heading font-bold text-base md:text-lg text-foreground mb-3 flex items-center gap-2">
+                  <span className={`inline-block w-1 h-4 md:h-5 rounded-full ${brand.accent.replace("border-", "bg-")}`} />
                   {cat.name}
-                  <span className="text-xs font-normal text-muted-foreground">
-                    ({cat.products.length} {cat.products.length === 1 ? "producto" : "productos"})
+                  <span className="text-[11px] font-normal text-muted-foreground">
+                    ({cat.products.length})
                   </span>
                 </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+
+                {/* Mobile: compact list cards | Desktop: grid */}
+                <div className="flex flex-col gap-2 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-4">
                   {cat.products.map((product) => (
                     <div
                       key={product.sku}
-                      className={`bg-card border border-border rounded-lg p-4 hover:shadow-lg hover:border-primary/40 transition-all group`}
+                      className="bg-card border border-border rounded-xl md:rounded-lg p-3 md:p-4 hover:shadow-lg hover:border-primary/40 transition-all group flex items-center gap-3 md:flex-col md:items-stretch"
                     >
-                      <div className="flex items-start justify-between mb-2">
-                        <span className={`text-[10px] font-heading font-bold uppercase tracking-wider px-2 py-0.5 rounded ${brand.badge}`}>
-                          {cat.name}
-                        </span>
-                        <span className="text-[10px] font-mono text-muted-foreground">
-                          {product.sku}
+                      {/* Mobile: horizontal layout */}
+                      <div className="flex-1 min-w-0 md:flex-auto">
+                        <div className="flex items-center gap-2 mb-0.5 md:mb-2">
+                          <span className={`text-[9px] md:text-[10px] font-heading font-bold uppercase tracking-wider px-1.5 py-0.5 rounded ${brand.badge}`}>
+                            {cat.name}
+                          </span>
+                          <span className="text-[9px] md:text-[10px] font-mono text-muted-foreground hidden md:inline">
+                            {product.sku}
+                          </span>
+                        </div>
+                        <h4 className="font-heading font-bold text-card-foreground text-sm leading-tight md:min-h-[2.5rem]">
+                          {product.name}
+                        </h4>
+                        <span className="text-lg font-heading font-black text-foreground md:hidden">
+                          {product.price}
                         </span>
                       </div>
-                      <h4 className="font-heading font-bold text-card-foreground text-sm mt-2 min-h-[2.5rem]">
-                        {product.name}
-                      </h4>
-                      <div className="flex items-center justify-between mt-3 pt-3 border-t border-border">
+
+                      {/* Desktop: price + button row */}
+                      <div className="hidden md:flex items-center justify-between mt-3 pt-3 border-t border-border">
                         <span className="text-lg font-heading font-black text-foreground">
                           {product.price}
                         </span>
@@ -246,6 +270,17 @@ const Products = () => {
                           Consultar
                         </a>
                       </div>
+
+                      {/* Mobile: compact buy button */}
+                      <a
+                        href={`https://wa.me/1234567890?text=Hola%2C%20me%20interesa%20${encodeURIComponent(product.name)}%20(${brand.name})%20-%20${product.sku}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="md:hidden bg-whatsapp text-primary-foreground px-4 py-2.5 rounded-full text-xs font-heading font-bold flex items-center gap-1.5 hover:brightness-110 transition flex-shrink-0 shadow-sm"
+                      >
+                        <MessageCircle size={14} />
+                        Comprar
+                      </a>
                     </div>
                   ))}
                 </div>
