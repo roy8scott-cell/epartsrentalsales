@@ -9,14 +9,14 @@ const Hero = () => {
       </div>
       <div className="relative container py-24 md:py-36 flex flex-col items-center text-center gap-6">
         <span className="bg-primary/20 text-primary px-4 py-1.5 rounded-full font-heading font-bold text-xs uppercase tracking-widest">
-          Equipos de Jardinería
+          Equipos de Jardinería y Hogar
         </span>
         <h1 className="text-4xl md:text-6xl font-heading font-black text-secondary-foreground leading-tight max-w-3xl">
           Piezas y Equipos para tu{" "}
-          <span className="text-primary">Jardín</span>
+          <span className="text-primary">Jardín y Hogar</span>
         </h1>
         <p className="text-secondary-foreground/70 text-lg md:text-xl max-w-xl font-body">
-          Venta y renta de piezas para podadoras, motosierras, trimmers y más.
+          Venta y renta de piezas para motosierras, trimmers, taladros y más.
           Compra fácil por WhatsApp.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 mt-4">
