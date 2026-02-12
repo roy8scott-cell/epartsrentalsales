@@ -40,7 +40,7 @@ const Header = ({ activeTab, onTabChange }: HeaderProps) => {
             </button>
           ))}
           <a
-            href="https://wa.me/1234567890?text=Hola%2C%20me%20interesa%20una%20pieza"
+            href="https://wa.me/17878524747?text=Hola%2C%20me%20interesa%20una%20pieza"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-whatsapp text-primary-foreground px-5 py-2 rounded-md font-heading font-bold text-sm hover:brightness-110 transition ml-4"
@@ -76,7 +76,7 @@ const Header = ({ activeTab, onTabChange }: HeaderProps) => {
             </button>
           ))}
           <a
-            href="https://wa.me/1234567890?text=Hola%2C%20me%20interesa%20una%20pieza"
+            href="https://wa.me/17878524747?text=Hola%2C%20me%20interesa%20una%20pieza"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-whatsapp text-primary-foreground px-5 py-2 rounded-md font-heading font-bold text-sm text-center hover:brightness-110 transition"

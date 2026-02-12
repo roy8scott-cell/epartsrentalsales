@@ -27,9 +27,26 @@ const Footer = () => {
               Contacto
             </h4>
             <ul className="space-y-2 text-secondary-foreground/60 text-sm">
-              <li>📱 WhatsApp: +1 (234) 567-890</li>
-              <li>📧 info@epartsrental.com</li>
-              <li>📍 Tu ciudad, País</li>
+              <li>
+                <a href="tel:+17878524747" className="hover:text-primary transition-colors">
+                  📱 +1 (787) 852-4747
+                </a>
+              </li>
+              <li>
+                <a href="mailto:epartsrental@yahoo.com" className="hover:text-primary transition-colors">
+                  📧 epartsrental@yahoo.com
+                </a>
+              </li>
+              <li>
+                <a href="https://maps.google.com/?q=Calle+Cruz+Ortiz+Stella+117+Suite+2+Humacao+Puerto+Rico+00791" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  📍 Calle Cruz Ortiz Stella #117 Suite 2, Humacao, PR 00791
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com/epartsrentalsales" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  📸 @epartsrentalsales
+                </a>
+              </li>
             </ul>
           </div>
         </div>
