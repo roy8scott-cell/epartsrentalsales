@@ -1,80 +1,6 @@
 import { useState, useMemo } from "react";
 import { MessageCircle, Search, X } from "lucide-react";
-
-type Product = {
-  name: string;
-  price: string;
-  sku: string;
-  description?: string;
-};
-
-type Category = {
-  name: string;
-  products: Product[];
-};
-
-type Brand = {
-  id: string;
-  name: string;
-  accent: string;
-  badge: string;
-  categories: Category[];
-};
-
-const brands: Brand[] = [
-  {
-    id: "husqvarna",
-    name: "Husqvarna",
-    accent: "border-orange-500",
-    badge: "bg-orange-500/10 text-orange-600",
-    categories: [
-      {
-        name: "Motosierras",
-        products: [
-          { name: "Husqvarna 562 XP® Mark II", price: "$949.99", sku: "HUS-562XP", description: "59.8 cm³ · 4.7 hp · 70.2 fts. Alta capacidad de corte, diseño liviano y barras largas." },
-        ],
-      },
-      {
-        name: "Hedge Trimmers",
-        products: [
-          { name: "Husqvarna 122HD60", price: "$369.99", sku: "HUS-122HD60", description: "23.2 in cuchilla · 10.8 lbs. LowVib®, Smart Start® y Air Purge." },
-          { name: "Husqvarna 322HD60", price: "$449.99", sku: "HUS-322HD60", description: "24 in cuchilla · 11.5 lbs. Cuchillas de acero endurecido, Smart Start® y mango trasero ajustable." },
-          { name: "Husqvarna 525HF3S", price: "$549.99", sku: "HUS-525HF3S", description: "25.59 in cuchilla · 13.4 lbs. Peso ligero, barra larga y engranajes duraderos." },
-          { name: "Husqvarna 525HE3", price: "$589.99", sku: "HUS-525HE3", description: "24 in cuchilla · 13 lbs. Motor X-TORQ®, Smart Start® y barra ajustable." },
-          { name: "Husqvarna 525HE4", price: "$629.99", sku: "HUS-525HE4", description: "24 in cuchilla · 13.1 lbs. Motor X-TORQ®, Smart Start® y barra ajustable." },
-        ],
-      },
-      {
-        name: "Pole Saws",
-        products: [
-          { name: "Husqvarna 122LKP", price: "$299.99", sku: "HUS-122LKP", description: "Alcance hasta 12 pies · 12.6 lbs. Cadena X-CUT® y lubricación automática." },
-        ],
-      },
-      {
-        name: "Zero-Turn Mowers",
-        products: [
-          { name: "Husqvarna Z254F Special Edition", price: "$3,699.00", sku: "HUS-Z254F", description: "54 in corte · 23.1 hp Kawasaki. ClearCut™ Fabricated Deck y marco ultra-duradero." },
-          { name: "Husqvarna Z248F Special Edition", price: "$3,599.00", sku: "HUS-Z248F", description: "48 in corte · 21.5 hp Kawasaki. ClearCut™ Fabricated Deck y marco ultra-duradero." },
-          { name: "Husqvarna Z242F Special Edition", price: "$3,499.00", sku: "HUS-Z242F", description: "42 in corte · 21.5 hp Kawasaki. ClearCut™ Fabricated Deck y marco ultra-duradero." },
-        ],
-      },
-    ],
-  },
-  {
-    id: "makita",
-    name: "Makita",
-    accent: "border-teal-500",
-    badge: "bg-teal-500/10 text-teal-600",
-    categories: [],
-  },
-  {
-    id: "milwaukee",
-    name: "Milwaukee",
-    accent: "border-red-600",
-    badge: "bg-red-600/10 text-red-600",
-    categories: [],
-  },
-];
+import { brands } from "@/data/products";
 
 const Products = () => {
   const [activeBrand, setActiveBrand] = useState("husqvarna");
@@ -96,6 +22,7 @@ const Products = () => {
           (p) =>
             p.name.toLowerCase().includes(q) ||
             p.sku.toLowerCase().includes(q) ||
+            p.description.toLowerCase().includes(q) ||
             cat.name.toLowerCase().includes(q)
         ),
       }))
@@ -106,23 +33,22 @@ const Products = () => {
 
   return (
     <section className="min-h-full flex flex-col">
-      {/* Sticky top bar on mobile: brand pills + search */}
+      {/* Sticky top bar */}
       <div className="sticky top-0 z-10 bg-background/95 backdrop-blur-sm border-b border-border md:relative md:border-0 md:bg-transparent md:backdrop-blur-none">
         <div className="container pt-4 pb-3 md:pt-8">
-          {/* Header - hidden on mobile for compactness */}
           <div className="hidden md:block mb-6">
             <span className="text-primary font-heading font-bold text-sm uppercase tracking-widest">
-              Catálogo de Repuestos
+              Catálogo de Productos
             </span>
             <h2 className="text-3xl md:text-4xl font-heading font-black text-foreground mt-2">
-              Encuentra tu Repuesto
+              Encuentra tu Equipo
             </h2>
             <p className="text-muted-foreground mt-2 max-w-lg">
               Selecciona la marca y busca por nombre o código. ¡Consulta disponibilidad por WhatsApp!
             </p>
           </div>
 
-          {/* Brand Tabs - horizontal scroll on mobile */}
+          {/* Brand Tabs */}
           <div className="flex gap-2 mb-3 overflow-x-auto pb-1 scrollbar-hide md:flex-wrap md:overflow-visible md:mb-6">
             {brands.map((b) => (
               <button
@@ -140,33 +66,35 @@ const Products = () => {
           </div>
 
           {/* Category Pills */}
-          <div className="flex gap-2 mb-3 overflow-x-auto pb-1 scrollbar-hide md:flex-wrap md:overflow-visible">
-            <button
-              onClick={() => setActiveCategory(null)}
-              className={`px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs font-heading font-semibold transition-all whitespace-nowrap flex-shrink-0 ${
-                activeCategory === null
-                  ? "bg-primary text-primary-foreground shadow-sm"
-                  : "bg-muted text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              Todas
-            </button>
-            {brand.categories.map((cat) => (
+          {brand.categories.length > 0 && (
+            <div className="flex gap-2 mb-3 overflow-x-auto pb-1 scrollbar-hide md:flex-wrap md:overflow-visible">
               <button
-                key={cat.name}
-                onClick={() => setActiveCategory(cat.name)}
+                onClick={() => setActiveCategory(null)}
                 className={`px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs font-heading font-semibold transition-all whitespace-nowrap flex-shrink-0 ${
-                  activeCategory === cat.name
+                  activeCategory === null
                     ? "bg-primary text-primary-foreground shadow-sm"
                     : "bg-muted text-muted-foreground hover:text-foreground"
                 }`}
               >
-                {cat.name}
+                Todas
               </button>
-            ))}
-          </div>
+              {brand.categories.map((cat) => (
+                <button
+                  key={cat.name}
+                  onClick={() => setActiveCategory(cat.name)}
+                  className={`px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs font-heading font-semibold transition-all whitespace-nowrap flex-shrink-0 ${
+                    activeCategory === cat.name
+                      ? "bg-primary text-primary-foreground shadow-sm"
+                      : "bg-muted text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {cat.name}
+                </button>
+              ))}
+            </div>
+          )}
 
-          {/* Search Bar - full width on mobile */}
+          {/* Search Bar */}
           <div className="relative">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" size={18} />
             <input
@@ -186,7 +114,6 @@ const Products = () => {
             )}
           </div>
 
-          {/* Results count on mobile */}
           {search && (
             <p className="text-xs text-muted-foreground mt-2 md:hidden">
               {totalResults} resultado{totalResults !== 1 ? "s" : ""} para "{search}"
@@ -200,8 +127,16 @@ const Products = () => {
         {filteredCategories.length === 0 ? (
           <div className="text-center py-16 text-muted-foreground">
             <Search size={40} className="mx-auto mb-3 opacity-30" />
-            <p className="font-heading font-semibold">No se encontraron repuestos</p>
-            <p className="text-sm mt-1">Intenta con otro término</p>
+            <p className="font-heading font-semibold">
+              {brand.categories.length === 0
+                ? "Próximamente — productos en camino"
+                : "No se encontraron productos"}
+            </p>
+            <p className="text-sm mt-1">
+              {brand.categories.length === 0
+                ? "Estamos agregando inventario de esta marca"
+                : "Intenta con otro término"}
+            </p>
           </div>
         ) : (
           <div className="space-y-6 md:space-y-8">
@@ -215,15 +150,37 @@ const Products = () => {
                   </span>
                 </h3>
 
-                {/* Mobile: compact list cards | Desktop: grid */}
                 <div className="flex flex-col gap-2 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-4">
                   {cat.products.map((product) => (
                     <div
                       key={product.sku}
-                      className="bg-card border border-border rounded-xl md:rounded-lg p-3 md:p-4 hover:shadow-lg hover:border-primary/40 transition-all group flex items-center gap-3 md:flex-col md:items-stretch"
+                      className="bg-card border border-border rounded-xl md:rounded-lg overflow-hidden hover:shadow-lg hover:border-primary/40 transition-all group flex items-center gap-3 md:flex-col md:items-stretch"
                     >
-                      {/* Mobile: horizontal layout */}
-                      <div className="flex-1 min-w-0 md:flex-auto">
+                      {/* Product Image - Desktop */}
+                      {product.image && (
+                        <div className="hidden md:block bg-muted/30 p-4">
+                          <img
+                            src={product.image}
+                            alt={product.name}
+                            className="w-full h-40 object-contain group-hover:scale-105 transition-transform duration-300"
+                            loading="lazy"
+                          />
+                        </div>
+                      )}
+
+                      {/* Product Image - Mobile thumbnail */}
+                      {product.image && (
+                        <div className="md:hidden w-20 h-20 flex-shrink-0 bg-muted/30 rounded-lg overflow-hidden ml-3">
+                          <img
+                            src={product.image}
+                            alt={product.name}
+                            className="w-full h-full object-contain p-1"
+                            loading="lazy"
+                          />
+                        </div>
+                      )}
+
+                      <div className={`flex-1 min-w-0 md:flex-auto p-3 md:p-4 ${product.image ? 'md:pt-0' : ''}`}>
                         <div className="flex items-center gap-2 mb-0.5 md:mb-2">
                           <span className={`text-[9px] md:text-[10px] font-heading font-bold uppercase tracking-wider px-1.5 py-0.5 rounded ${brand.badge}`}>
                             {cat.name}
@@ -235,18 +192,16 @@ const Products = () => {
                         <h4 className="font-heading font-bold text-card-foreground text-sm leading-tight md:min-h-[2.5rem]">
                           {product.name}
                         </h4>
-                        {product.description && (
-                          <p className="text-[11px] md:text-xs text-muted-foreground leading-snug mt-1 line-clamp-2">
-                            {product.description}
-                          </p>
-                        )}
-                        <span className="text-lg font-heading font-black text-foreground md:hidden">
+                        <p className="text-[11px] md:text-xs text-muted-foreground leading-snug mt-1 line-clamp-2">
+                          {product.description}
+                        </p>
+                        <span className="text-lg font-heading font-black text-foreground md:hidden mt-1 block">
                           {product.price}
                         </span>
                       </div>
 
-                      {/* Desktop: price + button row */}
-                      <div className="hidden md:flex items-center justify-between mt-3 pt-3 border-t border-border">
+                      {/* Desktop: price + button */}
+                      <div className="hidden md:flex items-center justify-between px-4 pb-4 pt-2 border-t border-border mx-4">
                         <span className="text-lg font-heading font-black text-foreground">
                           {product.price}
                         </span>
@@ -261,12 +216,12 @@ const Products = () => {
                         </a>
                       </div>
 
-                      {/* Mobile: compact buy button */}
+                      {/* Mobile: buy button */}
                       <a
                         href={`https://wa.me/17878525975?text=Hola%2C%20me%20interesa%20${encodeURIComponent(product.name)}%20(${brand.name})%20-%20${product.sku}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="md:hidden bg-whatsapp text-primary-foreground px-4 py-2.5 rounded-full text-xs font-heading font-bold flex items-center gap-1.5 hover:brightness-110 transition flex-shrink-0 shadow-sm"
+                        className="md:hidden bg-whatsapp text-primary-foreground px-4 py-2.5 rounded-full text-xs font-heading font-bold flex items-center gap-1.5 hover:brightness-110 transition flex-shrink-0 shadow-sm mr-3"
                       >
                         <MessageCircle size={14} />
                         Comprar
