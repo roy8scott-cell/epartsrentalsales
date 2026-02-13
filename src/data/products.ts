@@ -237,7 +237,7 @@ export const brands: Brand[] = [
             price: "$499.95",
             sku: "HUS-322HD60",
             description: 'Profesional, cuchilla 24". Acero endurecido, Smart Start® y mango ajustable.',
-            image: `${CDN}/hedge-trimmers/photos/studio/h210-0299.webp?v=d4968330e00e823d&format=WEBP_LANDSCAPE_CONTAIN_MD`,
+            image: `${CDN}/hedge-trimmers/photos/studio/h210-0732.webp?v=ed5ab979e00e823d&format=WEBP_LANDSCAPE_CONTAIN_MD`,
           },
           {
             name: "Husqvarna 122HD60",
