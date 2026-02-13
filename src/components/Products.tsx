@@ -212,7 +212,7 @@ const Products = () => {
                           className="bg-whatsapp text-primary-foreground px-3 py-1.5 rounded-md text-xs font-heading font-bold flex items-center gap-1 hover:brightness-110 transition"
                         >
                           <MessageCircle size={14} />
-                          Consultar
+                          Comprar
                         </a>
                       </div>
 
