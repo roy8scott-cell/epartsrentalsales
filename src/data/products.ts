@@ -28,9 +28,9 @@ export const brands: Brand[] = [
     accent: "border-orange-500",
     badge: "bg-orange-500/10 text-orange-600",
     categories: [
-      // ── 1. Sopladores ──
+      // ── 1. Blowers ──
       {
-        name: "Sopladores",
+        name: "Blowers",
         products: [
           {
             name: "Husqvarna 590BTS",
@@ -69,9 +69,9 @@ export const brands: Brand[] = [
           },
         ],
       },
-      // ── 2. Desbrozadoras y Cortabordes ──
+      // ── 2. Brushcutters & Trimmers ──
       {
-        name: "Trimmers y Desbrozadoras",
+        name: "Brushcutters & Trimmers",
         products: [
           {
             name: "Husqvarna 545FR",
@@ -149,9 +149,9 @@ export const brands: Brand[] = [
           },
         ],
       },
-      // ── 3. Motosierras ──
+      // ── 3. Chainsaws ──
       {
-        name: "Motosierras",
+        name: "Chainsaws",
         products: [
           {
             name: "562 XP® Mark II",
@@ -204,9 +204,9 @@ export const brands: Brand[] = [
           },
         ],
       },
-      // ── 4. Cortasetos ──
+      // ── 4. Trimmer Hedgers ──
       {
-        name: "Cortasetos",
+        name: "Trimmer Hedgers",
         products: [
           {
             name: "Husqvarna 525HE4",
@@ -245,9 +245,9 @@ export const brands: Brand[] = [
           },
         ],
       },
-      // ── 5. Tractores Cortacésped ──
+      // ── 5. Tractors ──
       {
-        name: "Tractores Cortacésped",
+        name: "Tractors",
         products: [
           {
             name: 'Husqvarna TS 140X (54")',
@@ -279,9 +279,9 @@ export const brands: Brand[] = [
           },
         ],
       },
-      // ── 6. Giro Cero ──
+      // ── 6. Zero Turn ──
       {
-        name: "Giro Cero",
+        name: "Zero Turn",
         products: [
           {
             name: "Z254F Special Edition",
@@ -306,9 +306,9 @@ export const brands: Brand[] = [
           },
         ],
       },
-      // ── 7. Automower® ──
+      // ── 7. Robot Lawn Mowers ──
       {
-        name: "Automower®",
+        name: "Robot Lawn Mowers",
         products: [
           {
             name: "Automower® 435 iQ AWD",
