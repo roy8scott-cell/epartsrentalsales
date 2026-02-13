@@ -318,7 +318,7 @@ export const brands: Brand[] = [
             price: "$4,999.95",
             sku: "HUS-AM435",
             description: "Tracción total. Pendientes hasta 70%, navegación EPOS® wire-free.",
-            image: `${CDN}/robotic-mowers/photos/studio/v/vg/vg-821274.webp?v=1afb68a6e00e823d&format=WEBP_LANDSCAPE_CONTAIN_MD`,
+            image: `${CDN}/robotic-mowers/photos/studio/l/la/la-734523.webp?v=29f1a236e00e823d&format=WEBP_LANDSCAPE_CONTAIN_MD`,
           },
           {
             name: "Automower® 440 iQ",

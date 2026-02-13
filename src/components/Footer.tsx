@@ -28,13 +28,13 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2 text-secondary-foreground/60 text-sm">
               <li>
-                <a href="https://wa.me/17878525975?text=Hola%2C%20necesito%20información" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                  📱 +1 (787) 852-5975 (WhatsApp principal)
+                <a href="https://wa.me/17878094747?text=Hola%2C%20necesito%20información" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  📱 +1 (787) 809-4747 (WhatsApp principal)
                 </a>
               </li>
               <li>
-                <a href="https://wa.me/17878094747?text=Hola%2C%20necesito%20información" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                  📱 +1 (787) 809-4747 (WhatsApp)
+                <a href="https://wa.me/17878525975?text=Hola%2C%20necesito%20información" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  📱 +1 (787) 852-5975 (WhatsApp)
                 </a>
               </li>
               <li>
