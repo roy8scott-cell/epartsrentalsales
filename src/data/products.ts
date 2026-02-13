@@ -155,21 +155,21 @@ export const brands: Brand[] = [
         products: [
           {
             name: "562 XP® Mark II",
-            price: "Consultar",
+            price: "$999.95",
             sku: "HUS-562XP",
             description: "Profesional, 4.7 hp, 59.8 cm³. Alta capacidad de corte y diseño liviano.",
             image: `${CDN}/chainsaws/photos/studio/c/cw/cw-214781.webp?v=5a4a2f88e00e823d&format=WEBP_LANDSCAPE_CONTAIN_MD`,
           },
           {
             name: "460 Rancher",
-            price: "Consultar",
+            price: "$699.95",
             sku: "HUS-460R",
             description: "Uso rudo, 3.62 hp, 60.3 cm³. Motor X-TORQ® con alto torque.",
             image: `${CDN}/chainsaws/photos/studio/d/df/df-247350.webp?v=25c20f02e00e823d&format=WEBP_LANDSCAPE_CONTAIN_MD`,
           },
           {
             name: "455 Rancher",
-            price: "Consultar",
+            price: "$629.95",
             sku: "HUS-455R",
             description: "Uso rudo, 3.5 hp, 55.5 cm³. Potente y fácil de manejar.",
             image: `${CDN}/chainsaws/photos/studio/h/hc/hc-614481.webp?v=54d308cfe00e823d&format=WEBP_LANDSCAPE_CONTAIN_MD`,
@@ -238,7 +238,7 @@ export const brands: Brand[] = [
           },
           {
             name: "Husqvarna 122HD60",
-            price: "Consultar",
+            price: "$419.95",
             sku: "HUS-122HD60",
             description: "Ligero, uso doméstico. LowVib®, Smart Start® y Air Purge.",
             image: `${CDN}/hedge-trimmers/photos/studio/h210-0299.webp?v=d4968330e00e823d&format=WEBP_LANDSCAPE_CONTAIN_MD`,
