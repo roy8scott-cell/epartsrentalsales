@@ -39,14 +39,6 @@ const Header = ({ activeTab, onTabChange }: HeaderProps) => {
               {item.label}
             </button>
           ))}
-          <a
-            href="https://wa.me/17878524747?text=Hola%2C%20me%20interesa%20una%20pieza"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-whatsapp text-primary-foreground px-5 py-2 rounded-md font-heading font-bold text-sm hover:brightness-110 transition ml-4"
-          >
-            WhatsApp
-          </a>
         </nav>
 
         {/* Mobile toggle */}
@@ -75,14 +67,6 @@ const Header = ({ activeTab, onTabChange }: HeaderProps) => {
               {item.label}
             </button>
           ))}
-          <a
-            href="https://wa.me/17878524747?text=Hola%2C%20me%20interesa%20una%20pieza"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-whatsapp text-primary-foreground px-5 py-2 rounded-md font-heading font-bold text-sm text-center hover:brightness-110 transition"
-          >
-            WhatsApp
-          </a>
         </nav>
       )}
     </header>
