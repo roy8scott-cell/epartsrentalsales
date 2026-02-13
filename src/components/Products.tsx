@@ -125,13 +125,18 @@ const brands = [
 
 const Products = () => {
   const [activeBrand, setActiveBrand] = useState("husqvarna");
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [search, setSearch] = useState("");
   const brand = brands.find((b) => b.id === activeBrand)!;
 
   const filteredCategories = useMemo(() => {
-    if (!search.trim()) return brand.categories;
+    let cats = brand.categories;
+    if (activeCategory) {
+      cats = cats.filter((cat) => cat.name === activeCategory);
+    }
+    if (!search.trim()) return cats;
     const q = search.toLowerCase();
-    return brand.categories
+    return cats
       .map((cat) => ({
         ...cat,
         products: cat.products.filter(
@@ -142,7 +147,7 @@ const Products = () => {
         ),
       }))
       .filter((cat) => cat.products.length > 0);
-  }, [brand, search]);
+  }, [brand, search, activeCategory]);
 
   const totalResults = filteredCategories.reduce((sum, cat) => sum + cat.products.length, 0);
 
@@ -169,7 +174,7 @@ const Products = () => {
             {brands.map((b) => (
               <button
                 key={b.id}
-                onClick={() => { setActiveBrand(b.id); setSearch(""); }}
+                onClick={() => { setActiveBrand(b.id); setActiveCategory(null); setSearch(""); }}
                 className={`px-4 py-2 md:px-5 md:py-2.5 rounded-full md:rounded-lg font-heading font-bold text-xs md:text-sm uppercase tracking-wider transition-all border-2 whitespace-nowrap flex-shrink-0 ${
                   activeBrand === b.id
                     ? `${b.accent} bg-card shadow-md text-foreground`
@@ -177,6 +182,33 @@ const Products = () => {
                 }`}
               >
                 {b.name}
+              </button>
+            ))}
+          </div>
+
+          {/* Category Pills */}
+          <div className="flex gap-2 mb-3 overflow-x-auto pb-1 scrollbar-hide md:flex-wrap md:overflow-visible">
+            <button
+              onClick={() => setActiveCategory(null)}
+              className={`px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs font-heading font-semibold transition-all whitespace-nowrap flex-shrink-0 ${
+                activeCategory === null
+                  ? "bg-primary text-primary-foreground shadow-sm"
+                  : "bg-muted text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              Todas
+            </button>
+            {brand.categories.map((cat) => (
+              <button
+                key={cat.name}
+                onClick={() => setActiveCategory(cat.name)}
+                className={`px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs font-heading font-semibold transition-all whitespace-nowrap flex-shrink-0 ${
+                  activeCategory === cat.name
+                    ? "bg-primary text-primary-foreground shadow-sm"
+                    : "bg-muted text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {cat.name}
               </button>
             ))}
           </div>

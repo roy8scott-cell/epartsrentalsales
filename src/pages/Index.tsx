@@ -9,7 +9,6 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 const tabs = [
   { id: "inicio", label: "Inicio" },
   { id: "productos", label: "Productos" },
-  { id: "categorías", label: "Categorías" },
   { id: "contacto", label: "Contacto" },
 ];
 
@@ -22,7 +21,6 @@ const Index = () => {
       <main className="flex-1 overflow-y-auto">
         {activeTab === "inicio" && <Hero onNavigate={setActiveTab} />}
         {activeTab === "productos" && <Products />}
-        {activeTab === "categorías" && <Categories />}
         {activeTab === "contacto" && <Footer />}
       </main>
       <WhatsAppFloat />
