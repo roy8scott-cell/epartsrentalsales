@@ -18,8 +18,8 @@ const Header = ({ activeTab, onTabChange }: HeaderProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-secondary/95 backdrop-blur-sm border-b border-secondary">
-      <div className="container flex items-center justify-between py-1">
+    <header className="sticky top-0 z-50 bg-secondary/95 backdrop-blur-sm border-b border-secondary py-0">
+      <div className="container flex items-center justify-between">
         <button onClick={() => onTabChange("inicio")} className="flex items-center gap-3">
           <img src={logo} alt="E-Parts Rental & Sales" className="h-32 md:h-40 w-auto" />
         </button>
