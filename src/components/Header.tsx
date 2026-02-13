@@ -5,7 +5,6 @@ import logo from "@/assets/logo.png";
 const navItems = [
   { id: "inicio", label: "Inicio" },
   { id: "productos", label: "Productos" },
-  { id: "categorías", label: "Categorías" },
   { id: "contacto", label: "Contacto" },
 ];
 
