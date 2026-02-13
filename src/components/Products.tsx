@@ -1,7 +1,27 @@
 import { useState, useMemo } from "react";
 import { MessageCircle, Search, X } from "lucide-react";
 
-const brands = [
+type Product = {
+  name: string;
+  price: string;
+  sku: string;
+  description?: string;
+};
+
+type Category = {
+  name: string;
+  products: Product[];
+};
+
+type Brand = {
+  id: string;
+  name: string;
+  accent: string;
+  badge: string;
+  categories: Category[];
+};
+
+const brands: Brand[] = [
   {
     id: "husqvarna",
     name: "Husqvarna",
@@ -11,12 +31,37 @@ const brands = [
       {
         name: "Motosierras",
         products: [
+          { name: "Husqvarna 562 XP® Mark II", price: "$949.99", sku: "HUS-562XP", description: "59.8 cm³ · 4.7 hp · 70.2 fts. Alta capacidad de corte, diseño liviano y barras largas." },
           { name: 'Cadena Motosierra 16"', price: "$18.50", sku: "HUS-CH-16" },
           { name: 'Barra Guía 18"', price: "$35.00", sku: "HUS-BG-18" },
           { name: "Piñón de Cadena .325", price: "$12.00", sku: "HUS-PC-325" },
           { name: "Tensor de Cadena", price: "$9.50", sku: "HUS-TC-01" },
           { name: "Bomba de Aceite", price: "$28.00", sku: "HUS-BA-01" },
           { name: "Embrague Completo", price: "$42.00", sku: "HUS-EM-01" },
+        ],
+      },
+      {
+        name: "Hedge Trimmers",
+        products: [
+          { name: "Husqvarna 122HD60", price: "$369.99", sku: "HUS-122HD60", description: "23.2 in cuchilla · 10.8 lbs. LowVib®, Smart Start® y Air Purge." },
+          { name: "Husqvarna 322HD60", price: "$449.99", sku: "HUS-322HD60", description: "24 in cuchilla · 11.5 lbs. Cuchillas de acero endurecido, Smart Start® y mango trasero ajustable." },
+          { name: "Husqvarna 525HF3S", price: "$549.99", sku: "HUS-525HF3S", description: "25.59 in cuchilla · 13.4 lbs. Peso ligero, barra larga y engranajes duraderos." },
+          { name: "Husqvarna 525HE3", price: "$589.99", sku: "HUS-525HE3", description: "24 in cuchilla · 13 lbs. Motor X-TORQ®, Smart Start® y barra ajustable." },
+          { name: "Husqvarna 525HE4", price: "$629.99", sku: "HUS-525HE4", description: "24 in cuchilla · 13.1 lbs. Motor X-TORQ®, Smart Start® y barra ajustable." },
+        ],
+      },
+      {
+        name: "Pole Saws",
+        products: [
+          { name: "Husqvarna 122LKP", price: "$299.99", sku: "HUS-122LKP", description: "Alcance hasta 12 pies · 12.6 lbs. Cadena X-CUT® y lubricación automática." },
+        ],
+      },
+      {
+        name: "Zero-Turn Mowers",
+        products: [
+          { name: "Husqvarna Z254F Special Edition", price: "$3,699.00", sku: "HUS-Z254F", description: '54 in corte · 23.1 hp Kawasaki. ClearCut™ Fabricated Deck y marco ultra-duradero.' },
+          { name: "Husqvarna Z248F Special Edition", price: "$3,599.00", sku: "HUS-Z248F", description: '48 in corte · 21.5 hp Kawasaki. ClearCut™ Fabricated Deck y marco ultra-duradero.' },
+          { name: "Husqvarna Z242F Special Edition", price: "$3,499.00", sku: "HUS-Z242F", description: '42 in corte · 21.5 hp Kawasaki. ClearCut™ Fabricated Deck y marco ultra-duradero.' },
         ],
       },
       {
@@ -34,15 +79,6 @@ const brands = [
           { name: "Filtro de Aire Sopladora", price: "$8.99", sku: "HUS-FA-SOP" },
           { name: "Tubo Soplador", price: "$14.00", sku: "HUS-TS-01" },
           { name: "Boquilla Plana", price: "$6.50", sku: "HUS-BP-01" },
-        ],
-      },
-      {
-        name: "Repuestos Generales",
-        products: [
-          { name: "Bujía NGK para Husqvarna", price: "$4.50", sku: "HUS-BJ-NGK" },
-          { name: "Filtro de Combustible", price: "$3.50", sku: "HUS-FC-01" },
-          { name: "Arrancador de Retroceso", price: "$22.00", sku: "HUS-AR-01" },
-          { name: "Carburador Completo", price: "$38.00", sku: "HUS-CB-01" },
         ],
       },
     ],
@@ -282,6 +318,11 @@ const Products = () => {
                         <h4 className="font-heading font-bold text-card-foreground text-sm leading-tight md:min-h-[2.5rem]">
                           {product.name}
                         </h4>
+                        {product.description && (
+                          <p className="text-[11px] md:text-xs text-muted-foreground leading-snug mt-1 line-clamp-2">
+                            {product.description}
+                          </p>
+                        )}
                         <span className="text-lg font-heading font-black text-foreground md:hidden">
                           {product.price}
                         </span>
