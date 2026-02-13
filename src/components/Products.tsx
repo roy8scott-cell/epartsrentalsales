@@ -32,12 +32,6 @@ const brands: Brand[] = [
         name: "Motosierras",
         products: [
           { name: "Husqvarna 562 XP® Mark II", price: "$949.99", sku: "HUS-562XP", description: "59.8 cm³ · 4.7 hp · 70.2 fts. Alta capacidad de corte, diseño liviano y barras largas." },
-          { name: 'Cadena Motosierra 16"', price: "$18.50", sku: "HUS-CH-16" },
-          { name: 'Barra Guía 18"', price: "$35.00", sku: "HUS-BG-18" },
-          { name: "Piñón de Cadena .325", price: "$12.00", sku: "HUS-PC-325" },
-          { name: "Tensor de Cadena", price: "$9.50", sku: "HUS-TC-01" },
-          { name: "Bomba de Aceite", price: "$28.00", sku: "HUS-BA-01" },
-          { name: "Embrague Completo", price: "$42.00", sku: "HUS-EM-01" },
         ],
       },
       {
@@ -59,26 +53,9 @@ const brands: Brand[] = [
       {
         name: "Zero-Turn Mowers",
         products: [
-          { name: "Husqvarna Z254F Special Edition", price: "$3,699.00", sku: "HUS-Z254F", description: '54 in corte · 23.1 hp Kawasaki. ClearCut™ Fabricated Deck y marco ultra-duradero.' },
-          { name: "Husqvarna Z248F Special Edition", price: "$3,599.00", sku: "HUS-Z248F", description: '48 in corte · 21.5 hp Kawasaki. ClearCut™ Fabricated Deck y marco ultra-duradero.' },
-          { name: "Husqvarna Z242F Special Edition", price: "$3,499.00", sku: "HUS-Z242F", description: '42 in corte · 21.5 hp Kawasaki. ClearCut™ Fabricated Deck y marco ultra-duradero.' },
-        ],
-      },
-      {
-        name: "Trimmers",
-        products: [
-          { name: "Cabezal Trimmer T25", price: "$22.00", sku: "HUS-T25" },
-          { name: 'Línea de Corte .095" (1lb)', price: "$15.00", sku: "HUS-LC-095" },
-          { name: "Protector de Línea", price: "$8.00", sku: "HUS-PL-01" },
-          { name: "Eje Flexible", price: "$18.50", sku: "HUS-EF-01" },
-        ],
-      },
-      {
-        name: "Sopladoras",
-        products: [
-          { name: "Filtro de Aire Sopladora", price: "$8.99", sku: "HUS-FA-SOP" },
-          { name: "Tubo Soplador", price: "$14.00", sku: "HUS-TS-01" },
-          { name: "Boquilla Plana", price: "$6.50", sku: "HUS-BP-01" },
+          { name: "Husqvarna Z254F Special Edition", price: "$3,699.00", sku: "HUS-Z254F", description: "54 in corte · 23.1 hp Kawasaki. ClearCut™ Fabricated Deck y marco ultra-duradero." },
+          { name: "Husqvarna Z248F Special Edition", price: "$3,599.00", sku: "HUS-Z248F", description: "48 in corte · 21.5 hp Kawasaki. ClearCut™ Fabricated Deck y marco ultra-duradero." },
+          { name: "Husqvarna Z242F Special Edition", price: "$3,499.00", sku: "HUS-Z242F", description: "42 in corte · 21.5 hp Kawasaki. ClearCut™ Fabricated Deck y marco ultra-duradero." },
         ],
       },
     ],
@@ -88,74 +65,14 @@ const brands: Brand[] = [
     name: "Makita",
     accent: "border-teal-500",
     badge: "bg-teal-500/10 text-teal-600",
-    categories: [
-      {
-        name: "Baterías y Cargadores",
-        products: [
-          { name: "Batería 18V 5.0Ah", price: "$89.00", sku: "MAK-BT-18V5" },
-          { name: "Batería 18V 3.0Ah", price: "$55.00", sku: "MAK-BT-18V3" },
-          { name: "Cargador Rápido DC18RC", price: "$45.00", sku: "MAK-CR-18RC" },
-          { name: "Cargador Doble DC18RD", price: "$69.00", sku: "MAK-CR-18RD" },
-        ],
-      },
-      {
-        name: "Taladros",
-        products: [
-          { name: "Broca SDS-Plus Set 5pc", price: "$28.00", sku: "MAK-BR-SDS5" },
-          { name: "Mandril 13mm", price: "$19.00", sku: "MAK-MN-13" },
-          { name: "Carbones para Taladro", price: "$7.00", sku: "MAK-CB-TAL" },
-          { name: "Portabrocas Rápido", price: "$24.00", sku: "MAK-PB-01" },
-        ],
-      },
-      {
-        name: "Accesorios",
-        products: [
-          { name: 'Disco de Corte 4.5"', price: "$6.50", sku: "MAK-DC-45" },
-          { name: "Disco Diamantado 4.5\"", price: "$18.00", sku: "MAK-DD-45" },
-          { name: "Lija Orbital Set 10pc", price: "$12.00", sku: "MAK-LO-10" },
-        ],
-      },
-    ],
+    categories: [],
   },
   {
     id: "milwaukee",
     name: "Milwaukee",
     accent: "border-red-600",
     badge: "bg-red-600/10 text-red-600",
-    categories: [
-      {
-        name: "Baterías",
-        products: [
-          { name: "Batería M18 RedLithium 5.0Ah", price: "$95.00", sku: "MIL-M18-5" },
-          { name: "Batería M18 RedLithium 3.0Ah", price: "$65.00", sku: "MIL-M18-3" },
-          { name: "Batería M12 RedLithium", price: "$45.00", sku: "MIL-M12-2" },
-        ],
-      },
-      {
-        name: "Sierras",
-        products: [
-          { name: "Sierra Sable Blade Set", price: "$32.00", sku: "MIL-SS-SET" },
-          { name: "Hoja Sierra Circular 7.25\"", price: "$28.00", sku: "MIL-SC-725" },
-          { name: "Hoja Sierra Caladora Set", price: "$18.00", sku: "MIL-SJ-SET" },
-        ],
-      },
-      {
-        name: "Taladros",
-        products: [
-          { name: "Broca Paso Titanio", price: "$24.00", sku: "MIL-BPT-01" },
-          { name: "Punta de Impacto Set 20pc", price: "$15.00", sku: "MIL-PI-20" },
-          { name: "Broca Cobalto Set 15pc", price: "$38.00", sku: "MIL-BC-15" },
-        ],
-      },
-      {
-        name: "Accesorios y Protección",
-        products: [
-          { name: "Cinta Métrica 8m", price: "$18.00", sku: "MIL-CM-8" },
-          { name: "Guantes de Trabajo XL", price: "$22.00", sku: "MIL-GT-XL" },
-          { name: "Organizador PACKOUT", price: "$35.00", sku: "MIL-PO-01" },
-        ],
-      },
-    ],
+    categories: [],
   },
 ];
 
