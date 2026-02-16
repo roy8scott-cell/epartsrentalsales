@@ -1,35 +1,36 @@
+import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
 
 interface HeroProps {
-  onNavigate: (tab: string) => void;
+  onNavigate?: (tab: string) => void;
 }
 
 const Hero = ({ onNavigate }: HeroProps) => {
   return (
-    <section className="relative overflow-hidden min-h-full flex items-center">
+    <section className="relative overflow-hidden min-h-[70vh] flex items-center">
       <div className="absolute inset-0">
-        <img src={heroBg} alt="" className="w-full h-full object-cover" />
+        <img src={heroBg} alt="Equipos de jardinería Husqvarna en Puerto Rico" className="w-full h-full object-cover" loading="eager" />
         <div className="absolute inset-0 bg-secondary/80" />
       </div>
       <div className="relative container py-24 md:py-36 flex flex-col items-center text-center gap-6">
         <span className="bg-primary/20 text-primary px-4 py-1.5 rounded-full font-heading font-bold text-xs uppercase tracking-widest">
-          Equipos de Jardinería y Hogar
+          Equipos de Jardinería y Hogar en Humacao, PR
         </span>
         <h1 className="text-4xl md:text-6xl font-heading font-black text-secondary-foreground leading-tight max-w-3xl">
           Piezas y Equipos para tu{" "}
           <span className="text-primary">Jardín y Hogar</span>
         </h1>
         <p className="text-secondary-foreground/70 text-lg md:text-xl max-w-xl font-body">
-          Venta y renta de piezas para motosierras, trimmers, taladros y más.
-          Compra fácil por WhatsApp.
+          Venta y renta de motosierras, trimmers, sopladoras y tractores Husqvarna en Puerto Rico.
+          Compra fácil por WhatsApp con envío rápido.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 mt-4">
-          <button
-            onClick={() => onNavigate("productos")}
+          <Link
+            to="/productos"
             className="bg-primary text-primary-foreground px-8 py-3.5 rounded-md font-heading font-bold text-sm uppercase tracking-wider hover:brightness-110 transition"
           >
             Ver Productos
-          </button>
+          </Link>
           <a
             href="https://wa.me/17878094747?text=Hola%2C%20quiero%20información%20sobre%20piezas"
             target="_blank"

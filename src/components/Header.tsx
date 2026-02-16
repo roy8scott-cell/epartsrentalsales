@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
+
+const routeMap: Record<string, string> = {
+  inicio: "/",
+  productos: "/productos",
+  contacto: "/contacto",
+};
 
 const navItems = [
   { id: "inicio", label: "Inicio" },
@@ -19,15 +26,16 @@ const Header = ({ activeTab, onTabChange }: HeaderProps) => {
   return (
     <header className="sticky top-0 z-50 bg-secondary/95 backdrop-blur-sm border-b border-secondary py-0">
       <div className="container flex items-center justify-between">
-        <button onClick={() => onTabChange("inicio")} className="flex items-center gap-3">
-          <img src={logo} alt="E-Parts Rental & Sales" className="h-16 md:h-20 w-auto" />
-        </button>
+        <Link to="/" onClick={() => onTabChange("inicio")} className="flex items-center gap-3">
+          <img src={logo} alt="E-Parts Rental & Sales — equipos de jardinería en Humacao PR" className="h-16 md:h-20 w-auto" />
+        </Link>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-1">
           {navItems.map((item) => (
-            <button
+            <Link
               key={item.id}
+              to={routeMap[item.id]}
               onClick={() => onTabChange(item.id)}
               className={`px-4 py-2 rounded-md font-heading font-semibold text-sm uppercase tracking-wider transition-colors ${
                 activeTab === item.id
@@ -36,7 +44,7 @@ const Header = ({ activeTab, onTabChange }: HeaderProps) => {
               }`}
             >
               {item.label}
-            </button>
+            </Link>
           ))}
         </nav>
 
@@ -54,8 +62,9 @@ const Header = ({ activeTab, onTabChange }: HeaderProps) => {
       {menuOpen && (
         <nav className="md:hidden bg-secondary border-t border-border px-6 pb-4 flex flex-col gap-2">
           {navItems.map((item) => (
-            <button
+            <Link
               key={item.id}
+              to={routeMap[item.id]}
               onClick={() => { onTabChange(item.id); setMenuOpen(false); }}
               className={`text-left px-3 py-2 rounded-md font-heading font-semibold text-sm uppercase tracking-wider transition-colors ${
                 activeTab === item.id
@@ -64,7 +73,7 @@ const Header = ({ activeTab, onTabChange }: HeaderProps) => {
               }`}
             >
               {item.label}
-            </button>
+            </Link>
           ))}
         </nav>
       )}
