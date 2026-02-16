@@ -5,8 +5,8 @@ import Footer from "@/components/Footer";
 const ProductosPage = () => (
   <>
     <SEOHead
-      title="Productos Husqvarna en Puerto Rico | E-Parts"
-      description="Catálogo de motosierras, trimmers, sopladoras y tractores Husqvarna. Precios, fotos y compra directa por WhatsApp desde Humacao, PR."
+      title="Equipos Husqvarna, Makita y Milwaukee | E-Parts PR"
+      description="Motosierras, trimmers, sopladoras Husqvarna. Herramientas Makita y Milwaukee con garantía. Compra por WhatsApp en Humacao, Puerto Rico."
       canonical="https://epartsrentalsales.lovable.app/productos"
     />
     <Products />
