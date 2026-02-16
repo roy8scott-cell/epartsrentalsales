@@ -4,8 +4,8 @@ import Footer from "@/components/Footer";
 const ContactoPage = () => (
   <>
     <SEOHead
-      title="Contacto | E-Parts Rental & Sales Humacao PR"
-      description="Contáctanos por WhatsApp al (787) 809-4747 o visítanos en Calle Cruz Ortiz Stella #117, Humacao, Puerto Rico 00791."
+      title="Contacto | Reparación Makita y Milwaukee Humacao"
+      description="Reparación Makita, reparación Milwaukee, arreglos de trimmers y plantas eléctricas. WhatsApp (787) 809-4747. Humacao, PR 00791."
       canonical="https://epartsrentalsales.lovable.app/contacto"
     />
     <main className="min-h-[60vh]">

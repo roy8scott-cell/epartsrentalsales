@@ -3,7 +3,7 @@ const JsonLd = () => {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "E-Parts Rental & Sales",
-    description: "Venta y renta de equipos y piezas de jardinería en Humacao, Puerto Rico. Distribuidor autorizado Husqvarna.",
+    description: "Dealer autorizado Makita y Milwaukee en Puerto Rico. Reparación, garantía, arreglos de trimmers, máquinas de presión y plantas eléctricas en Humacao, PR.",
     url: "https://epartsrentalsales.lovable.app",
     telephone: "+17878094747",
     email: "epartsrental@yahoo.com",
@@ -23,6 +23,19 @@ const JsonLd = () => {
     areaServed: "Puerto Rico",
     priceRange: "$$",
     sameAs: ["https://instagram.com/epartsrentalsales"],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Servicios de reparación y garantía",
+      itemListElement: [
+        "Arreglos de máquina de presión",
+        "Arreglos de plantas eléctricas",
+        "Reparación Makita",
+        "Reparación Milwaukee",
+        "Garantía Makita",
+        "Garantía Milwaukee",
+        "Arreglos de trimmers",
+      ],
+    },
   };
 
   return (

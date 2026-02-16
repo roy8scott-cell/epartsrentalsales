@@ -13,8 +13,8 @@ const HomePage = () => {
   return (
     <>
       <SEOHead
-        title="E-Parts Rental & Sales | Equipos de Jardín en Humacao, PR"
-        description="Venta y renta de equipos y piezas de jardinería Husqvarna en Humacao, Puerto Rico. Compra fácil por WhatsApp. +10 años de experiencia."
+        title="E-Parts | Dealer Makita y Milwaukee Humacao PR"
+        description="Dealer Makita y Milwaukee en Puerto Rico. Reparación, garantía, arreglos de trimmers, máquinas de presión y plantas eléctricas. Humacao, PR."
         canonical="https://epartsrentalsales.lovable.app/"
       />
       <JsonLd />
