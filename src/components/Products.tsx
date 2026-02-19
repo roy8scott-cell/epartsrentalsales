@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
-import { MessageCircle, Search, X, ArrowUpDown } from "lucide-react";
+import { ShoppingCart, Search, X, ArrowUpDown, Check } from "lucide-react";
 import { brands, type Product } from "@/data/products";
+import { useCart } from "@/context/CartContext";
 
 type SortOption = "price-asc" | "price-desc" | "name-asc";
 
@@ -240,32 +241,18 @@ const Products = () => {
                         </span>
                       </div>
 
-                      {/* Desktop: price + button */}
+                      {/* Desktop: price + add to cart */}
                       <div className="hidden md:flex items-center justify-between px-4 pb-4 pt-2 border-t border-border mx-4">
                         <span className="text-lg font-heading font-black text-foreground">
                           {product.price}
                         </span>
-                        <a
-                          href={`https://wa.me/17878094747?text=Hola%2C%20me%20interesa%20${encodeURIComponent(product.name)}%20(${brand.name})%20-%20${product.sku}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="bg-whatsapp text-primary-foreground px-3 py-1.5 rounded-md text-xs font-heading font-bold flex items-center gap-1 hover:brightness-110 transition"
-                        >
-                          <MessageCircle size={14} />
-                          Comprar
-                        </a>
+                        <AddToCartButton product={product} brandName={brand.name} />
                       </div>
 
-                      {/* Mobile: buy button */}
-                      <a
-                        href={`https://wa.me/17878094747?text=Hola%2C%20me%20interesa%20${encodeURIComponent(product.name)}%20(${brand.name})%20-%20${product.sku}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="md:hidden bg-whatsapp text-primary-foreground px-4 py-2.5 rounded-full text-xs font-heading font-bold flex items-center gap-1.5 hover:brightness-110 transition flex-shrink-0 shadow-sm mr-3"
-                      >
-                        <MessageCircle size={14} />
-                        Comprar
-                      </a>
+                      {/* Mobile: add to cart */}
+                      <div className="md:hidden flex-shrink-0 mr-3">
+                        <AddToCartButton product={product} brandName={brand.name} mobile />
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -275,6 +262,52 @@ const Products = () => {
         )}
       </div>
     </section>
+  );
+};
+
+const AddToCartButton = ({ product, brandName, mobile }: { product: Product; brandName: string; mobile?: boolean }) => {
+  const { addItem, items, setIsOpen } = useCart();
+  const [justAdded, setJustAdded] = useState(false);
+  const inCart = items.find((i) => i.product.sku === product.sku);
+
+  const handleAdd = () => {
+    addItem(product, brandName);
+    setJustAdded(true);
+    setTimeout(() => setJustAdded(false), 1200);
+  };
+
+  if (mobile) {
+    return (
+      <button
+        onClick={inCart ? () => setIsOpen(true) : handleAdd}
+        className={`px-4 py-2.5 rounded-full text-xs font-heading font-bold flex items-center gap-1.5 transition flex-shrink-0 shadow-sm ${
+          justAdded
+            ? "bg-green-500 text-white"
+            : inCart
+            ? "bg-primary/10 text-primary border border-primary/30"
+            : "bg-primary text-primary-foreground hover:brightness-110"
+        }`}
+      >
+        {justAdded ? <Check size={14} /> : <ShoppingCart size={14} />}
+        {justAdded ? "Agregado" : inCart ? `En carrito (${inCart.quantity})` : "Agregar"}
+      </button>
+    );
+  }
+
+  return (
+    <button
+      onClick={inCart ? () => setIsOpen(true) : handleAdd}
+      className={`px-3 py-1.5 rounded-md text-xs font-heading font-bold flex items-center gap-1 transition ${
+        justAdded
+          ? "bg-green-500 text-white"
+          : inCart
+          ? "bg-primary/10 text-primary border border-primary/30 hover:bg-primary/20"
+          : "bg-primary text-primary-foreground hover:brightness-110"
+      }`}
+    >
+      {justAdded ? <Check size={14} /> : <ShoppingCart size={14} />}
+      {justAdded ? "Agregado" : inCart ? `En carrito (${inCart.quantity})` : "Agregar"}
+    </button>
   );
 };
 
