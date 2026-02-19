@@ -1,11 +1,31 @@
 import { useState, useMemo } from "react";
-import { MessageCircle, Search, X } from "lucide-react";
-import { brands } from "@/data/products";
+import { MessageCircle, Search, X, ArrowUpDown } from "lucide-react";
+import { brands, type Product } from "@/data/products";
+
+type SortOption = "price-asc" | "price-desc" | "name-asc";
+
+const parsePrice = (price: string): number =>
+  parseFloat(price.replace(/[^0-9.]/g, "")) || 0;
+
+const sortProducts = (products: Product[], sort: SortOption): Product[] => {
+  const sorted = [...products];
+  switch (sort) {
+    case "price-asc":
+      return sorted.sort((a, b) => parsePrice(a.price) - parsePrice(b.price));
+    case "price-desc":
+      return sorted.sort((a, b) => parsePrice(b.price) - parsePrice(a.price));
+    case "name-asc":
+      return sorted.sort((a, b) => a.name.localeCompare(b.name));
+    default:
+      return sorted;
+  }
+};
 
 const Products = () => {
   const [activeBrand, setActiveBrand] = useState("husqvarna");
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [search, setSearch] = useState("");
+  const [sort, setSort] = useState<SortOption>("price-asc");
   const brand = brands.find((b) => b.id === activeBrand)!;
 
   const filteredCategories = useMemo(() => {
@@ -13,21 +33,27 @@ const Products = () => {
     if (activeCategory) {
       cats = cats.filter((cat) => cat.name === activeCategory);
     }
-    if (!search.trim()) return cats;
-    const q = search.toLowerCase();
-    return cats
-      .map((cat) => ({
-        ...cat,
-        products: cat.products.filter(
-          (p) =>
-            p.name.toLowerCase().includes(q) ||
-            p.sku.toLowerCase().includes(q) ||
-            p.description.toLowerCase().includes(q) ||
-            cat.name.toLowerCase().includes(q)
-        ),
-      }))
-      .filter((cat) => cat.products.length > 0);
-  }, [brand, search, activeCategory]);
+    const q = search.toLowerCase().trim();
+    const filtered = q
+      ? cats
+          .map((cat) => ({
+            ...cat,
+            products: cat.products.filter(
+              (p) =>
+                p.name.toLowerCase().includes(q) ||
+                p.sku.toLowerCase().includes(q) ||
+                p.description.toLowerCase().includes(q) ||
+                cat.name.toLowerCase().includes(q)
+            ),
+          }))
+          .filter((cat) => cat.products.length > 0)
+      : cats;
+
+    return filtered.map((cat) => ({
+      ...cat,
+      products: sortProducts(cat.products, sort),
+    }));
+  }, [brand, search, activeCategory, sort]);
 
   const totalResults = filteredCategories.reduce((sum, cat) => sum + cat.products.length, 0);
 
@@ -94,24 +120,38 @@ const Products = () => {
             </div>
           )}
 
-          {/* Search Bar */}
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" size={18} />
-            <input
-              type="text"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              placeholder={`Buscar en ${brand.name}...`}
-              className="w-full pl-10 pr-10 py-2.5 md:py-3 rounded-full md:rounded-lg border border-border bg-card text-foreground placeholder:text-muted-foreground font-body text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition md:max-w-md"
-            />
-            {search && (
-              <button
-                onClick={() => setSearch("")}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+          {/* Search & Sort */}
+          <div className="flex gap-2 items-center">
+            <div className="relative flex-1 md:max-w-md">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" size={18} />
+              <input
+                type="text"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder={`Buscar en ${brand.name}...`}
+                className="w-full pl-10 pr-10 py-2.5 md:py-3 rounded-full md:rounded-lg border border-border bg-card text-foreground placeholder:text-muted-foreground font-body text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition"
+              />
+              {search && (
+                <button
+                  onClick={() => setSearch("")}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                >
+                  <X size={18} />
+                </button>
+              )}
+            </div>
+            <div className="relative flex-shrink-0">
+              <ArrowUpDown className="absolute left-2.5 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none" size={14} />
+              <select
+                value={sort}
+                onChange={(e) => setSort(e.target.value as SortOption)}
+                className="pl-8 pr-3 py-2.5 md:py-3 rounded-full md:rounded-lg border border-border bg-card text-foreground font-body text-xs md:text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition appearance-none cursor-pointer"
               >
-                <X size={18} />
-              </button>
-            )}
+                <option value="price-asc">Menor precio</option>
+                <option value="price-desc">Mayor precio</option>
+                <option value="name-asc">Nombre A-Z</option>
+              </select>
+            </div>
           </div>
 
           {search && (
