@@ -362,9 +362,9 @@ export const brands: Brand[] = [
       {
         name: "Rotary Hammers",
         products: [
-          { name: "Makita HR4041C", price: "$634.95", sku: "MAK-HR4041C", description: '1-9/16" Rotary Hammer, accepts Spline bits.', image: `${MCDN}/hr4/97fbfe39-1630-4576-ba10-d85cd6e8519c_hr4041c_k_1500px.png` },
+          { name: "Makita HR4041C", price: "$634.95", sku: "MAK-HR4041C", description: '1-9/16" Rotary Hammer, accepts Spline bits. 11 AMP motor delivers 230-460 RPM and 1,300-2,600 BPM. Constant speed control maintains speed under load.', image: `${MCDN}/hr4/97fbfe39-1630-4576-ba10-d85cd6e8519c_hr4041c_k_1500px.png` },
           { name: "Makita HR2641X1", price: "$299.95", sku: "MAK-HR2641X1", description: '8 Amp 1 in. Corded SDS-Plus Concrete/Masonry AVT Rotary Hammer Drill with 4-1/2 in. Corded Angle Grinder with Hard Case.', image: `${MCDN}/hr2/7dd522a4-2814-425f-b4f2-2791d2a2bb3c_hr2641x1_k_1500px.png` },
-          { name: "Makita HR2811F", price: "$394.95", sku: "MAK-HR2811F", description: '1-1/8" Rotary Hammer, accepts SDS-PLUS bits.', image: `${MCDN}/hr2/64fcb31b-f282-4009-aab6-a42956b2b963_hr2811f_k_1500px.png` },
+          { name: "Makita HR2811F", price: "$394.95", sku: "MAK-HR2811F", description: '1-1/8" SDS-PLUS Rotary Hammer. 7.0 AMP motor delivers 0-1,100 RPM and 0-4,500 BPM. 3-mode operation: Rotation Only, Hammering with Rotation, or Hammering Only.', image: `${MCDN}/hr2/64fcb31b-f282-4009-aab6-a42956b2b963_hr2811f_k_1500px.png` },
           { name: "Makita XRH04Z", price: "$229.95", sku: "MAK-XRH04Z", description: '18V LXT Lithium-Ion 7/8 in. Cordless SDS-Plus Concrete/Masonry Rotary Hammer Drill (Tool-Only).', image: `${MCDN}/xrh/42c3feff-641f-4aa1-b070-8cd163df8220_xrh04z_p_1500px.png` },
         ],
       },
@@ -372,9 +372,9 @@ export const brands: Brand[] = [
         name: "Demolition Hammers",
         products: [
           { name: "Makita HM1307CB", price: "$1,359.95", sku: "MAK-HM1307CB", description: '14 Amp 1-1/8 in. Hex Corded Variable Speed 35 lb. Demolition Hammer w/ Soft Start, LED, (1) Bull Point and Hard Case.', image: `${MCDN}/hm1/01b6d0e9-0260-439a-abc4-442b08ef7d56_hm1307cb_k_1500px.png` },
-          { name: "Makita HM0810B", price: "$589.95", sku: "MAK-HM0810B", description: "13 lb. Demolition Hammer, Spline Bits.", image: `${MCDN}/hm0/58c3f24e-58a6-4d2b-a667-06c85ca34852_hm0810b_k_1500px.png` },
-          { name: "Makita HM1211B", price: "$879.95", sku: "MAK-HM1211B", description: '20 lb. Demolition Hammer, accepts 3/4" Hex bits.', image: `${MCDN}/hm1/2a5d5d8c-2109-4057-b4d2-284ee9669e81_hm1211b_k_1500px.png` },
-          { name: "Makita HM1214C", price: "$1,199.95", sku: "MAK-HM1214C", description: "27 lb. AVT Demolition Hammer, accepts SDS-MAX bits.", image: `${MCDN}/hm1/975f21eb-27a7-42ee-b648-1de2088de441_hm1214c_k_1500px.png` },
+          { name: "Makita HM0810B", price: "$589.95", sku: "MAK-HM0810B", description: '13 lb. Demolition Hammer, accepts 3/4" Hex bits. 8.3 AMP motor delivers 2,900 BPM. Lock-on button for continuous use, one-touch tool retainer for quick bit changes.', image: `${MCDN}/hm0/58c3f24e-58a6-4d2b-a667-06c85ca34852_hm0810b_k_1500px.png` },
+          { name: "Makita HM1211B", price: "$879.95", sku: "MAK-HM1211B", description: '20 lb. Demolition Hammer, accepts 3/4" Hex bits. 10 AMP motor for faster and more efficient operation. D-shaped grip side handle absorbs vibration and secures in 4 positions.', image: `${MCDN}/hm1/2a5d5d8c-2109-4057-b4d2-284ee9669e81_hm1211b_k_1500px.png` },
+          { name: "Makita HM1214C", price: "$1,199.95", sku: "MAK-HM1214C", description: '27 lb. SDS-MAX AVT Demolition Hammer. 14 AMP motor for demanding jobs. Makita exclusive AVT counterbalance system reduces vibration. Variable speed control dial.', image: `${MCDN}/hm1/975f21eb-27a7-42ee-b648-1de2088de441_hm1214c_k_1500px.png` },
         ],
       },
       {
@@ -411,18 +411,18 @@ export const brands: Brand[] = [
       {
         name: "Grinders",
         products: [
-          { name: "Makita 9557PB", price: "$109.95", sku: "MAK-9557PB", description: '4-1/2" Paddle Switch Angle Grinder.', image: `${MCDN}/955/95b8b5bb-f9cd-42a0-9331-eb3de17cf43e_9557pb_p_1500px.png` },
-          { name: "Makita GA7021", price: "$229.95", sku: "MAK-GA7021", description: '7" Angle Grinder, with AC/DC Switch.', image: `${MCDN}/ga7/ef50e1f5-ee92-48ae-a32c-0d3175abf62f_ga7021_p_1500px.png` },
-          { name: "Makita XAG26Z", price: "$209.95", sku: "MAK-XAG26Z", description: '18V LXT 5" Paddle X-LOCK Angle Grinder, w/ AFT.', image: `${MCDN}/xag/bd2a2a59-1098-4bc7-b31e-8954e8e96bb2_xag26z_p_1500px.png` },
+          { name: "Makita 9557PB", price: "$109.95", sku: "MAK-9557PB", description: '4-1/2" Paddle Switch Angle Grinder with AC/DC Switch. 7.5 AMP motor delivers 11,000 RPM. Large paddle switch for easy operation, weighs only 4.5 lbs.', image: `${MCDN}/955/95b8b5bb-f9cd-42a0-9331-eb3de17cf43e_9557pb_p_1500px.png` },
+          { name: "Makita GA7021", price: "$229.95", sku: "MAK-GA7021", description: '7" Angle Grinder with AC/DC Switch. 15 AMP motor delivers 6,600 RPM. Rubberized soft grip handle, labyrinth construction with zig-zag varnish for longer tool life.', image: `${MCDN}/ga7/ef50e1f5-ee92-48ae-a32c-0d3175abf62f_ga7021_p_1500px.png` },
+          { name: "Makita XAG26Z", price: "$209.95", sku: "MAK-XAG26Z", description: '18V LXT Brushless Cordless 4-1/2" / 5" Paddle Switch X-LOCK Angle Grinder with AFT (Active Feedback-sensing Technology). Tool Only. One-touch X-LOCK accessory changes.', image: `${MCDN}/xag/bd2a2a59-1098-4bc7-b31e-8954e8e96bb2_xag26z_p_1500px.png` },
         ],
       },
       {
         name: "Saws & Cutters",
         products: [
-          { name: "Makita LW1401", price: "$314.95", sku: "MAK-LW1401", description: '14" Cut-off Saw.', image: `${MCDN}/lw1/b6168d1b-e173-49d5-9746-e97a65b0b71d_lw1401_p_1500px.png` },
+          { name: "Makita LW1401", price: "$314.95", sku: "MAK-LW1401", description: '14" Cut-Off Saw. Powerful 15 AMP motor delivers 3,800 RPM. Adjustable spark guard, fence adjustment up to 45° for various material sizes.', image: `${MCDN}/lw1/b6168d1b-e173-49d5-9746-e97a65b0b71d_lw1401_p_1500px.png` },
           { name: "Makita XSH04ZB", price: "$209.95", sku: "MAK-XSH04ZB", description: '18V 6-1/2 in. LXT Sub-Compact Lithium-Ion Brushless Cordless Circular Saw (Tool Only).', image: `${MCDN}/xsh/08251556-83ad-480d-9406-8dd5940ef32d_xsh04zb_p_1500px.png` },
-          { name: "Makita XEC01PT1", price: "$1,099.95", sku: "MAK-XEC01PT1", description: '18V X2 LXT Brushless 9" Power Cutter Kit w/ 4 Batteries.', image: `${MCDN}/xec/cc62df9a-71ab-4a76-850e-5aaeddfdddba_xec01pt1_k_1500px.png` },
-          { name: "Makita GEC01PL", price: "$2,269.95", sku: "MAK-GEC01PL", description: '40V max X2 XGT 14" Power Cutter Kit.', image: `${MCDN}/gec/e931e332-d5a0-4310-b2b0-bfc88f701eb5_gec01pl_k_1500px.png` },
+          { name: "Makita XEC01PT1", price: "$1,099.95", sku: "MAK-XEC01PT1", description: '36V (18V X2) LXT Brushless 9" Power Cutter Kit with AFT, Electric Brake, 4 Batteries (5.0 Ah). Cuts up to 3-5/8" deep with a 9" diamond blade.', image: `${MCDN}/xec/cc62df9a-71ab-4a76-850e-5aaeddfdddba_xec01pt1_k_1500px.png` },
+          { name: "Makita GEC01PL", price: "$2,269.95", sku: "MAK-GEC01PL", description: '80V max (40V max X2) XGT Brushless 14" Power Cutter Kit with AFT, Electric Brake (8.0Ah). Cuts up to 5" deep with a 14" diamond blade. Zero emissions.', image: `${MCDN}/gec/e931e332-d5a0-4310-b2b0-bfc88f701eb5_gec01pl_k_1500px.png` },
         ],
       },
     ],
