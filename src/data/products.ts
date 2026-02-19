@@ -357,7 +357,74 @@ export const brands: Brand[] = [
     name: "Makita",
     accent: "border-teal-500",
     badge: "bg-teal-500/10 text-teal-600",
-    categories: [],
+    categories: [
+      {
+        name: "Rotary Hammers",
+        products: [
+          { name: "Makita HR4041C", price: "$634.95", sku: "MAK-HR4041C", description: '1-9/16" Rotary Hammer, accepts Spline bits. Potente para concreto y mampostería.' },
+          { name: "Makita HR2641X1", price: "$299.95", sku: "MAK-HR2641X1", description: '8 Amp SDS-Plus Rotary Hammer + 4-1/2" Angle Grinder Kit. Combo versátil.' },
+          { name: "Makita HR2811F", price: "$394.95", sku: "MAK-HR2811F", description: '1-1/8" Rotary Hammer, SDS-PLUS bits. Ideal para perforación pesada.' },
+          { name: "Makita XRH04Z", price: "$229.95", sku: "MAK-XRH04Z", description: '18V LXT 7/8" Cordless SDS-Plus Rotary Hammer. Sin cable, máxima movilidad.' },
+        ],
+      },
+      {
+        name: "Demolition Hammers",
+        products: [
+          { name: "Makita HM1307CB", price: "$1,359.95", sku: "MAK-HM1307CB", description: '35 lb. Demolition Hammer, 14 Amp, 1-1/8" Hex, velocidad variable con LED.' },
+          { name: "Makita HM0810B", price: "$589.95", sku: "MAK-HM0810B", description: "13 lb. Demolition Hammer, Spline Bits. Compacto y potente." },
+          { name: "Makita HM1211B", price: "$879.95", sku: "MAK-HM1211B", description: '20 lb. Demolition Hammer, 3/4" Hex bits. Para trabajos de demolición mediana.' },
+          { name: "Makita HM1214C", price: "$1,199.95", sku: "MAK-HM1214C", description: "27 lb. AVT Demolition Hammer, SDS-MAX bits. Anti-vibración avanzada." },
+        ],
+      },
+      {
+        name: "Garden Equipment",
+        products: [
+          { name: "Makita XUX02SM1X1", price: "$299.95", sku: "MAK-XUX02SM1X1", description: '18V LXT Brushless Couple Shaft Kit con 13" String Trimmer (4.0Ah).' },
+          { name: "Makita XUX02SM1X3", price: "$349.95", sku: "MAK-XUX02SM1X3", description: '18V LXT Brushless Couple Shaft Kit con 13" String Trimmer & Blower.' },
+          { name: "Makita XUX02SM1X4", price: "$289.95", sku: "MAK-XUX02SM1X4", description: '18V LXT Brushless Couple Shaft Kit con String Trimmer & 10" Pole Saw.' },
+          { name: "Makita XUX02SM1X5", price: "$499.95", sku: "MAK-XUX02SM1X5", description: "18V LXT Brushless Kit con Trimmer, Pole Saw & Hedge Trimmer." },
+          { name: "Makita XUX02SM1X6", price: "$599.95", sku: "MAK-XUX02SM1X6", description: "18V LXT Kit completo: Trimmer, Pole Saw, Hedge Trimmer & Blower." },
+          { name: "Makita XBU03SM1", price: "$299.95", sku: "MAK-XBU03SM1", description: "18V LXT Brushless Cordless Leaf Blower Kit. 116 MPH, 459 CFM." },
+          { name: "Makita XCU10SM1", price: "$319.95", sku: "MAK-XCU10SM1", description: '18V LXT 10" Brushless Battery Top Handle Chain Saw.' },
+        ],
+      },
+      {
+        name: "Drills & Drivers",
+        products: [
+          { name: "Makita XPH12Z", price: "$159.95", sku: "MAK-XPH12Z", description: '18V LXT 1/2" Brushless Cordless Hammer Driver-Drill. Tool Only.' },
+          { name: "Makita XDT14Z", price: "$169.95", sku: "MAK-XDT14Z", description: '18V LXT Brushless 1/4" Quick-Shift 3-Speed Impact Driver.' },
+          { name: "Makita XFD10SY", price: "$179.95", sku: "MAK-XFD10SY", description: '18V LXT Compact 1/2" Variable Speed Driver Drill Kit (1.5 Ah).' },
+          { name: "Makita XDT11SY", price: "$179.95", sku: "MAK-XDT11SY", description: '18V LXT Compact 1/4" Variable Speed Impact Driver Kit (1.5 Ah).' },
+          { name: "Makita XT296SMR", price: "$289.95", sku: "MAK-XT296SMR", description: "18V LXT Brushless Hammer Drill & Impact Driver Combo Kit (2-Tool)." },
+        ],
+      },
+      {
+        name: "Impact Wrenches & Ratchets",
+        products: [
+          { name: "Makita XWT08Z", price: "$339.95", sku: "MAK-XWT08Z", description: '18V LXT Brushless High Torque 1/2" Impact Wrench. Tool-Only.' },
+          { name: "Makita XWT08T", price: "$629.95", sku: "MAK-XWT08T", description: '18V LXT Brushless High Torque 1/2" Impact Wrench Kit con 2 baterías.' },
+          { name: "Makita XWT04S1", price: "$289.95", sku: "MAK-XWT04S1", description: '18V LXT Cordless 1/2" Sq. Drive Impact Wrench Kit (3.0Ah).' },
+          { name: "Makita XRW01Z", price: "$199.95", sku: "MAK-XRW01Z", description: '18V LXT Cordless 3/8" & 1/4" Square Drive Ratchet. Tool-Only.' },
+        ],
+      },
+      {
+        name: "Grinders",
+        products: [
+          { name: "Makita 9557PB", price: "$109.95", sku: "MAK-9557PB", description: '4-1/2" Paddle Switch Angle Grinder. Compacto y confiable.' },
+          { name: "Makita GA7021", price: "$229.95", sku: "MAK-GA7021", description: '7" Angle Grinder con AC/DC Switch. Para corte y desbaste pesado.' },
+          { name: "Makita XAG26Z", price: "$209.95", sku: "MAK-XAG26Z", description: '18V LXT 5" Paddle X-LOCK Angle Grinder con AFT. Tool-Only.' },
+        ],
+      },
+      {
+        name: "Saws & Cutters",
+        products: [
+          { name: "Makita LW1401", price: "$314.95", sku: "MAK-LW1401", description: '14" Cut-off Saw. Para corte de metal y materiales duros.' },
+          { name: "Makita XSH04ZB", price: "$209.95", sku: "MAK-XSH04ZB", description: '18V 6-1/2" LXT Sub-Compact Brushless Circular Saw. Tool Only.' },
+          { name: "Makita XEC01PT1", price: "$1,099.95", sku: "MAK-XEC01PT1", description: '18V X2 LXT Brushless 9" Power Cutter Kit con 4 baterías.' },
+          { name: "Makita GEC01PL", price: "$2,269.95", sku: "MAK-GEC01PL", description: '40V max X2 XGT 14" Power Cutter Kit. Máxima potencia sin cable.' },
+        ],
+      },
+    ],
   },
   {
     id: "milwaukee",
