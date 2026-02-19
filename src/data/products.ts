@@ -404,8 +404,8 @@ export const brands: Brand[] = [
         products: [
           { name: "Makita XWT08Z", price: "$339.95", sku: "MAK-XWT08Z", description: '18V LXT Lithium-Ion Brushless Cordless High Torque 1/2 in. 3-Speed Drive Impact Wrench (Tool-Only), delivers 740 ft.lbs. of Fastening Torque and 1,180 ft.lbs. of Nut-Busting Torque.', image: `${MCDN}/xwt/9b2a2d7f-cea4-4ac6-af2d-0d25742e8790_xwt08z_p_1500px.png` },
           { name: "Makita XWT08T", price: "$629.95", sku: "MAK-XWT08T", description: '18V LXT Lithium-Ion Brushless Cordless High Torque 1/2 in. Square Drive Impact Wrench w/ (2) Batteries 5.0Ah, Bag, delivers 740 ft.lbs. of Fastening Torque and 1,180 ft.lbs. of Nut-Busting Torque.', image: `${MCDN}/xwt/3183a24f-2f8f-4233-ac8f-dc53721f1932_xwt08t_k_1500px.png` },
-          { name: "Makita XWT04S1", price: "$289.95", sku: "MAK-XWT04S1", description: '18V LXT Lithium-Ion Cordless 1/2 in. Sq. Drive Impact Wrench Kit (3.0Ah) delivers 325 ft. lbs.', image: `${MCDN}/xwt/28c8f88a-c0b7-4b61-839c-b2e669ab9694_xwt04s1_k_1500px.png` },
-          { name: "Makita XRW01Z", price: "$199.95", sku: "MAK-XRW01Z", description: '3/8 in./1/4 in. 18V LXT Lithium-Ion Cordless Square Drive Ratchet (Tool-Only) 0-800 RPM for fastening applications.', image: `${MCDN}/xrw/5351f1a0-223b-402f-94dc-de8ab898c901_xrw01z_p_1500px.png` },
+          { name: "Makita XWT04S1", price: "$289.95", sku: "MAK-XWT04S1", description: '18V LXT Lithium-Ion Cordless 1/2 in. Sq. Drive Impact Wrench Kit (3.0Ah). Delivers 325 ft.lbs. of Fastening Torque, 2,200 IPM and 1,600 RPM. Weighs only 7.5 lbs. with battery.', image: `${MCDN}/xwt/28c8f88a-c0b7-4b61-839c-b2e669ab9694_xwt04s1_k_1500px.png` },
+          { name: "Makita XRW01Z", price: "$199.95", sku: "MAK-XRW01Z", description: '3/8 in./1/4 in. 18V LXT Lithium-Ion Cordless Square Drive Ratchet (Tool-Only). Delivers 35 ft.lbs. of Max Torque, 0-800 RPM. Interchangeable 3/8" and 1/4" anvils. Low profile design for compact areas.', image: `${MCDN}/xrw/5351f1a0-223b-402f-94dc-de8ab898c901_xrw01z_p_1500px.png` },
         ],
       },
       {
