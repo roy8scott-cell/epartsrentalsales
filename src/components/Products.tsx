@@ -233,7 +233,7 @@ const Products = () => {
                         <h4 className="font-heading font-bold text-card-foreground text-sm leading-tight md:min-h-[2.5rem]">
                           {product.name}
                         </h4>
-                        <p className="text-[11px] md:text-xs text-muted-foreground leading-snug mt-1 line-clamp-2">
+                        <p className="text-[11px] md:text-xs text-muted-foreground leading-snug mt-1">
                           {product.description}
                         </p>
                         <span className="text-lg font-heading font-black text-foreground md:hidden mt-1 block">
