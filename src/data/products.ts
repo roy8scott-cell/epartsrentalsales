@@ -419,6 +419,8 @@ export const brands: Brand[] = [
       {
         name: "Saws & Cutters",
         products: [
+          { name: "Makita 5007F", price: "$189.95", sku: "MAK-5007F", description: '7-1/4" Circular Saw. Powerful 15 AMP motor delivers 5,800 RPM. Two built-in LED lights illuminate the line of cut. Heavy gauge aluminum wraparound base.', image: `${MCDN}/500/4573e931-7872-4e66-9a2c-a6d5988f8f10_5007f_p_1500px.png` },
+          { name: "Makita 5007MG", price: "$239.95", sku: "MAK-5007MG", description: '7-1/4" Magnesium Circular Saw. 15 AMP motor cuts through the densest lumber. Magnesium components create a lightweight saw (10.6 lbs.) that\'s jobsite tough.', image: `${MCDN}/500/92d756ee-4919-40c1-9306-a258a6246968_5007mg_k_1500px.png` },
           { name: "Makita LW1401", price: "$314.95", sku: "MAK-LW1401", description: '14" Cut-Off Saw. Powerful 15 AMP motor delivers 3,800 RPM. Adjustable spark guard, fence adjustment up to 45° for various material sizes.', image: `${MCDN}/lw1/b6168d1b-e173-49d5-9746-e97a65b0b71d_lw1401_p_1500px.png` },
           { name: "Makita XSH04ZB", price: "$209.95", sku: "MAK-XSH04ZB", description: '18V 6-1/2 in. LXT Sub-Compact Lithium-Ion Brushless Cordless Circular Saw (Tool Only).', image: `${MCDN}/xsh/08251556-83ad-480d-9406-8dd5940ef32d_xsh04zb_p_1500px.png` },
           { name: "Makita XEC01PT1", price: "$1,099.95", sku: "MAK-XEC01PT1", description: '36V (18V X2) LXT Brushless 9" Power Cutter Kit with AFT, Electric Brake, 4 Batteries (5.0 Ah). Cuts up to 3-5/8" deep with a 9" diamond blade.', image: `${MCDN}/xec/cc62df9a-71ab-4a76-850e-5aaeddfdddba_xec01pt1_k_1500px.png` },
