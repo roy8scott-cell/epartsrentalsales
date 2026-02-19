@@ -387,6 +387,8 @@ export const brands: Brand[] = [
           { name: "Makita XUX02SM1X6", price: "$599.95", sku: "MAK-XUX02SM1X6", description: '18V LXT Couple Shaft Power Head Kit w/String Trimmer, Pole Saw, Articulating Hedge Trimmer & Blower Attachments, 4.0Ah.', image: `${MCDN}/xux/44a04770-a9f9-41f7-90c6-e3dc982d0a17_xux02sm1x6_k_1500px.png` },
           { name: "Makita XBU03SM1", price: "$299.95", sku: "MAK-XBU03SM1", description: "116 MPH 459 CFM 18V LXT Lithium-Ion Brushless Cordless Leaf Blower Kit.", image: `${MCDN}/xbu/b81aab02-5c31-432a-ab23-208f293d7f32_xbu03sm1_k_1500px.png` },
           { name: "Makita XCU10SM1", price: "$319.95", sku: "MAK-XCU10SM1", description: 'LXT 10 in. 18V Lithium-Ion Brushless Battery Top Handle Chain Saw (Tool-Only).', image: `${MCDN}/xcu/a8d79846-8a6e-4d5a-966a-8b57d25533dc_xcu10sm1_k_1500px.png` },
+          { name: "Makita XCU14SR1", price: "$319.95", sku: "MAK-XCU14SR1", description: '18V LXT Brushless Cordless 6" Pruning Saw Kit (2.0Ah). Compact design for one-hand use. Ideal for pruning, trimming and cutting small logs.', image: `${MCDN}/xcu/d621571a-f9b8-430d-89b2-31ee969ba09d_xcu14sr1_k_1500px.png` },
+          { name: "Makita XCU04CM", price: "$439.95", sku: "MAK-XCU04CM", description: '36V (18V X2) LXT Brushless 16" Chain Saw Kit (4.0Ah). Powered by two 18V batteries for maximum power. Ideal for cutting firewood, limbing trees and light felling.', image: `${MCDN}/xcu/816bfdee-93f6-42ab-8017-ea3fc838caba_xcu04cm_k_1500px.png` },
         ],
       },
       {
