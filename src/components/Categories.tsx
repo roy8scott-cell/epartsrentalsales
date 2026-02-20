@@ -1,29 +1,36 @@
 import { Wrench, Trees, Cog, Zap } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const categories = [
   {
     icon: Trees,
     title: "Podadoras",
     description: "Piezas para cortadoras de césped, cuchillas, filtros y más.",
+    search: "Tractors",
   },
   {
     icon: Wrench,
     title: "Motosierras",
     description: "Cadenas, barras guía, bujías y repuestos originales.",
+    search: "Chainsaws",
   },
   {
     icon: Cog,
     title: "Trimmers",
     description: "Cabezales, líneas de corte, ejes y accesorios.",
+    search: "Trimmers",
   },
   {
     icon: Zap,
     title: "Sopladoras",
     description: "Tubos, filtros de aire, arrancadores y partes eléctricas.",
+    search: "Blowers",
   },
 ];
 
 const Categories = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="categorías" className="py-20 bg-background">
       <div className="container">
@@ -39,6 +46,7 @@ const Categories = () => {
           {categories.map((cat) => (
             <div
               key={cat.title}
+              onClick={() => navigate(`/productos?buscar=${encodeURIComponent(cat.search)}`)}
               className="bg-card border border-border rounded-lg p-8 text-center hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all group cursor-pointer"
             >
               <div className="w-14 h-14 mx-auto mb-5 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
