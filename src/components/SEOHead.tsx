@@ -4,9 +4,14 @@ interface SEOHeadProps {
   title: string;
   description: string;
   canonical?: string;
+  ogImage?: string;
+  ogType?: string;
 }
 
-const SEOHead = ({ title, description, canonical }: SEOHeadProps) => {
+const BASE_URL = "https://epartsrentalsales.lovable.app";
+const DEFAULT_OG_IMAGE = `${BASE_URL}/og-logo.png`;
+
+const SEOHead = ({ title, description, canonical, ogImage, ogType = "website" }: SEOHeadProps) => {
   useEffect(() => {
     document.title = title;
 
@@ -21,9 +26,22 @@ const SEOHead = ({ title, description, canonical }: SEOHeadProps) => {
     };
 
     setMeta("description", description);
-    setMeta("og:title", description, "property");
-    setMeta("og:description", description, "property");
 
+    // Open Graph
+    setMeta("og:title", title, "property");
+    setMeta("og:description", description, "property");
+    setMeta("og:type", ogType, "property");
+    setMeta("og:image", ogImage || DEFAULT_OG_IMAGE, "property");
+    if (canonical) {
+      setMeta("og:url", canonical, "property");
+    }
+
+    // Twitter
+    setMeta("twitter:title", title);
+    setMeta("twitter:description", description);
+    setMeta("twitter:image", ogImage || DEFAULT_OG_IMAGE);
+
+    // Canonical
     if (canonical) {
       let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
       if (!link) {
@@ -33,7 +51,7 @@ const SEOHead = ({ title, description, canonical }: SEOHeadProps) => {
       }
       link.href = canonical;
     }
-  }, [title, description, canonical]);
+  }, [title, description, canonical, ogImage, ogType]);
 
   return null;
 };
