@@ -21,6 +21,7 @@ export type Brand = {
 
 const CDN = "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna";
 const MCDN = "https://cdn.makitatools.com/apps/cms/img";
+const HCDN = "https://images.thdstatic.com/productImages";
 
 export const brands: Brand[] = [
   {
