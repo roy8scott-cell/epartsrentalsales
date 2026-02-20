@@ -432,6 +432,15 @@ export const brands: Brand[] = [
           { name: "Makita GEC01PL", price: "$2,269.95", sku: "MAK-GEC01PL", description: '80V max (40V max X2) XGT Brushless 14" Power Cutter Kit with AFT, Electric Brake (8.0Ah). Cuts up to 5" deep with a 14" diamond blade. Zero emissions.', image: `${MCDN}/gec/e931e332-d5a0-4310-b2b0-bfc88f701eb5_gec01pl_k_1500px.png` },
         ],
       },
+      {
+        name: "Bundle Special Deals",
+        products: [
+          { name: "Makita XT505", price: "$799.95", sku: "MAK-XT505", description: '18V LXT Lithium-Ion Cordless 5-Pc. Combo Kit (3.0Ah). Includes Hammer Drill, Impact Driver, Circular Saw, Recipro Saw, Flashlight, (2) 3.0Ah Batteries, Charger, and Tool Bag.', image: `${MCDN}/xt5/77f79b31-6d33-455a-b1fd-38be8e6e8d67_xt505_k_1500px.png` },
+          { name: "Makita GT400M1D1", price: "$999.95", sku: "MAK-GT400M1D1", description: '40V max XGT Brushless Cordless 4-Pc. Combo Kit (2.5Ah). Includes Hammer Drill, Impact Driver, Circular Saw, Recipro Saw, (2) 2.5Ah Batteries, Charger, and Bag.', image: `${MCDN}/gt4/6fd3dde1-3ccf-4e22-91f9-a9b8dcb33c83_gt400m1d1_k_1500px.png` },
+          { name: "Makita GT401M1D1", price: "$999.95", sku: "MAK-GT401M1D1", description: '40V max XGT Brushless Cordless 4-Pc. Combo Kit (4.0Ah). Includes Hammer Drill, Impact Driver, Circular Saw, Recipro Saw, (2) 4.0Ah Batteries, Charger, and Bag.', image: `${MCDN}/gt4/c8b22e6e-8be5-4d8f-886d-7ca4bcf1d9b1_gt401m1d1_k_1500px.png` },
+          { name: "Makita GT500M", price: "$1,149.95", sku: "MAK-GT500M", description: '40V max XGT Brushless Cordless 5-Pc. Combo Kit (4.0Ah). Includes Hammer Drill, Impact Driver, Circular Saw, Recipro Saw, Flashlight, (2) 4.0Ah Batteries, Charger, and Bag.', image: `${MCDN}/gt5/2c7bc5f8-08fc-4eca-bd34-0eed1c89a7ec_gt500m_k_1500px.png` },
+        ],
+      },
     ],
   },
   {
@@ -439,6 +448,113 @@ export const brands: Brand[] = [
     name: "Milwaukee",
     accent: "border-red-600",
     badge: "bg-red-600/10 text-red-600",
-    categories: [],
+    categories: [
+      // ── 1. Rotary Hammers ──
+      {
+        name: "Rotary Hammers",
+        products: [
+          { name: 'Milwaukee 5262-21', price: "$214.62", sku: "MIL-5262-21", description: '8 Amp Corded 1" SDS D-Handle Rotary Hammer. 5,625 RPM and 0-4,000 BPM. Compact, lightweight design for overhead and tight space applications.' },
+          { name: 'Milwaukee 5268-21', price: "$404.62", sku: "MIL-5268-21", description: '1-1/8" Corded SDS-Plus Rotary Hammer. 8 Amp motor delivers 5,500 RPM and 0-5,500 BPM. Anti-vibration system for reduced user fatigue.' },
+          { name: 'Milwaukee 2613-20', price: "$199.00", sku: "MIL-2613-20", description: 'M18 18V Lithium-Ion Brushless Cordless 1" SDS-Plus D-Handle Rotary Hammer (Tool-Only). 2.1 ft-lbs of impact energy, 0-1,400 RPM.' },
+          { name: 'Milwaukee 2912-20', price: "$249.00", sku: "MIL-2912-20", description: 'M18 FUEL 18V Lithium-Ion Brushless Cordless 1" SDS-Plus Rotary Hammer (Tool-Only). 2.1 ft-lbs of impact energy, AUTOSTOP Control.' },
+          { name: 'Milwaukee 5517-21', price: "$949.00", sku: "MIL-5517-21", description: '1-9/16" SDS-Max Rotary Hammer. 10.5 Amp motor delivers 3,300 BPM. Anti-Vibration System (AVS). Constant speed electronics under load.' },
+          { name: 'Milwaukee 5518-21', price: "$1,099.00", sku: "MIL-5518-21", description: '1-3/4" SDS-MAX Rotary Hammer. 15 Amp motor delivers 2,840 BPM with 8.2 ft-lbs of impact energy. AVS and Constant Speed Control.' },
+          { name: 'Milwaukee 2912-22', price: "$449.00", sku: "MIL-2912-22", description: 'M18 FUEL 1" SDS-Plus Rotary Hammer Kit with Two 6.0Ah Batteries, Charger and Hard Case. AUTOSTOP Control, 2.1 ft-lbs impact energy.' },
+          { name: 'Milwaukee 2717-22HD', price: "$799.00", sku: "MIL-2717-22HD", description: 'M18 FUEL 1-9/16" SDS-Max Rotary Hammer Kit w/ Two 8.0Ah Batteries, Charger and Hard Case. Cordless power equivalent to corded. AUTOSTOP.' },
+        ],
+      },
+      // ── 2. Demolition Hammers ──
+      {
+        name: "Demolition Hammers",
+        products: [
+          { name: 'Milwaukee 5446-21', price: "$749.00", sku: "MIL-5446-21", description: 'SDS-MAX Demolition Hammer. 14 Amp motor delivers 2,840 BPM. Soft-start and dial speed for controlled starts. AVS and 15.2 ft-lbs impact energy.' },
+          { name: 'Milwaukee MXF368-1XC', price: "$3,499.00", sku: "MIL-MXF368-1XC", description: 'MX FUEL Lithium-Ion Cordless 1-1/8" Breaker with Battery and Charger. Delivers up to 35 ft-lbs of impact energy. Eliminates cords and gas.' },
+        ],
+      },
+      // ── 3. Grinders ──
+      {
+        name: "Grinders",
+        products: [
+          { name: 'Milwaukee 6130-33', price: "$79.00", sku: "MIL-6130-33", description: '7 Amp Corded 4-1/2" Small Angle Grinder with Sliding Lock-On Switch. 11,000 RPM. Compact body and ergonomic barrel grip.' },
+          { name: 'Milwaukee 6142-30', price: "$139.00", sku: "MIL-6142-30", description: '11 Amp Corded 4-1/2" Small Angle Grinder with Lock-On Paddle Switch. 11,000 RPM. Overload protection for long motor life.' },
+          { name: 'Milwaukee 6088-30', price: "$329.00", sku: "MIL-6088-30", description: '15 Amp 7"/9" Large Angle Grinder with Trigger Lock-On Switch. 6,000 RPM. Slow start reduces startup torque. Robust construction.' },
+          { name: 'Milwaukee 2522-20', price: "$129.00", sku: "MIL-2522-20", description: 'M12 FUEL 12V Lithium-Ion Brushless Cordless 3" Cut Off Saw (Tool-Only). 20,000 RPM. Compact design for one-handed use.' },
+          { name: 'Milwaukee 2686-20', price: "$149.00", sku: "MIL-2686-20", description: 'M18 18V Lithium-Ion Brushless Cordless 4-1/2"/5" Grinder w/ Paddle Switch (Tool-Only). 8,500 RPM. RAPIDSTOP brake.' },
+          { name: 'Milwaukee 2785-20', price: "$279.00", sku: "MIL-2785-20", description: 'M18 FUEL 18V Lithium-Ion Brushless Cordless 7"/9" Angle Grinder (Tool-Only). 6,000 RPM. RAPIDSTOP brake and anti-kickback.' },
+          { name: 'Milwaukee 2522-21XC', price: "$199.00", sku: "MIL-2522-21XC", description: 'M12 FUEL 3" Cut-Off Saw Kit with One 4.0Ah Battery, Charger and Bag. 20,000 RPM. Compact one-handed design.' },
+          { name: 'Milwaukee 2686-20 + Starter Kit', price: "$249.00", sku: "MIL-2686-20-KIT", description: 'M18 Brushless 4-1/2"/5" Grinder Paddle Switch with 5.0Ah Starter Kit. RAPIDSTOP brake. 8,500 RPM.' },
+          { name: 'Milwaukee 2880-22', price: "$399.00", sku: "MIL-2880-22", description: 'M18 FUEL 4-1/2"/5" Grinder Paddle Switch Kit with Two 6.0Ah Batteries. RAPIDSTOP brake, anti-kickback, and drop shut-off.' },
+        ],
+      },
+      // ── 4. Drills & Impact Drivers ──
+      {
+        name: "Drills & Impact Drivers",
+        products: [
+          { name: 'Milwaukee 3453-20', price: "$99.00", sku: "MIL-3453-20", description: 'M12 FUEL 12V Lithium-Ion Brushless Cordless 1/4" Hex Impact Driver (Tool-Only). 1,700 in-lbs torque, 3,300 RPM.' },
+          { name: 'Milwaukee 2760-20', price: "$149.00", sku: "MIL-2760-20", description: 'M18 FUEL SURGE 1/4" Hex Hydraulic Impact Driver (Tool-Only). Up to 50% quieter. 450 ft-lbs torque, 0-3,000 RPM.' },
+          { name: 'Milwaukee 2761-20', price: "$179.00", sku: "MIL-2761-20", description: 'M18 FUEL SURGE 1/4" Hex Hydraulic Impact Driver (Tool-Only). Next-gen SURGE hydraulic technology. Quieter and less vibration.' },
+          { name: 'Milwaukee 2415-20', price: "$99.00", sku: "MIL-2415-20", description: 'M12 12V Lithium-Ion Cordless 3/8" Right Angle Drill (Tool-Only). Compact head for tight spaces. 100 in-lbs torque, 0-800 RPM.' },
+          { name: 'Milwaukee 2904-20', price: "$169.00", sku: "MIL-2904-20", description: 'M18 FUEL 18V Lithium-Ion Brushless Cordless 1/2" Hammer Drill/Driver (Tool-Only). 1,400 in-lbs torque, 2,000 RPM. ALL-METAL Ratcheting Chuck.' },
+          { name: 'Milwaukee 2551-22', price: "$199.00", sku: "MIL-2551-22", description: 'M12 FUEL SURGE 1/4" Hex Hydraulic Driver Kit w/ Two 2.0Ah Batteries, Charger, Bag. Quieter fastening with hydraulic technology.' },
+          { name: 'Milwaukee 3650-22CT', price: "$179.00", sku: "MIL-3650-22CT", description: 'M18 Brushless 1/4" Impact Driver Kit with Two 2.0Ah Batteries, Charger. 1,800 in-lbs torque, 3,600 RPM. Compact design.' },
+          { name: 'Milwaukee 2904-22', price: "$349.00", sku: "MIL-2904-22", description: 'M18 FUEL 1/2" Hammer Drill/Driver Kit with Two 5.0Ah Batteries, Hard Case. 1,400 in-lbs torque. POWERSTATE Brushless Motor.' },
+          { name: 'Milwaukee 3497-22', price: "$249.00", sku: "MIL-3497-22", description: 'M12 FUEL Hammer Drill and Impact Driver Combo Kit (2-Tool) w/ 2 Batteries and Bag. Sub-compact powerhouse for everyday tasks.' },
+          { name: 'Milwaukee 3697-22', price: "$399.00", sku: "MIL-3697-22", description: 'M18 FUEL Hammer Drill and Impact Driver Combo Kit (2-Tool) w/ 2 Batteries. Industry-leading performance in drilling and driving.' },
+          { name: 'Milwaukee 2807-20', price: "$279.00", sku: "MIL-2807-20", description: 'M18 FUEL GEN II 1/2" Hole Hawg Right Angle Drill (Tool-Only). 1,500 RPM with over 200 4-3/8" holes per charge. QUIK-LOK.' },
+        ],
+      },
+      // ── 5. Saws & Power Cutters ──
+      {
+        name: "Saws & Power Cutters",
+        products: [
+          { name: 'Milwaukee 6519-31', price: "$149.00", sku: "MIL-6519-31", description: '12 Amp SAWZALL Reciprocating Saw with Case. 0-3,000 SPM with 3/4" stroke length. Counter-balance mechanism for less vibration.' },
+          { name: 'Milwaukee 2621-20', price: "$129.00", sku: "MIL-2621-20", description: 'M18 Cordless SAWZALL Reciprocating Saw (Tool-Only). 0-3,000 SPM with 3/4" stroke. QUIK-LOK blade clamp for fast changes.' },
+          { name: 'Milwaukee 2821-20', price: "$199.00", sku: "MIL-2821-20", description: 'M18 FUEL GEN 2 SAWZALL Reciprocating Saw (Tool-Only). 0-3,000 SPM, 1-1/4" stroke. 50% faster cuts. FIXTEC clamp.' },
+          { name: 'Milwaukee 2722-20', price: "$249.00", sku: "MIL-2722-20", description: 'M18 FUEL Super SAWZALL Orbital Reciprocating Saw (Tool-Only). 0-3,000 SPM, 1-1/4" stroke. Orbital action for aggressive cuts.' },
+          { name: 'Milwaukee 2625-20', price: "$99.00", sku: "MIL-2625-20", description: 'M18 Cordless HACKZALL Reciprocating Saw (Tool-Only). One-handed compact design. 0-3,000 SPM, 1/2" stroke.' },
+          { name: 'Milwaukee 2719-20', price: "$149.00", sku: "MIL-2719-20", description: 'M18 FUEL HACKZALL Reciprocating Saw (Tool-Only). Brushless motor for 2X longer life. One-hand design, LED light.' },
+          { name: 'Milwaukee 2420-21', price: "$149.00", sku: "MIL-2420-21", description: 'M12 HACKZALL Reciprocating Saw Kit with 1.5Ah Battery, Charger and Tool Bag. Compact, 0-3,000 SPM. Cuts PVC, wood, metal.' },
+          { name: 'Milwaukee 2520-21XC', price: "$219.00", sku: "MIL-2520-21XC", description: 'M12 FUEL HACKZALL Kit w/ 4.0Ah Battery, Charger, Tool Bag. Brushless motor, 0-3,000 SPM. 2X faster cuts than M12.' },
+          { name: 'Milwaukee 2821-20 + FORGE Kit', price: "$399.00", sku: "MIL-2821-20-FK", description: 'M18 FUEL GEN 2 SAWZALL + FORGE 8.0Ah Battery + Charger. Ultimate cordless reciprocating saw setup. 50% faster cuts.' },
+          { name: 'Milwaukee 2722-20 + FORGE Kit', price: "$449.00", sku: "MIL-2722-20-FK", description: 'M18 FUEL Super SAWZALL + FORGE 8.0Ah Battery + Charger. Orbital action for the most aggressive cutting applications.' },
+          { name: 'Milwaukee 2630-20', price: "$129.00", sku: "MIL-2630-20", description: 'M18 18V Cordless 6-1/2" Circular Saw (Tool-Only). 3,500 RPM. Magnesium upper/lower guards. Cuts 2X material at 45°.' },
+          { name: 'Milwaukee 2631-20', price: "$189.00", sku: "MIL-2631-20", description: 'M18 Brushless 7-1/4" Circular Saw (Tool-Only). 5,000 RPM. Magnesium shoe for durability. LED light and rafter hook.' },
+          { name: 'Milwaukee 2834-20', price: "$249.00", sku: "MIL-2834-20", description: 'M18 FUEL 7-1/4" Circular Saw (Tool-Only). 5,800 RPM. Fastest blade speed in class. REDLITHIUM battery intelligence.' },
+          { name: 'Milwaukee 2930-20', price: "$279.00", sku: "MIL-2930-20", description: 'M18 FUEL 7-1/4" Rear Handle Circular Saw (Tool-Only). 5,800 RPM. Traditional worm-drive feel with cordless freedom.' },
+          { name: 'Milwaukee 2829-20', price: "$249.00", sku: "MIL-2829-20", description: 'M18 FUEL Compact Bandsaw (Tool-Only). Cuts 2-1/2" round or 2-1/2" x 2-1/2" square stock. One-handed portable cutting.' },
+          { name: 'Milwaukee 2929-20', price: "$379.00", sku: "MIL-2929-20", description: 'M18 FUEL Deep Cut Band Saw (Tool-Only). Cuts up to 5" x 5" material. Balanced design for overhead and bench cutting.' },
+          { name: 'Milwaukee 2786-20', price: "$449.00", sku: "MIL-2786-20", description: 'M18 FUEL ONE-KEY 9" Cut-Off Saw (Tool-Only). Cuts up to 3-1/2" deep. AUTOSTOP kickback control. ONE-KEY connectivity.' },
+          { name: 'Milwaukee 2736-21HD', price: "$799.00", sku: "MIL-2736-21HD", description: 'M18 FUEL ONE-KEY 8-1/4" Table Saw Kit with 12.0Ah Battery, Rapid Charger. 24-1/2" rip capacity. One-Key for guard tracking.' },
+        ],
+      },
+      // ── 6. Garden Equipment ──
+      {
+        name: "Garden Equipment",
+        products: [
+          { name: 'Milwaukee 2527-20', price: "$149.00", sku: "MIL-2527-20", description: 'M12 FUEL 6" HATCHET Pruning Saw (Tool-Only). 7,150 SPM. Compact and lightweight for one-handed pruning. REDLINK overload protection.' },
+          { name: 'Milwaukee 3004-20', price: "$199.00", sku: "MIL-3004-20", description: 'M18 FUEL 8" HATCHET Pruning Saw (Tool-Only). 6,600 SPM. Full-complement cutter bar for reduced kickback. Ideal for tree care pros.' },
+          { name: 'Milwaukee 2727-20', price: "$279.00", sku: "MIL-2727-20", description: 'M18 FUEL 16" Chainsaw (Tool-Only). Variable speed trigger and bucking spikes. Automatic chain oiler. Equivalent to 40cc gas.' },
+          { name: 'Milwaukee 2826-20T', price: "$349.00", sku: "MIL-2826-20T", description: 'M18 FUEL 14" Top Handle Chainsaw (Tool-Only). Designed for arborists. Low kickback bar. Tool-free chain tensioning.' },
+          { name: 'Milwaukee 2527-21', price: "$249.00", sku: "MIL-2527-21", description: 'M12 FUEL 6" HATCHET Pruning Saw Kit with 4.0Ah Battery and Charger. Compact, lightweight, and ready for heavy pruning.' },
+          { name: 'Milwaukee 2727-21HD', price: "$479.00", sku: "MIL-2727-21HD", description: 'M18 FUEL 16" Chainsaw Kit with 12.0Ah Battery and M18 Rapid Charger. Full system for serious cutting. Replaces 40cc gas saws.' },
+          { name: 'Milwaukee 2533-20', price: "$139.00", sku: "MIL-2533-20", description: 'M12 FUEL 8" Hedge Trimmer (Tool-Only). 3,000 SPM. Compact design for precision trimming and shaping.' },
+          { name: 'Milwaukee 3033-20', price: "$219.00", sku: "MIL-3033-20", description: 'M18 FUEL 24" Brushless Hedge Trimmer (Tool-Only). 3,400 SPM. Hardened steel blades for clean cuts on branches up to 1".' },
+          { name: 'Milwaukee 3016-20ST', price: "$249.00", sku: "MIL-3016-20ST", description: 'M18 FUEL 16" String Trimmer with QUIK-LOK Attachment Capability (Tool-Only). Variable speed trigger. Carbon fiber shaft.' },
+          { name: 'Milwaukee 3016-20PS', price: "$249.00", sku: "MIL-3016-20PS", description: 'M18 FUEL 10" Pole Saw with QUIK-LOK Attachment Capability (Tool-Only). Reaches up to 13 ft. Automatic oiler system.' },
+          { name: 'Milwaukee 3016-21ST', price: "$379.00", sku: "MIL-3016-21ST", description: 'M18 FUEL 16" String Trimmer Kit with QUIK-LOK, 8.0Ah Battery. Carbon fiber shaft with variable speed for ultimate control.' },
+          { name: 'Milwaukee 3031-21', price: "$449.00", sku: "MIL-3031-21", description: 'M18 FUEL QUIK-LOK String Trimmer + Blower Combo Kit (2-Tool) w/ 8.0Ah Battery. Complete cordless outdoor system.' },
+        ],
+      },
+      // ── 7. Bundle Special Deals ──
+      {
+        name: "Bundle Special Deals",
+        products: [
+          { name: 'Milwaukee 3670-22 + 2760-20', price: "$599.00", sku: "MIL-3670-22-BD", description: 'M18 FUEL 4-1/2"/6" Braking Grinder w/ Two XC 8.0Ah Batteries + FUEL SURGE 1/4" Impact Driver. Premium combo for heavy-duty grinding and driving.' },
+          { name: 'Milwaukee 3697-25', price: "$899.95", sku: "MIL-3697-25", description: 'M18 FUEL 5-Tool Combo Kit w/ Two 5.0Ah Batteries, Charger, Tool Bag. Includes Hammer Drill, Impact Driver, Circular Saw, SAWZALL, and LED Light.' },
+          { name: 'Milwaukee 3693-24CX', price: "$399.00", sku: "MIL-3693-24CX", description: 'M18 Brushless 4-Tool Combo Kit w/ 2 Batteries, Charger, Tool Bag. Hammer Drill, Impact Driver, SAWZALL, Work Light. Compact and efficient.' },
+          { name: 'Milwaukee 3697-27 + 2967-20', price: "$999.00", sku: "MIL-3697-27-BD", description: 'M18 FUEL 7-Tool Combo Kit + 1/2" High Torque Impact Wrench w/ Friction Ring. The ultimate professional tool set for jobsite productivity.' },
+        ],
+      },
+    ],
   },
 ];
