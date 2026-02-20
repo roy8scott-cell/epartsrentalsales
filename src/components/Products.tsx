@@ -1,4 +1,5 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import { ShoppingCart, Search, X, ArrowUpDown, Check } from "lucide-react";
 import { brands, type Product } from "@/data/products";
 import { useCart } from "@/context/CartContext";
@@ -23,11 +24,19 @@ const sortProducts = (products: Product[], sort: SortOption): Product[] => {
 };
 
 const Products = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [activeBrand, setActiveBrand] = useState("husqvarna");
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState(() => searchParams.get("buscar") || "");
   const [sort, setSort] = useState<SortOption>("price-asc");
   const brand = brands.find((b) => b.id === activeBrand)!;
+
+  useEffect(() => {
+    const q = searchParams.get("buscar");
+    if (q) {
+      setSearchParams({}, { replace: true });
+    }
+  }, []);
 
   const filteredCategories = useMemo(() => {
     let cats = brand.categories;
