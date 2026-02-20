@@ -438,10 +438,10 @@ export const brands: Brand[] = [
       {
         name: "Bundle Special Deals",
         products: [
-          { name: "Makita XT505", price: "$799.95", sku: "MAK-XT505", description: '18V LXT Lithium-Ion Cordless 5-Pc. Combo Kit (3.0Ah). Includes Hammer Drill, Impact Driver, Circular Saw, Recipro Saw, Flashlight, (2) 3.0Ah Batteries, Charger, and Tool Bag.', image: `${MCDN}/xt5/77f79b31-6d33-455a-b1fd-38be8e6e8d67_xt505_k_1500px.png` },
-          { name: "Makita GT400M1D1", price: "$999.95", sku: "MAK-GT400M1D1", description: '40V max XGT Brushless Cordless 4-Pc. Combo Kit (2.5Ah). Includes Hammer Drill, Impact Driver, Circular Saw, Recipro Saw, (2) 2.5Ah Batteries, Charger, and Bag.', image: `${MCDN}/gt4/6fd3dde1-3ccf-4e22-91f9-a9b8dcb33c83_gt400m1d1_k_1500px.png` },
-          { name: "Makita GT401M1D1", price: "$999.95", sku: "MAK-GT401M1D1", description: '40V max XGT Brushless Cordless 4-Pc. Combo Kit (4.0Ah). Includes Hammer Drill, Impact Driver, Circular Saw, Recipro Saw, (2) 4.0Ah Batteries, Charger, and Bag.', image: `${MCDN}/gt4/c8b22e6e-8be5-4d8f-886d-7ca4bcf1d9b1_gt401m1d1_k_1500px.png` },
-          { name: "Makita GT500M", price: "$1,149.95", sku: "MAK-GT500M", description: '40V max XGT Brushless Cordless 5-Pc. Combo Kit (4.0Ah). Includes Hammer Drill, Impact Driver, Circular Saw, Recipro Saw, Flashlight, (2) 4.0Ah Batteries, Charger, and Bag.', image: `${MCDN}/gt5/2c7bc5f8-08fc-4eca-bd34-0eed1c89a7ec_gt500m_k_1500px.png` },
+          { name: "Makita XT505", price: "$799.95", sku: "MAK-XT505", description: '18V LXT Lithium-Ion Cordless 5-Pc. Combo Kit (3.0Ah). Includes Hammer Drill, Impact Driver, Circular Saw, Recipro Saw, Flashlight, (2) 3.0Ah Batteries, Charger, and Tool Bag.', image: `${MCDN}/xt5/af5455a5-8234-4456-a563-962d7c2e3bab_xt505_k_1500px.png` },
+          { name: "Makita GT400M1D1", price: "$999.95", sku: "MAK-GT400M1D1", description: '40V max XGT Brushless Cordless 4-Pc. Combo Kit (2.5Ah). Includes Hammer Drill, Impact Driver, Circular Saw, Recipro Saw, (2) 2.5Ah Batteries, Charger, and Bag.', image: `${MCDN}/gt4/6a06a91e-6581-4fc6-8da0-77efa87e790f_gt400m1d1_k_1500px.png` },
+          { name: "Makita GT401M1D1", price: "$999.95", sku: "MAK-GT401M1D1", description: '40V max XGT Brushless Cordless 4-Pc. Combo Kit (4.0Ah). Includes Hammer Drill, Impact Driver, Circular Saw, Recipro Saw, (2) 4.0Ah Batteries, Charger, and Bag.', image: `${MCDN}/gt4/eeef9b95-816b-42ae-a274-a87d9985a328_gt401m1d1_k_1500px.png` },
+          { name: "Makita GT500M", price: "$1,149.95", sku: "MAK-GT500M", description: '40V max XGT Brushless Cordless 5-Pc. Combo Kit (4.0Ah). Includes Hammer Drill, Impact Driver, Circular Saw, Recipro Saw, Flashlight, (2) 4.0Ah Batteries, Charger, and Bag.', image: `${MCDN}/gt5/7af0ddbb-e631-4cc3-9150-c95d7e801913_gt500m_k_1500px.png` },
         ],
       },
     ],
