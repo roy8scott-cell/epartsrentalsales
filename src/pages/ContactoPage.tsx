@@ -1,4 +1,5 @@
 import SEOHead from "@/components/SEOHead";
+import JsonLd from "@/components/JsonLd";
 import Footer from "@/components/Footer";
 
 const ContactoPage = () => (
@@ -8,6 +9,7 @@ const ContactoPage = () => (
       description="Reparación Makita, reparación Milwaukee, arreglos de trimmers y plantas eléctricas. WhatsApp (787) 809-4747. Humacao, PR 00791."
       canonical="https://epartsrentalsales.lovable.app/contacto"
     />
+    <JsonLd />
     <main className="min-h-[60vh]">
       <section className="container py-12 md:py-20">
         <div className="text-center mb-10">

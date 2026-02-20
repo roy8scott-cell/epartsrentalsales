@@ -6,12 +6,14 @@ import logo from "@/assets/logo.png";
 const routeMap: Record<string, string> = {
   inicio: "/",
   productos: "/productos",
+  nosotros: "/nosotros",
   contacto: "/contacto",
 };
 
 const navItems = [
   { id: "inicio", label: "Inicio" },
   { id: "productos", label: "Productos" },
+  { id: "nosotros", label: "Nosotros" },
   { id: "contacto", label: "Contacto" },
 ];
 
