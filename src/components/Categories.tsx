@@ -46,7 +46,7 @@ const Categories = () => {
           {categories.map((cat) => (
             <div
               key={cat.title}
-              onClick={() => navigate(`/productos?buscar=${encodeURIComponent(cat.search)}`)}
+              onClick={() => { navigate(`/productos?buscar=${encodeURIComponent(cat.search)}`); window.scrollTo({ top: 0 }); }}
               className="bg-card border border-border rounded-lg p-8 text-center hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all group cursor-pointer"
             >
               <div className="w-14 h-14 mx-auto mb-5 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">

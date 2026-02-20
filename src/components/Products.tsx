@@ -89,7 +89,7 @@ const Products = () => {
             {brands.map((b) => (
               <button
                 key={b.id}
-                onClick={() => { setActiveBrand(b.id); setActiveCategory(null); setSearch(""); }}
+                onClick={() => { setActiveBrand(b.id); setActiveCategory(null); setSearch(""); window.scrollTo({ top: 0, behavior: "smooth" }); }}
                 className={`px-4 py-2 md:px-5 md:py-2.5 rounded-full md:rounded-lg font-heading font-bold text-xs md:text-sm uppercase tracking-wider transition-all border-2 whitespace-nowrap flex-shrink-0 ${
                   activeBrand === b.id
                     ? `${b.accent} bg-card shadow-md text-foreground`
@@ -105,7 +105,7 @@ const Products = () => {
           {brand.categories.length > 0 && (
             <div className="flex gap-2 mb-3 overflow-x-auto pb-1 scrollbar-hide md:flex-wrap md:overflow-visible">
               <button
-                onClick={() => setActiveCategory(null)}
+                onClick={() => { setActiveCategory(null); window.scrollTo({ top: 0, behavior: "smooth" }); }}
                 className={`px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs font-heading font-semibold transition-all whitespace-nowrap flex-shrink-0 ${
                   activeCategory === null
                     ? "bg-primary text-primary-foreground shadow-sm"
@@ -117,7 +117,7 @@ const Products = () => {
               {brand.categories.map((cat) => (
                 <button
                   key={cat.name}
-                  onClick={() => setActiveCategory(cat.name)}
+                  onClick={() => { setActiveCategory(cat.name); window.scrollTo({ top: 0, behavior: "smooth" }); }}
                   className={`px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs font-heading font-semibold transition-all whitespace-nowrap flex-shrink-0 ${
                     activeCategory === cat.name
                       ? "bg-primary text-primary-foreground shadow-sm"
