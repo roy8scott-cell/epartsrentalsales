@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { ShoppingCart, Search, X, ArrowUpDown, Check } from "lucide-react";
 import { brands, type Product } from "@/data/products";
 import { useCart } from "@/context/CartContext";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 
 type SortOption = "price-asc" | "price-desc" | "name-asc";
 
@@ -208,26 +209,12 @@ const Products = () => {
                     >
                       {/* Product Image - Desktop */}
                       {product.image && (
-                        <div className="hidden md:block bg-muted/30 p-4">
-                          <img
-                            src={product.image}
-                            alt={product.name}
-                            className="w-full h-40 object-contain group-hover:scale-105 transition-transform duration-300"
-                            loading="lazy"
-                          />
-                        </div>
+                        <ImageWithZoom src={product.image} alt={product.name} variant="desktop" />
                       )}
 
                       {/* Product Image - Mobile thumbnail */}
                       {product.image && (
-                        <div className="md:hidden w-20 h-20 flex-shrink-0 bg-muted/30 rounded-lg overflow-hidden ml-3">
-                          <img
-                            src={product.image}
-                            alt={product.name}
-                            className="w-full h-full object-contain p-1"
-                            loading="lazy"
-                          />
-                        </div>
+                        <ImageWithZoom src={product.image} alt={product.name} variant="mobile" />
                       )}
 
                       <div className={`flex-1 min-w-0 md:flex-auto p-3 md:p-4 ${product.image ? 'md:pt-0' : ''}`}>
@@ -271,6 +258,30 @@ const Products = () => {
         )}
       </div>
     </section>
+  );
+};
+
+const ImageWithZoom = ({ src, alt, variant }: { src: string; alt: string; variant: "desktop" | "mobile" }) => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      {variant === "desktop" ? (
+        <div className="hidden md:block bg-muted/30 p-4 cursor-zoom-in" onClick={() => setOpen(true)}>
+          <img src={src} alt={alt} className="w-full h-40 object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+        </div>
+      ) : (
+        <div className="md:hidden w-20 h-20 flex-shrink-0 bg-muted/30 rounded-lg overflow-hidden ml-3 cursor-zoom-in" onClick={() => setOpen(true)}>
+          <img src={src} alt={alt} className="w-full h-full object-contain p-1" loading="lazy" />
+        </div>
+      )}
+      <Dialog open={open} onOpenChange={setOpen}>
+        <DialogContent className="max-w-[90vw] md:max-w-2xl p-2 bg-background">
+          <DialogTitle className="sr-only">{alt}</DialogTitle>
+          <img src={src} alt={alt} className="w-full max-h-[80vh] object-contain" />
+        </DialogContent>
+      </Dialog>
+    </>
   );
 };
 
