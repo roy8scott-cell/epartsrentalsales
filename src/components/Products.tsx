@@ -40,7 +40,11 @@ const Products = () => {
   }, []);
 
   useEffect(() => {
-    window.scrollTo({ top: 0 });
+    // The scrollable container is <main> with overflow-y-auto, not window
+    const main = document.querySelector("main");
+    if (main) {
+      main.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
+    }
   }, [activeBrand, activeCategory]);
 
   const filteredCategories = useMemo(() => {
