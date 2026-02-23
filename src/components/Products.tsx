@@ -39,6 +39,10 @@ const Products = () => {
     }
   }, []);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, [activeBrand, activeCategory]);
+
   const filteredCategories = useMemo(() => {
     let cats = brand.categories;
     if (activeCategory) {
