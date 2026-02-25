@@ -41,7 +41,7 @@ const Header = ({ activeTab, onTabChange }: HeaderProps) => {
               onClick={() => onTabChange(item.id)}
               className={`px-4 py-2 rounded-md font-heading font-semibold text-sm uppercase tracking-wider transition-colors ${
                 activeTab === item.id
-                  ? "text-secondary-foreground bg-primary/10"
+                  ? "text-primary bg-primary/10"
                   : "text-secondary-foreground/80 hover:text-primary"
               }`}
             >
@@ -70,7 +70,7 @@ const Header = ({ activeTab, onTabChange }: HeaderProps) => {
               onClick={() => { onTabChange(item.id); setMenuOpen(false); }}
               className={`text-left px-3 py-2 rounded-md font-heading font-semibold text-sm uppercase tracking-wider transition-colors ${
                 activeTab === item.id
-                  ? "text-secondary-foreground bg-primary/10"
+                  ? "text-primary bg-primary/10"
                   : "text-secondary-foreground/80 hover:text-primary"
               }`}
             >
