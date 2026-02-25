@@ -48,7 +48,7 @@ export const brands: Brand[] = [
             price: "$949.95",
             sku: "HUS-590BFS",
             description: "56N blow force, 1,245 CFM. Multi-speed control with start button. AutoTune, LowVib®, padded harness with hip belt.",
-            image: `${CDN}/blowers/photos/studio/at-683132.webp?v=ebfc1302e00e823d&format=WEBP_LANDSCAPE_CONTAIN_MD`,
+            image: `${CDN}/blowers/photos/studio/zb-342365.webp?v=9e01c1cfe00e823d&format=WEBP_LANDSCAPE_CONTAIN_MD`,
           },
           {
             name: "Husqvarna 560BTS",
@@ -103,7 +103,7 @@ export const brands: Brand[] = [
             price: "$579.95",
             sku: "HUS-535LS",
             description: "Professional gas trimmer. 2.15 hp with reinforced gearbox for heavy-duty commercial use. X-Torq® engine.",
-            image: `${CDN}/grass-trimmers/photos/studio/h210-0740.webp?v=3fbde939e00e823d&format=WEBP_LANDSCAPE_CONTAIN_MD`,
+            image: "https://sleequipment.com/cdn/shop/files/535ls.jpg?v=1766778948",
           },
           {
             name: "Husqvarna 525LST",
@@ -138,7 +138,7 @@ export const brands: Brand[] = [
             price: "$499.95",
             sku: "HUS-330IKP",
             description: "Battery-powered Combi Switch with pole saw attachment. Modular system for pruning and trimming, battery and charger included.",
-            image: `${CDN}/combi-trimmer-attachments/photos/studio/lz-341323.webp?v=944bcbb4e00e823d&format=WEBP_LANDSCAPE_CONTAIN_MD`,
+            image: `${CDN}/combi-trimmer-attachments/photos/studio/xq-090418.webp?v=cf9d11f5e00e823d&format=WEBP_LANDSCAPE_CONTAIN_MD`,
           },
           {
             name: "320iL + 230iB Bundle",
@@ -261,21 +261,21 @@ export const brands: Brand[] = [
             price: "$4,799.95",
             sku: "HUS-TS140X-54",
             description: 'New release. 54" cutting width, 24 hp. Air Induction™ technology and 18" High-Back seat for all-day comfort.',
-            image: `${CDN}/garden-tractors/photos/studio/l/lw/lw-664937.webp?v=b2ae9fa8e00e823d&format=WEBP_LANDSCAPE_CONTAIN_MD`,
+            image: `${CDN}/garden-tractors/photos/studio/a/au/au-139688.webp?format=WEBP_LANDSCAPE_CONTAIN_MD`,
           },
           {
             name: 'Husqvarna TS 140X (48")',
             price: "$4,399.95",
             sku: "HUS-TS140X-48",
             description: 'New release. 48" cutting width, 22 hp. Air Induction™ technology and reinforced cutting deck.',
-            image: `${CDN}/garden-tractors/photos/studio/l/lw/lw-664937.webp?v=b2ae9fa8e00e823d&format=WEBP_LANDSCAPE_CONTAIN_MD`,
+            image: `${CDN}/garden-tractors/photos/studio/a/au/au-139688.webp?format=WEBP_LANDSCAPE_CONTAIN_MD`,
           },
           {
             name: 'Husqvarna TS 140X (42")',
             price: "$3,999.95",
             sku: "HUS-TS140X-42",
             description: 'New release. 42" cutting width, 22 hp. Compact and comfortable design for residential use.',
-            image: `${CDN}/garden-tractors/photos/studio/l/lw/lw-664937.webp?v=b2ae9fa8e00e823d&format=WEBP_LANDSCAPE_CONTAIN_MD`,
+            image: `${CDN}/garden-tractors/photos/studio/a/au/au-139688.webp?format=WEBP_LANDSCAPE_CONTAIN_MD`,
           },
           {
             name: "Husqvarna TS 120",
@@ -336,7 +336,7 @@ export const brands: Brand[] = [
             price: "$3,499.95",
             sku: "HUS-AM420",
             description: "Covers up to 1 acre. Wire-free with EPOS® navigation, Automower® Connect App included.",
-            image: `${CDN}/robotic-mowers/photos/studio/q/qr/qr-130527.webp?v=32d99e77e00e823d&format=WEBP_LANDSCAPE_CONTAIN_MD`,
+            image: `${CDN}/robotic-mowers/photos/studio/s/sm/sm-807077.webp?v=1b0d967be00e823d&format=WEBP_LANDSCAPE_CONTAIN_MD`,
           },
           {
             name: "Automower® 410 iQ",
@@ -518,8 +518,8 @@ export const brands: Brand[] = [
           { name: 'Milwaukee 2719-20', price: "$149.00", sku: "MIL-2719-20", description: 'M18 FUEL HACKZALL Reciprocating Saw (Tool-Only). Brushless motor for 2X longer life. One-hand design, LED light.', image: `${HCDN}/a3e84f60-44f0-419f-b1ba-e015e46b09e9/svn/milwaukee-reciprocating-saws-2719-20-64_600.jpg` },
           { name: 'Milwaukee 2420-21', price: "$149.00", sku: "MIL-2420-21", description: 'M12 HACKZALL Reciprocating Saw Kit with 1.5Ah Battery, Charger and Tool Bag. Compact, 0-3,000 SPM. Cuts PVC, wood, metal.', image: `${HCDN}/d84c207d-c4e1-4430-8d15-f76a7df8b971/svn/milwaukee-reciprocating-saws-2420-21-64_600.jpg` },
           { name: 'Milwaukee 2520-21XC', price: "$219.00", sku: "MIL-2520-21XC", description: 'M12 FUEL HACKZALL Kit w/ 4.0Ah Battery, Charger, Tool Bag. Brushless motor, 0-3,000 SPM. 2X faster cuts than M12.', image: `${HCDN}/7a03ff00-e793-4a1a-9875-f0a264fcbbba/svn/milwaukee-reciprocating-saws-2520-21xc-64_600.jpg` },
-          { name: 'Milwaukee 2821-20 + FORGE Kit', price: "$399.00", sku: "MIL-2821-20-FK", description: 'M18 FUEL GEN 2 SAWZALL + FORGE 8.0Ah Battery + Charger. Ultimate cordless reciprocating saw setup. 50% faster cuts.', image: `${HCDN}/e8f5bd00-407d-4e60-8fce-f1bade27ab6b/svn/milwaukee-reciprocating-saws-2821-20-64_600.jpg` },
-          { name: 'Milwaukee 2722-20 + FORGE Kit', price: "$449.00", sku: "MIL-2722-20-FK", description: 'M18 FUEL Super SAWZALL + FORGE 8.0Ah Battery + Charger. Orbital action for the most aggressive cutting applications.', image: `${HCDN}/37a64942-1026-469e-bef8-9d419cd4f2d0/svn/milwaukee-reciprocating-saws-2722-20-64_600.jpg` },
+          { name: 'Milwaukee 2821-20 + FORGE Kit', price: "$399.00", sku: "MIL-2821-20-FK", description: 'M18 FUEL GEN 2 SAWZALL + FORGE 8.0Ah Battery + Charger. Ultimate cordless reciprocating saw setup. 50% faster cuts.', image: "https://www.toolnut.com/cdn/shop/files/2821-21f_101.jpg?v=1740524125" },
+          { name: 'Milwaukee 2722-20 + FORGE Kit', price: "$449.00", sku: "MIL-2722-20-FK", description: 'M18 FUEL Super SAWZALL + FORGE 8.0Ah Battery + Charger. Orbital action for the most aggressive cutting applications.', image: "https://artstoolsales.com/cdn/shop/files/2722-21HD_Kit.jpg?v=1756825888" },
           { name: 'Milwaukee 2630-20', price: "$129.00", sku: "MIL-2630-20", description: 'M18 18V Cordless 6-1/2" Circular Saw (Tool-Only). 3,500 RPM. Magnesium upper/lower guards. Cuts 2X material at 45°.', image: `${HCDN}/8b9b7559-0c47-478e-bf72-420d60371b68/svn/milwaukee-circular-saws-2630-20-64_600.jpg` },
           { name: 'Milwaukee 2631-20', price: "$189.00", sku: "MIL-2631-20", description: 'M18 Brushless 7-1/4" Circular Saw (Tool-Only). 5,000 RPM. Magnesium shoe for durability. LED light and rafter hook.', image: `${TCDN}/Milwaukee-2631-20_01.jpg?v=1769855034&width=800` },
           { name: 'Milwaukee 2834-20', price: "$249.00", sku: "MIL-2834-20", description: 'M18 FUEL 7-1/4" Circular Saw (Tool-Only). 5,800 RPM. Fastest blade speed in class. REDLITHIUM battery intelligence.', image: `${HCDN}/9b6ee406-8591-40d8-aede-31837dcccd6a/svn/milwaukee-circular-saws-2834-20-64_600.jpg` },
@@ -552,7 +552,7 @@ export const brands: Brand[] = [
       {
         name: "Bundle Special Deals",
         products: [
-          { name: 'Milwaukee 3670-22 + 2760-20', price: "$599.00", sku: "MIL-3670-22-BD", description: 'M18 FUEL 4-1/2"/6" Braking Grinder w/ Two XC 8.0Ah Batteries + FUEL SURGE 1/4" Impact Driver. Premium combo for heavy-duty grinding and driving.', image: `${HCDN}/cd3d1f2e-fed2-4f2f-9682-aa63d6bf48c8/svn/milwaukee-power-tool-combo-kits-3697-25-64_600.jpg` },
+          { name: 'Milwaukee 3670-22 + 2760-20', price: "$599.00", sku: "MIL-3670-22-BD", description: 'M18 FUEL 4-1/2"/6" Braking Grinder w/ Two XC 8.0Ah Batteries + FUEL SURGE 1/4" Impact Driver. Premium combo for heavy-duty grinding and driving.', image: "https://www.ohiopowertool.com/media/catalog/product/8/6/86d27a50816ced0be20543a84dff0de38c378ebc8984699d3393845d698d5f62.jpeg" },
           { name: 'Milwaukee 3697-25', price: "$899.95", sku: "MIL-3697-25", description: 'M18 FUEL 5-Tool Combo Kit w/ Two 5.0Ah Batteries, Charger, Tool Bag. Includes Hammer Drill, Impact Driver, Circular Saw, SAWZALL, and LED Light.', image: `${HCDN}/cd3d1f2e-fed2-4f2f-9682-aa63d6bf48c8/svn/milwaukee-power-tool-combo-kits-3697-25-64_600.jpg` },
           { name: 'Milwaukee 3693-24CX', price: "$399.00", sku: "MIL-3693-24CX", description: 'M18 Brushless 4-Tool Combo Kit w/ 2 Batteries, Charger, Tool Bag. Hammer Drill, Impact Driver, SAWZALL, Work Light. Compact and efficient.', image: `${ACDN}/dw019d0c8f/images/images/catalog/product/S0000000005444/milwaukee-m18-4-tool-combo-kit-3693-24cx.jpg?sw=720` },
           { name: 'Milwaukee 3697-27 + 2967-20', price: "$999.00", sku: "MIL-3697-27-BD", description: 'M18 FUEL 7-Tool Combo Kit + 1/2" High Torque Impact Wrench w/ Friction Ring. The ultimate professional tool set for jobsite productivity.', image: `${HCDN}/940dbd45-c82e-4738-9754-60ca2cc0eb01/svn/milwaukee-power-tool-combo-kits-3697-27-2967-20-64_600.jpg` },
