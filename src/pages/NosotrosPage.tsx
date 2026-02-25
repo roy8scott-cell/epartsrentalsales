@@ -34,7 +34,7 @@ const NosotrosPage = () => (
           <span className="text-primary font-heading font-bold text-sm uppercase tracking-widest">
             Quiénes Somos
           </span>
-          <h1 className="text-3xl md:text-5xl font-heading font-black text-foreground mt-3">
+          <h1 className="text-3xl md:text-5xl font-heading font-black text-secondary-foreground mt-3">
             E-Parts Rental & Sales
           </h1>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto text-lg leading-relaxed">
