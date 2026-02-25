@@ -40,6 +40,10 @@ const Products = () => {
   }, []);
 
   useEffect(() => {
+    setActiveCategory(null);
+  }, [activeBrand]);
+
+  useEffect(() => {
     // The scrollable container is <main> with overflow-y-auto, not window
     const main = document.querySelector("main");
     if (main) {
