@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
 import { ShoppingCart, Search, X, ArrowUpDown, Check } from "lucide-react";
 import { brands, type Product } from "@/data/products";
@@ -28,6 +28,7 @@ const Products = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [activeBrand, setActiveBrand] = useState("husqvarna");
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const categoryBarRef = useRef<HTMLDivElement>(null);
   const [search, setSearch] = useState(() => searchParams.get("buscar") || "");
   const [sort, setSort] = useState<SortOption>("price-asc");
   const brand = brands.find((b) => b.id === activeBrand)!;
@@ -41,6 +42,9 @@ const Products = () => {
 
   useEffect(() => {
     setActiveCategory(null);
+    if (categoryBarRef.current) {
+      categoryBarRef.current.scrollTo({ left: 0, behavior: "instant" as ScrollBehavior });
+    }
   }, [activeBrand]);
 
   useEffect(() => {
@@ -116,7 +120,7 @@ const Products = () => {
 
           {/* Category Pills */}
           {brand.categories.length > 0 && (
-            <div className="flex gap-2 mb-3 overflow-x-auto pb-1 scrollbar-hide md:flex-wrap md:overflow-visible">
+            <div ref={categoryBarRef} className="flex gap-2 mb-3 overflow-x-auto pb-1 scrollbar-hide md:flex-wrap md:overflow-visible">
               <button
                 onClick={() => { setActiveCategory(null); window.scrollTo({ top: 0, behavior: "smooth" }); }}
                 className={`px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs font-heading font-semibold transition-all whitespace-nowrap flex-shrink-0 ${
