@@ -32,9 +32,9 @@ export const brands: Brand[] = [
     accent: "border-orange-500",
     badge: "bg-orange-500/10 text-orange-600",
     categories: [
-      // ── 1. Blowers ──
+      // ── 1. Sopladoras ──
       {
-        name: "Blowers",
+        name: "Sopladoras",
         products: [
           {
             name: "Husqvarna 590BTS",
@@ -73,9 +73,9 @@ export const brands: Brand[] = [
           },
         ],
       },
-      // ── 2. Brushcutters & Trimmers ──
+      // ── 2. Desbrozadoras y Trimmers ──
       {
-        name: "Brushcutters & Trimmers",
+        name: "Desbrozadoras y Trimmers",
         products: [
           {
             name: "Husqvarna 545FR",
@@ -156,9 +156,9 @@ export const brands: Brand[] = [
           },
         ],
       },
-      // ── 3. Chainsaws ──
+      // ── 3. Motosierras ──
       {
-        name: "Chainsaws",
+        name: "Motosierras",
         products: [
           {
             name: "562 XP® Mark II",
@@ -211,9 +211,9 @@ export const brands: Brand[] = [
           },
         ],
       },
-      // ── 4. Trimmer Hedgers ──
+      // ── 4. Podadoras de Seto ──
       {
-        name: "Trimmer Hedgers",
+        name: "Podadoras de Seto",
         products: [
           {
             name: "Husqvarna 525HE4",
@@ -252,9 +252,9 @@ export const brands: Brand[] = [
           },
         ],
       },
-      // ── 5. Tractors ──
+      // ── 5. Tractores ──
       {
-        name: "Tractors",
+        name: "Tractores",
         products: [
           {
             name: 'Husqvarna TS 140X (54")',
@@ -286,9 +286,9 @@ export const brands: Brand[] = [
           },
         ],
       },
-      // ── 6. Zero Turn ──
+      // ── 6. Cortadoras Zero Turn ──
       {
-        name: "Zero Turn",
+        name: "Cortadoras Zero Turn",
         products: [
           {
             name: "Z254F Special Edition",
@@ -313,9 +313,9 @@ export const brands: Brand[] = [
           },
         ],
       },
-      // ── 7. Robot Lawn Mowers ──
+      // ── 7. Cortadoras Robóticas ──
       {
-        name: "Robot Lawn Mowers",
+        name: "Cortadoras Robóticas",
         products: [
           {
             name: "Automower® 435 iQ AWD",
@@ -363,7 +363,7 @@ export const brands: Brand[] = [
     badge: "bg-teal-500/10 text-teal-600",
     categories: [
       {
-        name: "Rotary Hammers",
+        name: "Martillos Rotatorios",
         products: [
           { name: "Makita HR4041C", price: "$634.95", sku: "MAK-HR4041C", description: '1-9/16" Rotary Hammer, accepts Spline bits. 11 AMP motor delivers 230-460 RPM and 1,300-2,600 BPM. Constant speed control maintains speed under load.', image: `${MCDN}/hr4/97fbfe39-1630-4576-ba10-d85cd6e8519c_hr4041c_k_1500px.png` },
           { name: "Makita HR2641X1", price: "$299.95", sku: "MAK-HR2641X1", description: '8 Amp 1 in. Corded SDS-Plus Concrete/Masonry AVT Rotary Hammer Drill with 4-1/2 in. Corded Angle Grinder with Hard Case.', image: `${MCDN}/hr2/7dd522a4-2814-425f-b4f2-2791d2a2bb3c_hr2641x1_k_1500px.png` },
@@ -372,7 +372,7 @@ export const brands: Brand[] = [
         ],
       },
       {
-        name: "Demolition Hammers",
+        name: "Martillos Demoledores",
         products: [
           { name: "Makita HM1307CB", price: "$1,359.95", sku: "MAK-HM1307CB", description: '14 Amp 1-1/8 in. Hex Corded Variable Speed 35 lb. Demolition Hammer w/ Soft Start, LED, (1) Bull Point and Hard Case.', image: `${MCDN}/hm1/01b6d0e9-0260-439a-abc4-442b08ef7d56_hm1307cb_k_1500px.png` },
           { name: "Makita HM0810B", price: "$589.95", sku: "MAK-HM0810B", description: '13 lb. Demolition Hammer, accepts 3/4" Hex bits. 8.3 AMP motor delivers 2,900 BPM. Lock-on button for continuous use, one-touch tool retainer for quick bit changes.', image: `${MCDN}/hm0/58c3f24e-58a6-4d2b-a667-06c85ca34852_hm0810b_k_1500px.png` },
@@ -381,7 +381,7 @@ export const brands: Brand[] = [
         ],
       },
       {
-        name: "Garden Equipment",
+        name: "Equipos de Jardín (Makita)",
         products: [
           { name: "Makita XUX02SM1X1", price: "$299.95", sku: "MAK-XUX02SM1X1", description: 'LXT 18V Lithium-Ion Brushless Cordless Couple Shaft Power Head Kit w/13 in. String Trimmer Attachment (4.0Ah).', image: `${MCDN}/xux/309b5b6a-7289-4af9-a762-972b22ce036b_xux02sm1x1_k_1500px.png` },
           { name: "Makita XUX02SM1X3", price: "$349.95", sku: "MAK-XUX02SM1X3", description: 'LXT 18V Brushless Cordless Couple Shaft Power Head Kit with 13 in. String Trimmer and Leaf Blower Attachments, 4.0Ah.', image: `${MCDN}/xux/cea9295f-f8d9-426e-a3cd-7cd101ca96d8_xux02sm1x3_k_1500px.png` },
@@ -395,7 +395,7 @@ export const brands: Brand[] = [
         ],
       },
       {
-        name: "Drills & Drivers",
+        name: "Taladros y Atornilladores",
         products: [
           { name: "Makita XPH12Z", price: "$159.95", sku: "MAK-XPH12Z", description: '18V LXT Lithium-Ion 1/2 in. Brushless Cordless Hammer Driver-Drill (Tool Only).', image: `${MCDN}/xph/d95a3190-0b96-4e7b-85ef-9c139dbb28b5_xph12z_p_1500px.png` },
           { name: "Makita XDT14Z", price: "$169.95", sku: "MAK-XDT14Z", description: '18V LXT Lithium-Ion Brushless 1/4 in. Cordless Quick-Shift Mode 3-Speed Impact Driver (Tool Only).', image: `${MCDN}/xdt/7cb31bcc-d235-4ba7-9670-c42276973981_xdt14z_p_1500px.png` },
@@ -405,7 +405,7 @@ export const brands: Brand[] = [
         ],
       },
       {
-        name: "Impact Wrenches & Ratchets",
+        name: "Llaves de Impacto",
         products: [
           { name: "Makita XWT08Z", price: "$339.95", sku: "MAK-XWT08Z", description: '18V LXT Lithium-Ion Brushless Cordless High Torque 1/2 in. 3-Speed Drive Impact Wrench (Tool-Only), delivers 740 ft.lbs. of Fastening Torque and 1,180 ft.lbs. of Nut-Busting Torque.', image: `${MCDN}/xwt/9b2a2d7f-cea4-4ac6-af2d-0d25742e8790_xwt08z_p_1500px.png` },
           { name: "Makita XWT08T", price: "$629.95", sku: "MAK-XWT08T", description: '18V LXT Lithium-Ion Brushless Cordless High Torque 1/2 in. Square Drive Impact Wrench w/ (2) Batteries 5.0Ah, Bag, delivers 740 ft.lbs. of Fastening Torque and 1,180 ft.lbs. of Nut-Busting Torque.', image: `${MCDN}/xwt/3183a24f-2f8f-4233-ac8f-dc53721f1932_xwt08t_k_1500px.png` },
@@ -414,7 +414,7 @@ export const brands: Brand[] = [
         ],
       },
       {
-        name: "Grinders",
+        name: "Esmeriles y Amoladoras (Makita)",
         products: [
           { name: "Makita 9557PB", price: "$109.95", sku: "MAK-9557PB", description: '4-1/2" Paddle Switch Angle Grinder with AC/DC Switch. 7.5 AMP motor delivers 11,000 RPM. Large paddle switch for easy operation, weighs only 4.5 lbs.', image: `${MCDN}/955/95b8b5bb-f9cd-42a0-9331-eb3de17cf43e_9557pb_p_1500px.png` },
           { name: "Makita GA7021", price: "$229.95", sku: "MAK-GA7021", description: '7" Angle Grinder with AC/DC Switch. 15 AMP motor delivers 6,600 RPM. Rubberized soft grip handle, labyrinth construction with zig-zag varnish for longer tool life.', image: `${MCDN}/ga7/ef50e1f5-ee92-48ae-a32c-0d3175abf62f_ga7021_p_1500px.png` },
@@ -422,7 +422,7 @@ export const brands: Brand[] = [
         ],
       },
       {
-        name: "Saws & Cutters",
+        name: "Sierras y Cortadoras",
         products: [
           { name: "Makita 5007F", price: "$189.95", sku: "MAK-5007F", description: '7-1/4" Circular Saw. Powerful 15 AMP motor delivers 5,800 RPM. Two built-in LED lights illuminate the line of cut. Heavy gauge aluminum wraparound base.', image: `${MCDN}/500/4573e931-7872-4e66-9a2c-a6d5988f8f10_5007f_p_1500px.png` },
           { name: "Makita 5007MG", price: "$239.95", sku: "MAK-5007MG", description: '7-1/4" Magnesium Circular Saw. 15 AMP motor cuts through the densest lumber. Magnesium components create a lightweight saw (10.6 lbs.) that\'s jobsite tough.', image: `${MCDN}/500/92d756ee-4919-40c1-9306-a258a6246968_5007mg_k_1500px.png` },
@@ -436,7 +436,7 @@ export const brands: Brand[] = [
         ],
       },
       {
-        name: "Bundle Special Deals",
+        name: "Combos y Ofertas (Makita)",
         products: [
           { name: "Makita XT505", price: "$799.95", sku: "MAK-XT505", description: '18V LXT Lithium-Ion Cordless 5-Pc. Combo Kit (3.0Ah). Includes Hammer Drill, Impact Driver, Circular Saw, Recipro Saw, Flashlight, (2) 3.0Ah Batteries, Charger, and Tool Bag.', image: `${MCDN}/xt5/af5455a5-8234-4456-a563-962d7c2e3bab_xt505_k_1500px.png` },
           { name: "Makita GT400M1D1", price: "$999.95", sku: "MAK-GT400M1D1", description: '40V max XGT Brushless Cordless 4-Pc. Combo Kit (2.5Ah). Includes Hammer Drill, Impact Driver, Circular Saw, Recipro Saw, (2) 2.5Ah Batteries, Charger, and Bag.', image: `${MCDN}/gt4/6a06a91e-6581-4fc6-8da0-77efa87e790f_gt400m1d1_k_1500px.png` },
@@ -454,7 +454,7 @@ export const brands: Brand[] = [
     categories: [
       // ── 1. Rotary Hammers ──
       {
-        name: "Rotary Hammers",
+        name: "Martillos Rotatorios (Milwaukee)",
         products: [
           { name: 'Milwaukee 5262-21', price: "$214.62", sku: "MIL-5262-21", description: '8 Amp Corded 1" SDS D-Handle Rotary Hammer. 5,625 RPM and 0-4,000 BPM. Compact, lightweight design for overhead and tight space applications.', image: `${HCDN}/394f7138-759d-457b-af2c-6347e128b702/svn/milwaukee-rotary-hammers-5262-21-64_600.jpg` },
           { name: 'Milwaukee 5268-21', price: "$404.62", sku: "MIL-5268-21", description: '1-1/8" Corded SDS-Plus Rotary Hammer. 8 Amp motor delivers 5,500 RPM and 0-5,500 BPM. Anti-vibration system for reduced user fatigue.', image: `${TCDN}/milwaukee-5268-21_01_d69e918f-979e-43ee-acf1-1429af948cc0.jpg?v=1769855034&width=800` },
@@ -468,7 +468,7 @@ export const brands: Brand[] = [
       },
       // ── 2. Demolition Hammers ──
       {
-        name: "Demolition Hammers",
+        name: "Martillos Demoledores (Milwaukee)",
         products: [
           { name: 'Milwaukee 5446-21', price: "$749.00", sku: "MIL-5446-21", description: 'SDS-MAX Demolition Hammer. 14 Amp motor delivers 2,840 BPM. Soft-start and dial speed for controlled starts. AVS and 15.2 ft-lbs impact energy.', image: `${HCDN}/a53bf528-484f-4487-854e-7e0f17793b10/svn/milwaukee-rotary-hammers-5446-21-64_600.jpg` },
           { name: 'Milwaukee MXF368-1XC', price: "$3,499.00", sku: "MIL-MXF368-1XC", description: 'MX FUEL Lithium-Ion Cordless 1-1/8" Breaker with Battery and Charger. Delivers up to 35 ft-lbs of impact energy. Eliminates cords and gas.', image: `${ACDN}/dw9145f3ba/images/images/catalog/product/045242537402/milwaukee-mx-fuel-breaker-mxf368-1xc.jpg?sw=720` },
@@ -476,7 +476,7 @@ export const brands: Brand[] = [
       },
       // ── 3. Grinders ──
       {
-        name: "Grinders",
+        name: "Esmeriles y Amoladoras (Milwaukee)",
         products: [
           { name: 'Milwaukee 6130-33', price: "$79.00", sku: "MIL-6130-33", description: '7 Amp Corded 4-1/2" Small Angle Grinder with Sliding Lock-On Switch. 11,000 RPM. Compact body and ergonomic barrel grip.', image: `${ACDN}/dw86335078/images/images/catalog/product/045242195732/milwaukee-70-amp-4-12-in-small-angle-grinder-6130-33.jpg?sw=720` },
           { name: 'Milwaukee 6142-30', price: "$139.00", sku: "MIL-6142-30", description: '11 Amp Corded 4-1/2" Small Angle Grinder with Lock-On Paddle Switch. 11,000 RPM. Overload protection for long motor life.', image: `${HCDN}/c1188195-fbbb-4b12-926f-8aaa98c40928/svn/milwaukee-angle-grinders-6142-30-64_600.jpg` },
@@ -491,7 +491,7 @@ export const brands: Brand[] = [
       },
       // ── 4. Drills & Impact Drivers ──
       {
-        name: "Drills & Impact Drivers",
+        name: "Taladros e Impactos",
         products: [
           { name: 'Milwaukee 3453-20', price: "$99.00", sku: "MIL-3453-20", description: 'M12 FUEL 12V Lithium-Ion Brushless Cordless 1/4" Hex Impact Driver (Tool-Only). 1,700 in-lbs torque, 3,300 RPM.', image: `${TCDN}/Milwaukee-3453-20_01.jpg?v=1771600647&width=800` },
           { name: 'Milwaukee 2760-20', price: "$149.00", sku: "MIL-2760-20", description: 'M18 FUEL SURGE 1/4" Hex Hydraulic Impact Driver (Tool-Only). Up to 50% quieter. 450 ft-lbs torque, 0-3,000 RPM.', image: `${HCDN}/9c416e16-396a-4b33-bc4b-0c51dcfb1e06/svn/milwaukee-impact-drivers-2760-20-64_600.jpg` },
@@ -508,7 +508,7 @@ export const brands: Brand[] = [
       },
       // ── 5. Saws & Power Cutters ──
       {
-        name: "Saws & Power Cutters",
+        name: "Sierras y Cortadoras (Milwaukee)",
         products: [
           { name: 'Milwaukee 6519-31', price: "$149.00", sku: "MIL-6519-31", description: '12 Amp SAWZALL Reciprocating Saw with Case. 0-3,000 SPM with 3/4" stroke length. Counter-balance mechanism for less vibration.', image: `${HCDN}/ee680fdc-1ad4-4b05-8187-3de7affd4ce4/svn/milwaukee-reciprocating-saws-6519-31-64_600.jpg` },
           { name: 'Milwaukee 2621-20', price: "$129.00", sku: "MIL-2621-20", description: 'M18 Cordless SAWZALL Reciprocating Saw (Tool-Only). 0-3,000 SPM with 3/4" stroke. QUIK-LOK blade clamp for fast changes.', image: `${HCDN}/e3922c83-cf48-4066-9cda-9dd3cdf990bb/svn/milwaukee-reciprocating-saws-2621-20-64_600.jpg` },
@@ -532,7 +532,7 @@ export const brands: Brand[] = [
       },
       // ── 6. Garden Equipment ──
       {
-        name: "Garden Equipment",
+        name: "Equipos de Jardín (Milwaukee)",
         products: [
           { name: 'Milwaukee 2527-20', price: "$149.00", sku: "MIL-2527-20", description: 'M12 FUEL 6" HATCHET Pruning Saw (Tool-Only). 7,150 SPM. Compact and lightweight for one-handed pruning. REDLINK overload protection.', image: `${HCDN}/933a4e80-cd00-47f1-bd08-396c93f5c651/svn/milwaukee-cordless-chainsaws-2527-20-64_600.jpg` },
           { name: 'Milwaukee 3004-20', price: "$199.00", sku: "MIL-3004-20", description: 'M18 FUEL 8" HATCHET Pruning Saw (Tool-Only). 6,600 SPM. Full-complement cutter bar for reduced kickback. Ideal for tree care pros.', image: `${ACDN}/dw6bd1e26e/images/images/catalog/product/045242646173/milwaukee-m18-fuel-hatchet-8-inch-pruning-saw-bare-tool-3004-20.jpg?sw=720` },
@@ -550,7 +550,7 @@ export const brands: Brand[] = [
       },
       // ── 7. Bundle Special Deals ──
       {
-        name: "Bundle Special Deals",
+        name: "Combos y Ofertas (Milwaukee)",
         products: [
           
           { name: 'Milwaukee 3697-25', price: "$899.95", sku: "MIL-3697-25", description: 'M18 FUEL 5-Tool Combo Kit w/ Two 5.0Ah Batteries, Charger, Tool Bag. Includes Hammer Drill, Impact Driver, Circular Saw, SAWZALL, and LED Light.', image: `${HCDN}/cd3d1f2e-fed2-4f2f-9682-aa63d6bf48c8/svn/milwaukee-power-tool-combo-kits-3697-25-64_600.jpg` },

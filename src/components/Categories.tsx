@@ -6,13 +6,13 @@ const categories = [
     icon: Trees,
     title: "Podadoras",
     description: "Piezas para cortadoras de césped, cuchillas, filtros y más.",
-    search: "Tractors",
+    search: "Tractores",
   },
   {
     icon: Wrench,
     title: "Motosierras",
     description: "Cadenas, barras guía, bujías y repuestos originales.",
-    search: "Chainsaws",
+    search: "Motosierras",
   },
   {
     icon: Cog,
@@ -24,7 +24,7 @@ const categories = [
     icon: Zap,
     title: "Sopladoras",
     description: "Tubos, filtros de aire, arrancadores y partes eléctricas.",
-    search: "Blowers",
+    search: "Sopladoras",
   },
 ];
 
