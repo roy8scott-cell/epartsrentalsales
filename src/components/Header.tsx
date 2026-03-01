@@ -9,6 +9,7 @@ const routeMap: Record<string, string> = {
   productos: "/productos",
   nosotros: "/nosotros",
   contacto: "/contacto",
+  blog: "/blog",
 };
 
 interface HeaderProps {
@@ -25,6 +26,7 @@ const Header = ({ activeTab, onTabChange }: HeaderProps) => {
     { id: "productos", label: t.nav_productos },
     { id: "nosotros", label: t.nav_nosotros },
     { id: "contacto", label: t.nav_contacto },
+    { id: "blog", label: t.nav_blog },
   ];
 
   return (

@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, Package, Users, Phone } from "lucide-react";
+import { Home, Package, Users, Phone, BookOpen } from "lucide-react";
 import { useLang } from "@/context/LanguageContext";
 
 const MobileBottomNav = () => {
@@ -9,6 +9,7 @@ const MobileBottomNav = () => {
   const items = [
     { path: "/", label: t.nav_inicio, icon: Home, id: "inicio" },
     { path: "/productos", label: t.nav_productos, icon: Package, id: "productos" },
+    { path: "/blog", label: t.nav_blog, icon: BookOpen, id: "blog" },
     { path: "/nosotros", label: t.nav_nosotros, icon: Users, id: "nosotros" },
     { path: "/contacto", label: t.nav_contacto, icon: Phone, id: "contacto" },
   ];
@@ -17,6 +18,7 @@ const MobileBottomNav = () => {
     : location.pathname === "/productos" ? "productos"
     : location.pathname === "/nosotros" ? "nosotros"
     : location.pathname === "/contacto" ? "contacto"
+    : location.pathname === "/blog" ? "blog"
     : "";
 
   return (

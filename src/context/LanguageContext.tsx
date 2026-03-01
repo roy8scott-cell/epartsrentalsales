@@ -8,6 +8,7 @@ interface Translations {
   nav_productos: string;
   nav_nosotros: string;
   nav_contacto: string;
+  nav_blog: string;
   // Hero
   hero_badge: string;
   hero_title: string;
@@ -108,6 +109,7 @@ const es: Translations = {
   nav_productos: "Productos",
   nav_nosotros: "Nosotros",
   nav_contacto: "Contacto",
+  nav_blog: "Blog",
   hero_badge: "Equipos de Jardinería y Hogar en Humacao, PR",
   hero_title: "Piezas y Equipos para tu",
   hero_title_highlight: "Jardín y Hogar",
@@ -233,6 +235,7 @@ const en: Translations = {
   nav_productos: "Products",
   nav_nosotros: "About Us",
   nav_contacto: "Contact",
+  nav_blog: "Blog",
   hero_badge: "Outdoor & Home Equipment in Humacao, PR",
   hero_title: "Parts & Equipment for your",
   hero_title_highlight: "Garden & Home",
