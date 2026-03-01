@@ -4,6 +4,7 @@ import { ShoppingCart, Search, X, ArrowUpDown, Check } from "lucide-react";
 import { brands, type Product } from "@/data/products";
 import { useCart } from "@/context/CartContext";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import { useLang } from "@/context/LanguageContext";
 
 type SortOption = "price-asc" | "price-desc" | "name-asc";
 
@@ -31,6 +32,7 @@ const Products = () => {
   const categoryBarRef = useRef<HTMLDivElement>(null);
   const [search, setSearch] = useState(() => searchParams.get("buscar") || "");
   const [sort, setSort] = useState<SortOption>("price-asc");
+  const { t } = useLang();
   const brand = brands.find((b) => b.id === activeBrand)!;
 
   useEffect(() => {
@@ -48,7 +50,6 @@ const Products = () => {
   }, [activeBrand]);
 
   useEffect(() => {
-    // The scrollable container is <main> with overflow-y-auto, not window
     const main = document.querySelector("main");
     if (main) {
       main.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
@@ -91,13 +92,13 @@ const Products = () => {
         <div className="container pt-4 pb-3 md:pt-8">
           <div className="hidden md:block mb-6">
             <span className="text-primary font-heading font-bold text-sm uppercase tracking-widest">
-              Catálogo de Productos
+              {t.products_badge}
             </span>
             <h2 className="text-3xl md:text-4xl font-heading font-black text-foreground mt-2">
-              Encuentra tu Equipo
+              {t.products_title}
             </h2>
             <p className="text-muted-foreground mt-2 max-w-lg">
-              Selecciona la marca y busca por nombre o código. ¡Consulta disponibilidad por WhatsApp!
+              {t.products_desc}
             </p>
           </div>
 
@@ -129,7 +130,7 @@ const Products = () => {
                     : "bg-muted text-muted-foreground hover:text-foreground"
                 }`}
               >
-                Todas
+                {t.products_all}
               </button>
               {brand.categories.map((cat) => (
                 <button
@@ -155,7 +156,7 @@ const Products = () => {
                 type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder={`Buscar en ${brand.name}...`}
+                placeholder={`${t.products_search_placeholder} ${brand.name}...`}
                 className="w-full pl-10 pr-10 py-2.5 md:py-3 rounded-full md:rounded-lg border border-border bg-card text-foreground placeholder:text-muted-foreground font-body text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition"
               />
               {search && (
@@ -174,16 +175,16 @@ const Products = () => {
                 onChange={(e) => setSort(e.target.value as SortOption)}
                 className="pl-8 pr-3 py-2.5 md:py-3 rounded-full md:rounded-lg border border-border bg-card text-foreground font-body text-xs md:text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition appearance-none cursor-pointer"
               >
-                <option value="price-asc">Menor precio</option>
-                <option value="price-desc">Mayor precio</option>
-                <option value="name-asc">Nombre A-Z</option>
+                <option value="price-asc">{t.products_sort_price_asc}</option>
+                <option value="price-desc">{t.products_sort_price_desc}</option>
+                <option value="name-asc">{t.products_sort_name}</option>
               </select>
             </div>
           </div>
 
           {search && (
             <p className="text-xs text-muted-foreground mt-2 md:hidden">
-              {totalResults} resultado{totalResults !== 1 ? "s" : ""} para "{search}"
+              {totalResults} {t.products_results}{totalResults !== 1 ? "s" : ""} {t.products_result_for} "{search}"
             </p>
           )}
         </div>
@@ -196,13 +197,13 @@ const Products = () => {
             <Search size={40} className="mx-auto mb-3 opacity-30" />
             <p className="font-heading font-semibold">
               {brand.categories.length === 0
-                ? "Próximamente — productos en camino"
-                : "No se encontraron productos"}
+                ? t.products_empty_soon
+                : t.products_empty_noresult}
             </p>
             <p className="text-sm mt-1">
               {brand.categories.length === 0
-                ? "Estamos agregando inventario de esta marca"
-                : "Intenta con otro término"}
+                ? t.products_empty_soon_desc
+                : t.products_empty_noresult_desc}
             </p>
           </div>
         ) : (
@@ -217,18 +218,15 @@ const Products = () => {
                   </span>
                 </h3>
 
-                <div className="flex flex-col gap-2 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-4">
+                <div className="flex flex-col gap-3 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-4">
                   {cat.products.map((product) => (
                     <div
                       key={product.sku}
-                      className="bg-card border border-border rounded-xl md:rounded-lg overflow-hidden hover:shadow-lg hover:border-primary/40 transition-all group flex items-center gap-3 md:flex-col md:items-stretch"
+                      className="bg-card border border-border rounded-2xl md:rounded-xl overflow-hidden hover:shadow-lg hover:border-primary/40 transition-all group flex items-center gap-3 md:flex-col md:items-stretch animate-fade-in"
                     >
-                      {/* Product Image - Desktop */}
                       {product.image && (
                         <ImageWithZoom src={product.image} alt={product.name} variant="desktop" />
                       )}
-
-                      {/* Product Image - Mobile thumbnail */}
                       {product.image && (
                         <ImageWithZoom src={product.image} alt={product.name} variant="mobile" />
                       )}
@@ -287,7 +285,7 @@ const ImageWithZoom = ({ src, alt, variant }: { src: string; alt: string; varian
           <img src={src} alt={alt} className="w-full h-40 object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy" />
         </div>
       ) : (
-        <div className="md:hidden w-20 h-20 flex-shrink-0 bg-muted/30 rounded-lg overflow-hidden ml-3 cursor-zoom-in" onClick={() => setOpen(true)}>
+        <div className="md:hidden w-20 h-20 flex-shrink-0 bg-muted/30 rounded-xl overflow-hidden ml-3 cursor-zoom-in" onClick={() => setOpen(true)}>
           <img src={src} alt={alt} className="w-full h-full object-contain p-1" loading="lazy" />
         </div>
       )}
@@ -303,6 +301,7 @@ const ImageWithZoom = ({ src, alt, variant }: { src: string; alt: string; varian
 
 const AddToCartButton = ({ product, brandName, mobile }: { product: Product; brandName: string; mobile?: boolean }) => {
   const { addItem, items, setIsOpen } = useCart();
+  const { t } = useLang();
   const [justAdded, setJustAdded] = useState(false);
   const inCart = items.find((i) => i.product.sku === product.sku);
 
@@ -318,14 +317,14 @@ const AddToCartButton = ({ product, brandName, mobile }: { product: Product; bra
         onClick={inCart ? () => setIsOpen(true) : handleAdd}
         className={`px-4 py-2.5 rounded-full text-xs font-heading font-bold flex items-center gap-1.5 transition flex-shrink-0 shadow-sm ${
           justAdded
-            ? "bg-green-500 text-white"
+            ? "bg-accent text-accent-foreground"
             : inCart
             ? "bg-primary/10 text-primary border border-primary/30"
             : "bg-primary text-primary-foreground hover:brightness-110"
         }`}
       >
         {justAdded ? <Check size={14} /> : <ShoppingCart size={14} />}
-        {justAdded ? "Agregado" : inCart ? `En carrito (${inCart.quantity})` : "Agregar"}
+        {justAdded ? t.products_added : inCart ? `${t.products_in_cart} (${inCart.quantity})` : t.products_add}
       </button>
     );
   }
@@ -335,14 +334,14 @@ const AddToCartButton = ({ product, brandName, mobile }: { product: Product; bra
       onClick={inCart ? () => setIsOpen(true) : handleAdd}
       className={`px-3 py-1.5 rounded-md text-xs font-heading font-bold flex items-center gap-1 transition ${
         justAdded
-          ? "bg-green-500 text-white"
+          ? "bg-accent text-accent-foreground"
           : inCart
           ? "bg-primary/10 text-primary border border-primary/30 hover:bg-primary/20"
           : "bg-primary text-primary-foreground hover:brightness-110"
       }`}
     >
       {justAdded ? <Check size={14} /> : <ShoppingCart size={14} />}
-      {justAdded ? "Agregado" : inCart ? `En carrito (${inCart.quantity})` : "Agregar"}
+      {justAdded ? t.products_added : inCart ? `${t.products_in_cart} (${inCart.quantity})` : t.products_add}
     </button>
   );
 };
