@@ -8,7 +8,7 @@ const Footer = () => {
           <div>
             <img src={logo} alt="E-Parts" className="h-16 w-auto mb-4" />
             <p className="text-secondary-foreground/60 text-sm leading-relaxed">
-              Venta y renta de piezas para equipos de jardinería. Servicio rápido y confiable.
+              Dealer autorizado Makita y Milwaukee en Humacao, Puerto Rico. Venta, renta y reparación de equipos Husqvarna, Makita y Milwaukee.
             </p>
           </div>
           <div>
