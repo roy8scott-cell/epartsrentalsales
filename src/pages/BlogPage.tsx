@@ -8,7 +8,7 @@ const posts = [
   {
     slug: "como-mantener-tu-trimmer",
     date: "2025-01-15",
-    img: null,
+    img: "/images/blog-trimmer.jpg",
     category_es: "Mantenimiento",
     category_en: "Maintenance",
     title_es: "Cómo mantener tu trimmer en perfecto estado",
@@ -59,7 +59,7 @@ Does your trimmer need service? Visit us at **Calle Cruz Ortiz Stella #117 Suite
   {
     slug: "makita-vs-milwaukee",
     date: "2025-02-03",
-    img: null,
+    img: "/images/blog-makita-milwaukee.jpg",
     category_es: "Comparativas",
     category_en: "Comparisons",
     title_es: "Makita vs Milwaukee: ¿cuál es mejor para ti?",
@@ -112,7 +112,7 @@ As an authorized dealer for both brands in Puerto Rico, at E-Parts we can advise
   {
     slug: "plantas-electricas-huracanes",
     date: "2025-03-10",
-    img: null,
+    img: "/images/blog-generator.jpg",
     category_es: "Consejos",
     category_en: "Tips",
     title_es: "Prepara tu planta eléctrica antes de la temporada de huracanes",
@@ -232,8 +232,11 @@ const BlogPage = () => {
               className="group bg-card border border-border rounded-2xl overflow-hidden hover:shadow-lg hover:border-primary/30 transition-all duration-300 animate-fade-in cursor-pointer"
               onClick={() => setSelected(post)}
             >
-              <div className="h-44 bg-secondary flex items-center justify-center">
-                <BookOpen size={40} className="text-secondary-foreground/20" />
+              <div className="h-44 bg-secondary overflow-hidden">
+                {post.img
+                  ? <img src={post.img} alt={lang === "es" ? post.title_es : post.title_en} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  : <div className="w-full h-full flex items-center justify-center"><BookOpen size={40} className="text-secondary-foreground/20" /></div>
+                }
               </div>
 
               <div className="p-5 flex flex-col gap-3">
@@ -279,8 +282,15 @@ const BlogPage = () => {
             className="relative w-full md:max-w-2xl bg-card border border-border rounded-t-3xl md:rounded-2xl shadow-2xl max-h-[90dvh] flex flex-col overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
+            {/* Cover image */}
+            {selected.img && (
+              <div className="h-52 md:h-64 w-full shrink-0 overflow-hidden">
+                <img src={selected.img} alt={lang === "es" ? selected.title_es : selected.title_en} className="w-full h-full object-cover" />
+              </div>
+            )}
+
             {/* Modal header */}
-            <div className="flex items-start justify-between gap-4 px-6 pt-6 pb-4 border-b border-border shrink-0">
+            <div className="flex items-start justify-between gap-4 px-6 pt-5 pb-4 border-b border-border shrink-0">
               <div className="flex flex-col gap-1.5">
                 <div className="flex items-center gap-2">
                   <span className="text-[10px] font-heading font-bold uppercase tracking-widest text-primary bg-primary/10 px-2 py-0.5 rounded-full flex items-center gap-1">
