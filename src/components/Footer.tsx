@@ -1,30 +1,33 @@
 import logo from "@/assets/logo.png";
+import { useLang } from "@/context/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLang();
+
   return (
     <footer id="contacto" className="bg-secondary text-secondary-foreground">
-      <div className="container py-14">
+      <div className="container py-14 pb-24 md:pb-14">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
             <img src={logo} alt="E-Parts" className="h-16 w-auto mb-4" />
             <p className="text-secondary-foreground/60 text-sm leading-relaxed">
-              Dealer autorizado Makita y Milwaukee en Humacao, Puerto Rico. Venta, renta y reparación de equipos Husqvarna, Makita y Milwaukee.
+              {t.footer_desc}
             </p>
           </div>
           <div>
             <h4 className="font-heading font-bold text-sm uppercase tracking-wider text-primary mb-4">
-              Categorías
+              {t.footer_categories}
             </h4>
             <ul className="space-y-2 text-secondary-foreground/60 text-sm">
-              <li><a href="#categorías" className="hover:text-primary transition-colors">Podadoras</a></li>
-              <li><a href="#categorías" className="hover:text-primary transition-colors">Motosierras</a></li>
-              <li><a href="#categorías" className="hover:text-primary transition-colors">Trimmers</a></li>
-              <li><a href="#categorías" className="hover:text-primary transition-colors">Sopladoras</a></li>
+              <li><a href="#categorías" className="hover:text-primary transition-colors">{t.cat_podadoras}</a></li>
+              <li><a href="#categorías" className="hover:text-primary transition-colors">{t.cat_motosierras}</a></li>
+              <li><a href="#categorías" className="hover:text-primary transition-colors">{t.cat_trimmers}</a></li>
+              <li><a href="#categorías" className="hover:text-primary transition-colors">{t.cat_sopladoras}</a></li>
             </ul>
           </div>
           <div>
             <h4 className="font-heading font-bold text-sm uppercase tracking-wider text-primary mb-4">
-              Contacto
+              {t.footer_contact}
             </h4>
             <ul className="space-y-2 text-secondary-foreground/60 text-sm">
               <li>
@@ -56,7 +59,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-secondary-foreground/10 mt-10 pt-6 text-center text-secondary-foreground/40 text-xs">
-          © {new Date().getFullYear()} E-Parts Rental & Sales. Todos los derechos reservados.
+          © {new Date().getFullYear()} E-Parts Rental & Sales. {t.footer_rights}
         </div>
       </div>
     </footer>

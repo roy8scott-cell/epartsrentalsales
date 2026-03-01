@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
+import { useLang } from "@/context/LanguageContext";
 
 const routeMap: Record<string, string> = {
   inicio: "/",
@@ -10,13 +11,6 @@ const routeMap: Record<string, string> = {
   contacto: "/contacto",
 };
 
-const navItems = [
-  { id: "inicio", label: "Inicio" },
-  { id: "productos", label: "Productos" },
-  { id: "nosotros", label: "Nosotros" },
-  { id: "contacto", label: "Contacto" },
-];
-
 interface HeaderProps {
   activeTab: string;
   onTabChange: (tab: string) => void;
@@ -24,6 +18,14 @@ interface HeaderProps {
 
 const Header = ({ activeTab, onTabChange }: HeaderProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { lang, setLang, t } = useLang();
+
+  const navItems = [
+    { id: "inicio", label: t.nav_inicio },
+    { id: "productos", label: t.nav_productos },
+    { id: "nosotros", label: t.nav_nosotros },
+    { id: "contacto", label: t.nav_contacto },
+  ];
 
   return (
     <header className="sticky top-0 z-50 bg-secondary/95 backdrop-blur-sm border-b border-secondary py-0">
@@ -50,19 +52,31 @@ const Header = ({ activeTab, onTabChange }: HeaderProps) => {
           ))}
         </nav>
 
-        {/* Mobile toggle */}
-        <button
-          className="md:hidden text-secondary-foreground"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          {menuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        <div className="flex items-center gap-2">
+          {/* Language Toggle */}
+          <button
+            onClick={() => setLang(lang === "es" ? "en" : "es")}
+            className="flex items-center gap-1 px-3 py-1.5 rounded-full border border-secondary-foreground/20 bg-secondary-foreground/5 hover:bg-primary/10 hover:border-primary/40 transition-all font-heading font-bold text-xs text-secondary-foreground/70 hover:text-primary"
+            aria-label="Switch language"
+          >
+            <span className="text-sm">{lang === "es" ? "🇺🇸" : "🇵🇷"}</span>
+            <span>{lang === "es" ? "EN" : "ES"}</span>
+          </button>
+
+          {/* Mobile toggle */}
+          <button
+            className="md:hidden text-secondary-foreground p-1"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? <X size={26} /> : <Menu size={26} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile nav */}
       {menuOpen && (
-        <nav className="md:hidden bg-secondary border-t border-border px-6 pb-4 flex flex-col gap-2">
+        <nav className="md:hidden bg-secondary border-t border-border px-6 pb-4 flex flex-col gap-2 animate-fade-in">
           {navItems.map((item) => (
             <Link
               key={item.id}

@@ -1,45 +1,54 @@
 import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
+import { useLang } from "@/context/LanguageContext";
 
 interface HeroProps {
   onNavigate?: (tab: string) => void;
 }
 
 const Hero = ({ onNavigate }: HeroProps) => {
+  const { t } = useLang();
   return (
-    <section className="relative overflow-hidden min-h-[70vh] flex items-center">
+    <section className="relative overflow-hidden min-h-[75vh] md:min-h-[70vh] flex items-center">
       <div className="absolute inset-0">
         <img src={heroBg} alt="Equipos de jardinería Husqvarna en Puerto Rico" className="w-full h-full object-cover" loading="eager" />
         <div className="absolute inset-0 bg-secondary/80" />
+        {/* Mobile gradient overlay for better readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-secondary/40 via-transparent to-secondary/90 md:hidden" />
       </div>
-      <div className="relative container py-24 md:py-36 flex flex-col items-center text-center gap-6">
-        <span className="bg-primary/20 text-primary px-4 py-1.5 rounded-full font-heading font-bold text-xs uppercase tracking-widest">
-          Equipos de Jardinería y Hogar en Humacao, PR
+      <div className="relative container py-20 md:py-36 flex flex-col items-center text-center gap-5 md:gap-6">
+        <span className="animate-fade-in bg-primary/20 text-primary px-4 py-1.5 rounded-full font-heading font-bold text-xs uppercase tracking-widest">
+          {t.hero_badge}
         </span>
-        <h1 className="text-4xl md:text-6xl font-heading font-black text-secondary-foreground leading-tight max-w-3xl">
-          Piezas y Equipos para tu{" "}
-          <span className="text-primary">Jardín y Hogar</span>
+        <h1 className="animate-fade-in text-4xl md:text-6xl font-heading font-black text-secondary-foreground leading-tight max-w-3xl" style={{ animationDelay: "0.1s" }}>
+          {t.hero_title}{" "}
+          <span className="text-primary">{t.hero_title_highlight}</span>
         </h1>
-        <p className="text-secondary-foreground/70 text-lg md:text-xl max-w-xl font-body">
-          Venta y renta de motosierras, trimmers, sopladoras y tractores Husqvarna en Puerto Rico.
-          Compra fácil por WhatsApp con envío rápido.
+        <p className="animate-fade-in text-secondary-foreground/70 text-base md:text-xl max-w-sm md:max-w-xl font-body leading-relaxed" style={{ animationDelay: "0.2s" }}>
+          {t.hero_desc}
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 mt-4">
+        <div className="animate-fade-in flex flex-col sm:flex-row gap-3 md:gap-4 mt-2 md:mt-4 w-full max-w-xs sm:max-w-none sm:w-auto" style={{ animationDelay: "0.3s" }}>
           <Link
             to="/productos"
-            className="bg-primary text-primary-foreground px-8 py-3.5 rounded-md font-heading font-bold text-sm uppercase tracking-wider hover:brightness-110 transition"
+            className="bg-primary text-primary-foreground px-8 py-4 rounded-xl font-heading font-bold text-sm uppercase tracking-wider hover:brightness-110 transition shadow-lg shadow-primary/30"
           >
-            Ver Productos
+            {t.hero_cta_products}
           </Link>
           <a
             href="https://wa.me/17878094747?text=Hola%2C%20quiero%20información%20sobre%20piezas"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-whatsapp text-primary-foreground px-8 py-3.5 rounded-md font-heading font-bold text-sm uppercase tracking-wider hover:brightness-110 transition flex items-center justify-center gap-2"
+            className="bg-whatsapp text-primary-foreground px-8 py-4 rounded-xl font-heading font-bold text-sm uppercase tracking-wider hover:brightness-110 transition shadow-lg shadow-green-700/30 flex items-center justify-center gap-2"
           >
             <WhatsAppIcon />
-            Cotizar por WhatsApp
+            {t.hero_cta_whatsapp}
           </a>
+        </div>
+        {/* Mobile scroll hint */}
+        <div className="md:hidden mt-6 animate-bounce text-secondary-foreground/40">
+          <svg className="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
         </div>
       </div>
     </section>
