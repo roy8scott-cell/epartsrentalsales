@@ -49,7 +49,7 @@ const Categories = () => {
             <div
               key={cat.title}
               onClick={() => { navigate(`/productos?buscar=${encodeURIComponent(cat.search)}`); window.scrollTo({ top: 0 }); }}
-              className="animate-fade-in bg-card border border-border rounded-2xl p-5 md:p-8 text-center hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all group cursor-pointer active:scale-95"
+              className="animate-fade-in glass rounded-2xl p-5 md:p-8 text-center hover:border-primary/40 hover:shadow-[0_12px_40px_hsl(var(--primary)/0.15)] transition-all group cursor-pointer active:scale-95"
               style={{ animationDelay: `${i * 0.07}s` }}
             >
               <div className="w-12 h-12 md:w-14 md:h-14 mx-auto mb-3 md:mb-5 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
