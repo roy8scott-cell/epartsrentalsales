@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SEOHead from "@/components/SEOHead";
 import Footer from "@/components/Footer";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 import { useLang } from "@/context/LanguageContext";
 import { BookOpen, X, Calendar, Tag } from "lucide-react";
 
@@ -204,6 +205,7 @@ const BlogPage = () => {
         description="Consejos de mantenimiento, comparativas de herramientas y guías para equipos Makita, Milwaukee y Husqvarna en Puerto Rico."
         canonical="https://epartsrentalsales.lovable.app/blog"
       />
+      <PageBreadcrumb crumbs={[{ label: lang === "es" ? "Blog" : "Blog" }]} />
 
       {/* Hero */}
       <section className="bg-secondary py-16 md:py-24 border-b border-secondary-foreground/10">
