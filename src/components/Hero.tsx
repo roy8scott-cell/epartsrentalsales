@@ -17,7 +17,7 @@ const Hero = ({ onNavigate }: HeroProps) => {
         <div className="absolute inset-0 bg-gradient-to-b from-secondary/40 via-transparent to-secondary/90 md:hidden" />
       </div>
       <div className="relative container py-20 md:py-36 flex flex-col items-center text-center gap-5 md:gap-6">
-        <span className="animate-fade-in bg-primary/20 text-primary px-4 py-1.5 rounded-full font-heading font-bold text-xs uppercase tracking-widest">
+        <span className="animate-fade-in glass-primary text-primary px-4 py-1.5 rounded-full font-heading font-bold text-xs uppercase tracking-widest">
           {t.hero_badge}
         </span>
         <h1 className="animate-fade-in text-4xl md:text-6xl font-heading font-black text-secondary-foreground leading-tight max-w-3xl" style={{ animationDelay: "0.1s" }}>

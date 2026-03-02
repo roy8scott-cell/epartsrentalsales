@@ -30,7 +30,7 @@ const Header = ({ activeTab, onTabChange }: HeaderProps) => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-secondary/95 backdrop-blur-sm border-b border-secondary py-0">
+    <header className="sticky top-0 z-50 glass-dark border-b border-secondary-foreground/10 py-0">
       <div className="container flex items-center justify-between">
         <Link to="/" onClick={() => onTabChange("inicio")} className="flex items-center gap-3">
           <img src={logo} alt="E-Parts Rental & Sales — equipos de jardinería en Humacao PR" className="h-16 md:h-20 w-auto" />

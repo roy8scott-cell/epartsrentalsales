@@ -4,7 +4,8 @@ const WhatsAppFloat = () => {
       href="https://wa.me/17878094747?text=Hola%2C%20necesito%20información%20sobre%20piezas"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-whatsapp rounded-full flex items-center justify-center shadow-xl whatsapp-pulse hover:brightness-110 transition"
+      className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-whatsapp rounded-full flex items-center justify-center shadow-[0_8px_32px_hsl(142_70%_45%/0.5)] whatsapp-pulse hover:brightness-110 transition"
+      style={{ boxShadow: "0 8px 32px hsl(142 70% 45% / 0.4), inset 0 1px 0 hsl(255 100% 100% / 0.25)" }}
       aria-label="Contactar por WhatsApp"
     >
       <svg viewBox="0 0 24 24" fill="white" className="w-8 h-8">

@@ -22,7 +22,7 @@ const MobileBottomNav = () => {
     : "";
 
   return (
-    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-secondary/95 backdrop-blur-md border-t border-secondary-foreground/10 safe-area-pb">
+    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 glass-dark border-t border-secondary-foreground/10 safe-area-pb">
       <div className="flex items-stretch justify-around">
         {items.map(({ path, label, icon: Icon, id }) => {
           const isActive = activeId === id;
