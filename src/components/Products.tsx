@@ -222,7 +222,7 @@ const Products = () => {
                   {cat.products.map((product) => (
                     <div
                       key={product.sku}
-                      className="bg-card border border-border rounded-2xl md:rounded-xl overflow-hidden hover:shadow-lg hover:border-primary/40 transition-all group flex items-center gap-3 md:flex-col md:items-stretch animate-fade-in"
+                      className="glass rounded-2xl md:rounded-xl overflow-hidden hover:shadow-[0_16px_48px_hsl(var(--primary)/0.18)] hover:border-primary/40 transition-all group flex items-center gap-3 md:flex-col md:items-stretch animate-fade-in"
                     >
                       {product.image && (
                         <ImageWithZoom src={product.image} alt={product.name} variant="desktop" />
@@ -252,7 +252,7 @@ const Products = () => {
                       </div>
 
                       {/* Desktop: price + add to cart */}
-                      <div className="hidden md:flex items-center justify-between px-4 pb-4 pt-2 border-t border-border mx-4">
+                      <div className="hidden md:flex items-center justify-between px-4 pb-4 pt-2 border-t border-border/50 mx-4">
                         <span className="text-lg font-heading font-black text-foreground">
                           {product.price}
                         </span>
