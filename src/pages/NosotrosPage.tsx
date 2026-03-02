@@ -1,6 +1,7 @@
 import SEOHead from "@/components/SEOHead";
 import JsonLd from "@/components/JsonLd";
 import Footer from "@/components/Footer";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 import { ShieldCheck, Clock, Award, Truck, Wrench, MapPin, Phone, Mail, Instagram } from "lucide-react";
 import { useLang } from "@/context/LanguageContext";
 
@@ -17,6 +18,7 @@ const NosotrosPage = () => {
         canonical="https://epartsrentalsales.lovable.app/nosotros"
       />
       <JsonLd />
+      <PageBreadcrumb crumbs={[{ label: t.nav_nosotros }]} />
       <main>
         <section className="bg-secondary py-16 md:py-24">
           <div className="container text-center">

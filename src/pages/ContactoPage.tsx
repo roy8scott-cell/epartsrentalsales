@@ -1,6 +1,7 @@
 import SEOHead from "@/components/SEOHead";
 import JsonLd from "@/components/JsonLd";
 import Footer from "@/components/Footer";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 import { useLang } from "@/context/LanguageContext";
 
 const ContactoPage = () => {
@@ -14,6 +15,7 @@ const ContactoPage = () => {
         canonical="https://epartsrentalsales.lovable.app/contacto"
       />
       <JsonLd />
+      <PageBreadcrumb crumbs={[{ label: t.nav_contacto }]} />
       <main className="min-h-[60vh]">
         <section className="container py-12 md:py-20">
           <div className="text-center mb-10">
