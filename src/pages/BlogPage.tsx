@@ -208,7 +208,7 @@ const BlogPage = () => {
       {/* Hero */}
       <section className="bg-secondary py-16 md:py-24 border-b border-secondary-foreground/10">
         <div className="container text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-heading font-bold uppercase tracking-widest mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-primary text-primary text-xs font-heading font-bold uppercase tracking-widest mb-4">
             <BookOpen size={12} />
             Blog
           </div>
@@ -229,7 +229,7 @@ const BlogPage = () => {
           {posts.map((post) => (
             <article
               key={post.slug}
-              className="group bg-card border border-border rounded-2xl overflow-hidden hover:shadow-lg hover:border-primary/30 transition-all duration-300 animate-fade-in cursor-pointer"
+              className="group glass rounded-2xl overflow-hidden hover:shadow-[0_16px_48px_hsl(var(--primary)/0.18)] hover:border-primary/40 transition-all duration-300 animate-fade-in cursor-pointer"
               onClick={() => setSelected(post)}
             >
               <div className="h-44 bg-secondary overflow-hidden">
@@ -275,11 +275,11 @@ const BlogPage = () => {
       {/* Modal overlay */}
       {selected && (
         <div
-          className="fixed inset-0 z-[100] flex items-end md:items-center justify-center p-0 md:p-6 bg-background/70 backdrop-blur-sm animate-fade-in"
+          className="fixed inset-0 z-[100] flex items-end md:items-center justify-center p-0 md:p-6 bg-secondary/60 backdrop-blur-md animate-fade-in"
           onClick={() => setSelected(null)}
         >
           <div
-            className="relative w-full md:max-w-2xl bg-card border border-border rounded-t-3xl md:rounded-2xl shadow-2xl max-h-[90dvh] flex flex-col overflow-hidden"
+            className="relative w-full md:max-w-2xl glass rounded-t-3xl md:rounded-2xl shadow-[0_24px_80px_hsl(0_0%_0%/0.35)] max-h-[90dvh] flex flex-col overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Cover image */}
@@ -290,10 +290,10 @@ const BlogPage = () => {
             )}
 
             {/* Modal header */}
-            <div className="flex items-start justify-between gap-4 px-6 pt-5 pb-4 border-b border-border shrink-0">
+            <div className="flex items-start justify-between gap-4 px-6 pt-5 pb-4 border-b border-border/50 shrink-0">
               <div className="flex flex-col gap-1.5">
                 <div className="flex items-center gap-2">
-                  <span className="text-[10px] font-heading font-bold uppercase tracking-widest text-primary bg-primary/10 px-2 py-0.5 rounded-full flex items-center gap-1">
+                  <span className="text-[10px] font-heading font-bold uppercase tracking-widest text-primary glass-primary px-2 py-0.5 rounded-full flex items-center gap-1">
                     <Tag size={9} />
                     {lang === "es" ? selected.category_es : selected.category_en}
                   </span>
@@ -307,7 +307,7 @@ const BlogPage = () => {
               </div>
               <button
                 onClick={() => setSelected(null)}
-                className="shrink-0 mt-0.5 p-2 rounded-full bg-secondary hover:bg-secondary/80 text-secondary-foreground transition-colors"
+                className="shrink-0 mt-0.5 p-2 rounded-full glass hover:shadow-md text-secondary-foreground transition-all"
                 aria-label="Cerrar"
               >
                 <X size={18} />
@@ -320,7 +320,7 @@ const BlogPage = () => {
             </div>
 
             {/* Modal footer CTA */}
-            <div className="shrink-0 px-6 py-4 border-t border-border bg-secondary/50">
+            <div className="shrink-0 px-6 py-4 border-t border-border/40 glass-dark">
               <a
                 href="https://wa.me/17878094747?text=Hola%2C%20leí%20el%20blog%20y%20necesito%20información"
                 target="_blank"
