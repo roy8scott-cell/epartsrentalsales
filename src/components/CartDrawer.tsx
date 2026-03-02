@@ -56,12 +56,12 @@ const CartDrawer = () => {
 
       {/* Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-full max-w-md bg-background border-l border-border z-50 flex flex-col transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-full w-full max-w-md glass-dark border-l border-secondary-foreground/10 z-50 flex flex-col transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         {/* Header */}
-        <div className="flex items-center justify-between p-4 border-b border-border">
+        <div className="flex items-center justify-between p-4 border-b border-secondary-foreground/10">
           <div className="flex items-center gap-2">
             <ShoppingCart size={20} className="text-primary" />
             <h2 className="font-heading font-bold text-lg">
@@ -93,7 +93,7 @@ const CartDrawer = () => {
               {items.map((item) => (
                 <div
                   key={item.product.sku}
-                  className="bg-card border border-border rounded-xl p-3 flex gap-3"
+                  className="glass rounded-xl p-3 flex gap-3"
                 >
                   {item.product.image && (
                     <div className="w-16 h-16 flex-shrink-0 bg-muted/30 rounded-lg overflow-hidden">
@@ -147,7 +147,7 @@ const CartDrawer = () => {
 
         {/* Footer */}
         {items.length > 0 && (
-          <div className="border-t border-border p-4 space-y-3 pb-safe">
+          <div className="border-t border-secondary-foreground/10 glass-dark p-4 space-y-3 pb-safe">
             <div className="flex items-center justify-between">
               <span className="text-sm text-muted-foreground">{t.cart_total}</span>
               <span className="text-xl font-heading font-black text-foreground">

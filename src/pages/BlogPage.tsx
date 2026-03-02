@@ -247,11 +247,11 @@ const BlogPage = () => {
                   <span className="text-xs text-muted-foreground ml-auto">{post.date}</span>
                 </div>
 
-                <h2 className="font-heading font-bold text-lg text-card-foreground leading-snug group-hover:text-primary transition-colors">
+                <h2 className="font-heading font-bold text-xl text-foreground leading-snug group-hover:text-primary transition-colors">
                   {lang === "es" ? post.title_es : post.title_en}
                 </h2>
 
-                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3 text-foreground/70">
+                <p className="text-foreground/80 text-base leading-relaxed line-clamp-3">
                   {lang === "es" ? post.excerpt_es : post.excerpt_en}
                 </p>
 
@@ -282,13 +282,6 @@ const BlogPage = () => {
             className="relative w-full md:max-w-2xl glass rounded-t-3xl md:rounded-2xl shadow-[0_24px_80px_hsl(0_0%_0%/0.35)] max-h-[90dvh] flex flex-col overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Cover image */}
-            {selected.img && (
-              <div className="h-52 md:h-64 w-full shrink-0 overflow-hidden">
-                <img src={selected.img} alt={lang === "es" ? selected.title_es : selected.title_en} className="w-full h-full object-cover" />
-              </div>
-            )}
-
             {/* Modal header */}
             <div className="flex items-start justify-between gap-4 px-6 pt-5 pb-4 border-b border-border/50 shrink-0">
               <div className="flex flex-col gap-1.5">
