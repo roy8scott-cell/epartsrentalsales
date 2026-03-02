@@ -1,4 +1,4 @@
-import { Wrench, Trees, Cog, Zap } from "lucide-react";
+import { Wrench, Tractor, Cog, Zap } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useLang } from "@/context/LanguageContext";
 
@@ -8,7 +8,7 @@ const Categories = () => {
 
   const categories = [
     {
-      icon: Trees,
+      icon: Tractor,
       title: t.cat_podadoras,
       description: t.cat_podadoras_desc,
       search: "Tractores",
