@@ -179,17 +179,17 @@ const renderContent = (text: string) => {
       const parts = line.slice(2).split(":**");
       if (parts.length === 2) {
         return (
-          <p key={i} className="text-muted-foreground text-sm leading-relaxed ml-3">
+          <p key={i} className="text-foreground/80 text-sm leading-relaxed ml-3">
             <strong className="text-foreground">{parts[0].replace("**", "")}:</strong>{parts[1]}
           </p>
         );
       }
     }
     if (line.startsWith("- ")) {
-      return <p key={i} className="text-muted-foreground text-sm leading-relaxed ml-3">• {line.slice(2)}</p>;
+      return <p key={i} className="text-foreground/80 text-sm leading-relaxed ml-3">• {line.slice(2)}</p>;
     }
     if (line.trim() === "") return <div key={i} className="h-2" />;
-    return <p key={i} className="text-muted-foreground text-sm leading-relaxed">{line}</p>;
+    return <p key={i} className="text-foreground/80 text-sm leading-relaxed">{line}</p>;
   });
 };
 
@@ -251,7 +251,7 @@ const BlogPage = () => {
                   {lang === "es" ? post.title_es : post.title_en}
                 </h2>
 
-                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
+                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3 text-foreground/70">
                   {lang === "es" ? post.excerpt_es : post.excerpt_en}
                 </p>
 

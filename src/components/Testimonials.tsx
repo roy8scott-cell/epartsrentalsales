@@ -17,7 +17,7 @@ const Testimonials = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
           {t.testimonials.map((testimonial) => (
-            <div key={testimonial.name} className="bg-card border border-border rounded-2xl p-5 md:p-6">
+            <div key={testimonial.name} className="glass rounded-2xl p-5 md:p-6 hover:shadow-[0_12px_40px_hsl(var(--primary)/0.12)] transition-all duration-300">
               <div className="flex gap-0.5 mb-3">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
                   <Star key={i} size={16} className="fill-primary text-primary" />

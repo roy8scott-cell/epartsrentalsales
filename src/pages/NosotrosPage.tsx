@@ -47,7 +47,7 @@ const NosotrosPage = () => {
               {t.nosotros_highlights.map((h, i) => {
                 const Icon = highlightIcons[i];
                 return (
-                  <div key={h.label} className="flex gap-4 p-5 rounded-2xl bg-card border border-border">
+                  <div key={h.label} className="flex gap-4 p-5 rounded-2xl glass hover:shadow-[0_8px_32px_hsl(var(--primary)/0.12)] transition-all duration-300">
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
                       <Icon size={24} />
                     </div>
@@ -65,7 +65,7 @@ const NosotrosPage = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
               {t.nosotros_services.map((s) => (
-                <div key={s.title} className="p-5 rounded-2xl bg-card border border-border">
+                <div key={s.title} className="p-5 rounded-2xl glass hover:shadow-[0_8px_32px_hsl(var(--primary)/0.12)] transition-all duration-300">
                   <div className="flex items-center gap-2 mb-2">
                     <Wrench size={16} className="text-primary" />
                     <h3 className="font-heading font-bold text-sm text-foreground">{s.title}</h3>
@@ -79,16 +79,16 @@ const NosotrosPage = () => {
               {t.nosotros_brands_title}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
-              <div className="p-6 rounded-2xl bg-card border-2 border-primary/30 text-center">
-                <h3 className="font-heading font-black text-lg text-foreground mb-2">Husqvarna</h3>
-                <p className="text-xs text-muted-foreground">Motosierras, trimmers, sopladoras, tractores, giro cero y Automower® robóticos.</p>
+              <div className="p-6 rounded-2xl glass border-primary/40 text-center hover:shadow-[0_8px_32px_hsl(var(--primary)/0.18)] transition-all duration-300">
+                 <h3 className="font-heading font-black text-lg text-foreground mb-2">Husqvarna</h3>
+                 <p className="text-xs text-muted-foreground">Motosierras, trimmers, sopladoras, tractores, giro cero y Automower® robóticos.</p>
               </div>
-              <div className="p-6 rounded-2xl bg-card border-2 border-primary/20 text-center">
-                <h3 className="font-heading font-black text-lg text-foreground mb-2">Makita</h3>
-                <p className="text-xs text-muted-foreground">Dealer autorizado. Rotary hammers, taladros, esmeriles, sierras y equipos de jardín LXT 18V.</p>
+              <div className="p-6 rounded-2xl glass text-center hover:shadow-[0_8px_32px_hsl(var(--primary)/0.12)] transition-all duration-300">
+                 <h3 className="font-heading font-black text-lg text-foreground mb-2">Makita</h3>
+                 <p className="text-xs text-muted-foreground">Dealer autorizado. Rotary hammers, taladros, esmeriles, sierras y equipos de jardín LXT 18V.</p>
               </div>
-              <div className="p-6 rounded-2xl bg-card border-2 border-primary/20 text-center">
-                <h3 className="font-heading font-black text-lg text-foreground mb-2">Milwaukee</h3>
+              <div className="p-6 rounded-2xl glass text-center hover:shadow-[0_8px_32px_hsl(var(--primary)/0.12)] transition-all duration-300">
+                 <h3 className="font-heading font-black text-lg text-foreground mb-2">Milwaukee</h3>
                 <p className="text-xs text-muted-foreground">Dealer autorizado. Herramientas M18 FUEL, MX FUEL, martillos demoledores y equipos de jardín.</p>
               </div>
             </div>
@@ -97,7 +97,7 @@ const NosotrosPage = () => {
               {t.nosotros_location_title}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-card border border-border rounded-2xl p-6 space-y-4">
+              <div className="glass rounded-2xl p-6 space-y-4">
                 <div className="flex items-start gap-3">
                   <MapPin size={20} className="text-primary mt-0.5 flex-shrink-0" />
                   <div>
@@ -145,7 +145,7 @@ const NosotrosPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="bg-card border border-border rounded-2xl overflow-hidden">
+              <div className="glass rounded-2xl overflow-hidden">
                 <iframe
                   title="Ubicación E-Parts Rental & Sales Humacao Puerto Rico"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3785.5!2d-65.8238!3d18.1496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDA4JzU4LjYiTiA2NcKwNDknMjUuNyJX!5e0!3m2!1ses!2spr!4v1700000000000"
