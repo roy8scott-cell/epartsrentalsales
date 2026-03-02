@@ -15,6 +15,8 @@ const Layout = () => {
     ? "contacto"
     : location.pathname === "/nosotros"
     ? "nosotros"
+    : location.pathname === "/blog"
+    ? "blog"
     : "inicio";
 
   const handleTabChange = (tab: string) => {
