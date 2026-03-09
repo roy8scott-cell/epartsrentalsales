@@ -167,6 +167,173 @@ Check that extension cords are not frayed and that the generator panel switches 
 At E-Parts we do full inspection and repair of generators. Schedule your appointment in Humacao before the peak season arrives. Message us on WhatsApp!
     `,
   },
+  {
+    slug: "taladro-percutor-husqvarna-makita",
+    date: "2025-04-02",
+    img: "/images/blog-makita-milwaukee.jpg",
+    category_es: "Guías de Compra",
+    category_en: "Buying Guides",
+    title_es: "¿Taladro percutor o taladro convencional? Guía para elegir",
+    title_en: "Hammer drill or conventional drill? A guide to choosing",
+    excerpt_es: "No todos los taladros son iguales. Te explicamos las diferencias clave entre un taladro convencional y un percutor, y cuándo necesitas cada uno.",
+    excerpt_en: "Not all drills are equal. We explain the key differences between a conventional drill and a hammer drill, and when you need each one.",
+    content_es: `
+Una de las preguntas más frecuentes que recibimos en E-Parts es: "¿Cuál taladro necesito?" La respuesta depende principalmente del material en el que vas a trabajar.
+
+**Taladro convencional**
+- **Úsalo para:** madera, metal, plástico y materiales blandos.
+- **Ventajas:** más ligero, mayor control de velocidad, ideal para trabajo de precisión.
+- **Limitación:** no puede perforar concreto ni mampostería de manera eficiente.
+- **Ejemplo:** Makita DF457DWE — excelente relación precio/rendimiento.
+
+**Taladro percutor**
+- **Úsalo para:** concreto, bloques, ladrillo, mampostería.
+- **Ventajas:** combina rotación con golpeo axial (percusión), ideal para anclar objetos en paredes de concreto.
+- **Limitación:** más pesado, genera vibración adicional.
+- **Ejemplo:** Makita HP457DWE o Milwaukee M18 FUEL — potencia profesional.
+
+**Rotomartillo (Rotary Hammer)**
+Para trabajos muy exigentes en concreto (más de 1" de profundidad), considera un rotomartillo como el Makita HR2230. Es más especializado pero indispensable para instalaciones eléctricas o de plomería en edificaciones.
+
+**Regla práctica:**
+Si trabajas principalmente en madera o metal → taladro convencional.
+Si anclas cosas en paredes o pisos de concreto con frecuencia → taladro percutor.
+Si perforar concreto es tu trabajo diario → rotomartillo.
+
+En E-Parts tenemos todos estos modelos disponibles. Visítanos en Humacao o consúltanos por WhatsApp y te ayudamos a elegir el correcto.
+    `,
+    content_en: `
+One of the most frequent questions we receive at E-Parts is: "Which drill do I need?" The answer mainly depends on the material you'll be working with.
+
+**Conventional drill**
+- **Use it for:** wood, metal, plastic and soft materials.
+- **Advantages:** lighter, better speed control, ideal for precision work.
+- **Limitation:** cannot drill concrete or masonry efficiently.
+- **Example:** Makita DF457DWE — excellent price/performance ratio.
+
+**Hammer drill**
+- **Use it for:** concrete, blocks, brick, masonry.
+- **Advantages:** combines rotation with axial hammering (percussion), ideal for anchoring objects in concrete walls.
+- **Limitation:** heavier, generates additional vibration.
+- **Example:** Makita HP457DWE or Milwaukee M18 FUEL — professional power.
+
+**Rotary Hammer**
+For very demanding concrete work (more than 1" depth), consider a rotary hammer like the Makita HR2230. It's more specialized but indispensable for electrical or plumbing installations in buildings.
+
+**Practical rule:**
+If you mainly work on wood or metal → conventional drill.
+If you anchor things in concrete walls or floors frequently → hammer drill.
+If drilling concrete is your daily work → rotary hammer.
+
+At E-Parts we have all these models available. Visit us in Humacao or ask us via WhatsApp and we'll help you choose the right one.
+    `,
+  },
+  {
+    slug: "husqvarna-motosierra-mantenimiento",
+    date: "2025-04-20",
+    img: "/images/blog-trimmer.jpg",
+    category_es: "Mantenimiento",
+    category_en: "Maintenance",
+    title_es: "Mantenimiento básico de tu motosierra Husqvarna",
+    title_en: "Basic maintenance of your Husqvarna chainsaw",
+    excerpt_es: "Una motosierra bien mantenida corta más fácil y dura más. Aprende a afilar la cadena, limpiar el filtro y revisar el sistema de lubricación.",
+    excerpt_en: "A well-maintained chainsaw cuts easier and lasts longer. Learn how to sharpen the chain, clean the filter and check the lubrication system.",
+    content_es: `
+La motosierra es una de las herramientas más exigentes que existen. Un mantenimiento adecuado no solo prolonga su vida útil, sino que también hace el trabajo más seguro.
+
+**1. Afilado de la cadena**
+Una cadena desafilada obliga al motor a trabajar más y aumenta el riesgo de rebote. Afila la cadena con una lima redonda del diámetro correcto (generalmente 3/16" para cadenas .325"). Mantén el ángulo de 30° en cada diente. Si notas polvo en lugar de virutas al cortar, es señal de que necesita afilado.
+
+**2. Limpieza del filtro de aire**
+Limpia el filtro después de cada jornada de trabajo. Un filtro tapado reduce la potencia y puede dañar el motor por sobrecalentamiento. Golpéalo suavemente para eliminar el aserrín acumulado.
+
+**3. Sistema de lubricación de la barra**
+Verifica que el aceite de cadena llegue correctamente a la barra. Pon la motosierra en marcha por unos segundos apuntando hacia un trozo de cartón: debe aparecer una línea de aceite. Si no hay aceite, limpia el orificio de salida con un alambre fino.
+
+**4. Tensión de la cadena**
+Una cadena floja puede salirse durante el corte (peligroso). Una muy apretada desgasta la barra y el sprocket. La cadena debe poder levantarse ligeramente con el dedo pero retornar sola a la barra.
+
+**5. Combustible correcto**
+Las motosierras Husqvarna usan mezcla aceite-gasolina en proporción 1:50. Nunca uses gasolina sin mezcla — destruirás el motor en minutos.
+
+**¿Necesita reparación tu motosierra?**
+En E-Parts somos especialistas en motosierras Husqvarna. Traer tu equipo a nuestro taller en Humacao o escríbenos por WhatsApp para diagnóstico.
+    `,
+    content_en: `
+The chainsaw is one of the most demanding tools there is. Proper maintenance not only extends its useful life, but also makes work safer.
+
+**1. Chain sharpening**
+A dull chain forces the engine to work harder and increases the risk of kickback. Sharpen the chain with a round file of the correct diameter (generally 3/16" for .325" chains). Maintain the 30° angle on each tooth. If you notice dust instead of chips when cutting, it's a sign it needs sharpening.
+
+**2. Air filter cleaning**
+Clean the filter after each work session. A clogged filter reduces power and can damage the engine through overheating. Tap it gently to remove accumulated sawdust.
+
+**3. Bar lubrication system**
+Verify that the chain oil reaches the bar correctly. Run the chainsaw for a few seconds pointing toward a piece of cardboard: an oil line should appear. If there's no oil, clean the outlet hole with a thin wire.
+
+**4. Chain tension**
+A loose chain can come off during cutting (dangerous). Too tight wears the bar and sprocket. The chain should be slightly liftable with a finger but return on its own to the bar.
+
+**5. Correct fuel**
+Husqvarna chainsaws use an oil-gasoline mix in a 1:50 ratio. Never use unmixed gasoline — you'll destroy the engine in minutes.
+
+**Does your chainsaw need repair?**
+At E-Parts we specialize in Husqvarna chainsaws. Bring your equipment to our shop in Humacao or message us on WhatsApp for diagnosis.
+    `,
+  },
+  {
+    slug: "milwaukee-m18-bateria-consejos",
+    date: "2025-05-05",
+    img: "/images/blog-makita-milwaukee.jpg",
+    category_es: "Consejos",
+    category_en: "Tips",
+    title_es: "Cómo cuidar y maximizar la vida de tus baterías Milwaukee M18",
+    title_en: "How to care for and maximize the life of your Milwaukee M18 batteries",
+    excerpt_es: "Las baterías M18 son una inversión importante. Sigue estos consejos para prolongar su vida útil, evitar el sobrecalentamiento y cargarlas correctamente.",
+    excerpt_en: "M18 batteries are a significant investment. Follow these tips to extend their lifespan, avoid overheating and charge them correctly.",
+    content_es: `
+Las baterías Milwaukee M18 son de las mejores del mercado, pero como toda batería de litio, requieren cuidados específicos para durar muchos años.
+
+**1. Evita el calor extremo**
+El peor enemigo de una batería de litio es el calor. Nunca dejes las baterías en el interior de un vehículo bajo el sol. La temperatura ideal de almacenamiento es entre 60°F y 80°F (15°C–27°C).
+
+**2. No las descargues completamente**
+A diferencia de las baterías de níquel antiguas, las de litio no deben descargarse al 0%. Cuando la herramienta avise de batería baja, cárgala pronto. La tecnología REDLINK™ de Milwaukee ayuda a proteger contra la descarga total.
+
+**3. Carga correcta**
+Usa siempre el cargador Milwaukee original. Los cargadores genéricos pueden dañar las celdas y anular la garantía. El cargador M18 estándar carga en 60 minutos; el RAPID CHARGER lo hace en 30 minutos.
+
+**4. Almacenamiento a largo plazo**
+Si no usarás las baterías por más de un mes, almacénalas con una carga del 40-60%. Completamente cargadas o descargadas aceleran la degradación de las celdas.
+
+**5. Limpieza de los contactos**
+Con el tiempo, los contactos dorados pueden oxidarse ligeramente. Límpialos con un borrador de lápiz suavemente y evita el contacto con agua o lubricantes.
+
+**¿Batería hinchada o que no carga?**
+En E-Parts reemplazamos baterías Milwaukee originales y podemos diagnosticar si la batería o el cargador es el problema. ¡Consúltanos por WhatsApp!
+    `,
+    content_en: `
+Milwaukee M18 batteries are among the best on the market, but like all lithium batteries, they require specific care to last many years.
+
+**1. Avoid extreme heat**
+The worst enemy of a lithium battery is heat. Never leave batteries inside a vehicle in the sun. The ideal storage temperature is between 60°F and 80°F (15°C–27°C).
+
+**2. Don't fully discharge them**
+Unlike old nickel batteries, lithium ones should not be discharged to 0%. When the tool signals low battery, charge it soon. Milwaukee's REDLINK™ technology helps protect against total discharge.
+
+**3. Correct charging**
+Always use the original Milwaukee charger. Generic chargers can damage the cells and void the warranty. The standard M18 charger charges in 60 minutes; the RAPID CHARGER does it in 30 minutes.
+
+**4. Long-term storage**
+If you won't use the batteries for more than a month, store them at 40-60% charge. Fully charged or discharged accelerates cell degradation.
+
+**5. Contact cleaning**
+Over time, the gold contacts can slightly oxidize. Clean them gently with a pencil eraser and avoid contact with water or lubricants.
+
+**Swollen battery or won't charge?**
+At E-Parts we replace original Milwaukee batteries and can diagnose whether the battery or charger is the problem. Ask us on WhatsApp!
+    `,
+  },
 ];
 
 // Simple markdown-like renderer
